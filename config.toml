@@ -15,7 +15,7 @@ theme = "hello-friend-ng"
 
 [menu]
   [[menu.main]]
-    name = "Projects"
+    name = "projects"
     url = "/projects/"
     weight = 1
 
@@ -25,6 +25,6 @@ theme = "hello-friend-ng"
     weight = 2
 
   [[menu.main]]
-    name = "Blog"
+    name = "blog"
     url = "/blog/"
     weight = 3
