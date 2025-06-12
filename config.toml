@@ -1,0 +1,30 @@
+baseURL = "http://paksyy.github.io/grayape/"
+languageCode = "en-us"
+title = "grayape"
+theme = "hello-friend-ng"
+
+[params]
+  defaultTheme = "dark"
+  enableThemeToggle = true
+  homeTitle = "grayape login"
+
+[params.Portrait]
+  Path = "images/avatar.png"
+  Alt = "My avatar"
+  MaxWidth = "150px"
+
+[menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 1
+
+  [[menu.main]]
+    name = "learningPath"
+    url = "/learningPath/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 3
