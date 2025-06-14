@@ -3,7 +3,7 @@
 
 A minimalist, content-first website where I document everything. I’m currently learning the ropes as an aspiring security researcher.
 
-## 📂 What you’ll find
+## What you’ll find
 
 | Section | Purpose |
 |---------|---------|
@@ -12,7 +12,7 @@ A minimalist, content-first website where I document everything. I’m currently
 | **learningPath** | Structured study notes (networking, linux, OS-internals, OWASP, etc). Checklists and mini-labs you can replicate. |
 | **hacklog** | CTF write-ups, red-team notes, PoCs for interesting CVEs. Updated whenever I break (or fix) something worth sharing. |
 
-## 🛠️ Stack
+## Stack
 
 - **Hugo** static-site generator  
 - Theme: *hello-friend-ng* (heavily tweaked, dark-mode friendly)  
