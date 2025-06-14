@@ -70,15 +70,15 @@ Specialized device for managing multiple VPN connections:
 ## (PRACTICAL) Basic monitoring
 - iftop 
 
-  ![iftop](iftop.PNG)
+  ![iftop](iftop.png)
 
 - nethog
 
-  ![nethog](nethog.PNG)
+  ![nethog](nethog.png)
 
 - iptraf-ng
 
-  ![iptraf-ng](iptraf-ng.PNG)
+  ![iptraf-ng](iptraf-ng.png)
   
 ## Network Access Applications
 - **VPN**: Secure remote access (IPsec, SSL)
@@ -137,19 +137,19 @@ Tools used for querying, discovering, and enumerating information about services
 
 - **dig**: A powerful DNS lookup tool for querying specific DNS records and analyzing DNS responses.
 
-  ![dig](dig.PNG)
+  ![dig](dig.png)
 
 - **dnsrecon**: Python-based tool for performing DNS enumeration, including brute force, zone transfers, and record collection.
 
-  ![dnsrecon](dnsrecon.PNG)
+  ![dnsrecon](dnsrecon.png)
 
 - **curl**: Transfers data from or to a server using supported protocols (HTTP, FTP, etc.), ideal for testing endpoints.
 
-  ![curl](curl.PNG)
+  ![curl](curl.png)
   
 - **wget**: Retrieves content from web servers, often used for downloading files or mirroring websites.
 
-  ![wget](wget.PNG)
+  ![wget](wget.png)
 
 ## WAN Technologies
 
