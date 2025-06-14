@@ -29,6 +29,10 @@
 
 
 
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="/grayape/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/grayape/favicon-32x32.png">
@@ -40,19 +44,21 @@
 
 
 
-  <meta itemprop="name" content="Home">
-  <meta itemprop="description" content="Welcome! This is my personal site built with Hugo and the Hello Friend NG theme.
-📝 I’ll be sharing:
-Dev notes Project updates Articles and ideas Thanks for visiting!">
-  <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="29">
+  <meta itemprop="name" content="grayape">
+  <meta itemprop="description" content="I’m an autodidact starting my journey in cybersecurity.
+Over the next months I’ll be building a strong foundation and documenting everything along the way.
+Work-in-progress sections:
+🔐 hacklog — write-ups, CTF notes, PoCs. 🧠 learningPath — structured study notes, labs, and reflections. 🛠️ projects — pragmatic tools in Go, Python, and c to automate recon and exploitation. Explore the sections above or contact me.">
+  <meta itemprop="datePublished" content="2025-06-13T18:20:12-07:00">
+  <meta itemprop="dateModified" content="2025-06-13T18:20:12-07:00">
+  <meta itemprop="wordCount" content="64">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Home">
-  <meta name="twitter:description" content="Welcome! This is my personal site built with Hugo and the Hello Friend NG theme.
-📝 I’ll be sharing:
-Dev notes Project updates Articles and ideas Thanks for visiting!">
+  <meta name="twitter:title" content="grayape">
+  <meta name="twitter:description" content="I’m an autodidact starting my journey in cybersecurity.
+Over the next months I’ll be building a strong foundation and documenting everything along the way.
+Work-in-progress sections:
+🔐 hacklog — write-ups, CTF notes, PoCs. 🧠 learningPath — structured study notes, labs, and reflections. 🛠️ projects — pragmatic tools in Go, Python, and c to automate recon and exploitation. Explore the sections above or contact me.">
 
 
 
@@ -75,8 +81,8 @@ Dev notes Project updates Articles and ideas Thanks for visiting!">
     </head>
 
     
-  <body class="">
-
+        <body>
+    
     
         <div class="container">
             <header class="header">
@@ -99,7 +105,7 @@ Dev notes Project updates Articles and ideas Thanks for visiting!">
 
         <span class="header__right">
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/grayape/projects/">projects</a></li><li><a href="/grayape/learningpath/">learningPath</a></li><li><a href="/grayape/blog/">blog</a></li>
+    <ul class="menu__inner"><li><a href="/grayape/projects/">projects</a></li><li><a href="/grayape/learningpath/">learningPath</a></li><li><a href="/grayape/hacklog/">hacklog</a></li>
     </ul>
 </nav>
 
@@ -121,21 +127,44 @@ Dev notes Project updates Articles and ideas Thanks for visiting!">
 
             <div class="content">
                 
-  <main>
-    <div>
-      
-        <img src="images/avatar.png"
-             class="circle"
-             alt="My avatar"
-             
-               style="max-width:150px"
-              />
-      
+<main>
+  <div>
+    
+      <img src="images/avatar.png"
+           class="circle"
+           alt="My avatar"
+           
+             style="max-width:150px"
+            />
+    
 
-        <h1>Hello, you.</h1>
-        <h2>Welcome to my digital subconscious.</h2>
+    <div class="hero-text">
+      <h1>Hello, you.</h1>
+      <h2>I am grayape, welcome to my digital subconscious.</h2>
     </div>
-  </main>
+
+    <div class="main-content">
+      <p>I’m an <strong>autodidact</strong> starting my journey in cybersecurity.<br>
+Over the next months I’ll be building a strong foundation and documenting everything along the way.</p>
+<p><strong>Work-in-progress sections:</strong></p>
+<ul>
+<li>🔐 <strong><code>hacklog</code></strong> — write-ups, CTF notes, PoCs.</li>
+<li>🧠 <strong><code>learningPath</code></strong> — structured study notes, labs, and reflections.</li>
+<li>🛠️ <strong><code>projects</code></strong> — pragmatic tools in Go, Python, and c to automate recon and exploitation.</li>
+</ul>
+<blockquote>
+<p>Explore the sections above or contact me.</p></blockquote>
+
+    </div>
+
+    
+      <div class="social-icons">
+        &nbsp; <a href="https://github.com/paksyy"  rel="me noopener " title="Github"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a> &nbsp;&nbsp; <a href="mailto:grayaperm@gmail.com"  rel="me noopener " title="Email"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a> &nbsp;
+      </div>
+    
+
+  </div>
+</main>
 
             </div>
 

@@ -7,11 +7,20 @@ theme = "hello-friend-ng"
   defaultTheme = "dark"
   enableThemeToggle = true
   homeTitle = "grayape login"
+  customCSS = ["css/custom.css"]
 
 [params.Portrait]
   Path = "images/avatar.png"
   Alt = "My avatar"
   MaxWidth = "150px"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/paksyy"
+
+[[params.social]]
+name = "email"
+url = "mailto:grayaperm@gmail.com"
 
 [menu]
   [[menu.main]]
@@ -25,6 +34,7 @@ theme = "hello-friend-ng"
     weight = 2
 
   [[menu.main]]
-    name = "blog"
-    url = "/blog/"
+    name = "hacklog"
+    url = "/hacklog/"
     weight = 3
+

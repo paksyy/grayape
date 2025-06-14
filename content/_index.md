@@ -1,14 +1,14 @@
 ---
-title: "Home"
+title: "grayape"
 ---
 
-# Welcome!
+I’m an **autodidact** starting my journey in cybersecurity.  
+Over the next months I’ll be building a strong foundation and documenting everything along the way.
 
-This is my personal site built with Hugo and the Hello Friend NG theme.
+**Work-in-progress sections:**
 
-📝 I'll be sharing:
-- Dev notes
-- Project updates
-- Articles and ideas
+- 🔐 **`hacklog`** — write-ups, CTF notes, PoCs.  
+- 🧠 **`learningPath`** — structured study notes, labs, and reflections.  
+- 🛠️ **`projects`** — pragmatic tools in Go, Python, and c to automate recon and exploitation.
 
-Thanks for visiting!
+> Explore the sections above or contact me.
