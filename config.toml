@@ -8,6 +8,8 @@ theme = "hello-friend-ng"
   enableThemeToggle = true
   homeTitle = "grayape login"
   customCSS = ["css/custom.css"]
+  relativeURLs = true
+  canonifyURLs = false
 
 [params.Portrait]
   Path = "images/avatar.png"
