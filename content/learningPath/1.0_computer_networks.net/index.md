@@ -271,3 +271,122 @@ Defines the scope and scale of network coverage.
 - **WAN (Wide Area Network)**: Covers large geographic areas (e.g., the Internet)
 - **SCADA (Supervisory Control and Data Acquisition)**: Industrial control systems for monitoring and controlling infrastructure (e.g., power plants, water treatment)
 - **Medianet**: Cisco term for networks optimized for media (e.g., video conferencing, streaming)
+
+## IP Addressing
+
+### IPv4 Properties
+- IPv4 uses 32-bit addresses written in dotted decimal notation (e.g., 192.168.1.1).
+- It supports around 4.3 billion unique addresses.
+- Each address has a network and host portion.
+- Paired with a subnet mask to define network boundaries.
+
+### Classes of IPv4 Addresses
+- Class A: 0.0.0.0 – 127.255.255.255
+- Class B: 128.0.0.0 – 191.255.255.255
+- Class C: 192.0.0.0 – 223.255.255.255
+- Class D: 224.0.0.0 – 239.255.255.255 (Multicast)
+- Class E: 240.0.0.0 – 255.255.255.255 (Experimental)
+
+### Classless IPv4 Addresses
+- CIDR (Classless Inter-Domain Routing) replaces class-based addressing.
+- Allows flexible subnetting with prefix notation (e.g., /24).
+- Enables efficient IP allocation and route aggregation.
+
+### Subnetting IPv4 Addresses
+- Divides networks into smaller subnetworks.
+- Reduces broadcast domains, improves performance and security.
+- Key concepts: subnet mask, network ID, broadcast address, host range.
+
+### IPv6 Address Structure
+- IPv6 uses 128-bit hexadecimal addresses (e.g., 2001:0db8::1).
+- Written in eight 16-bit blocks, compressed with "::" where applicable.
+- Vast address space to accommodate modern internet growth.
+
+### IPv6 Network Transmissions
+- IPv6 supports:
+  - Unicast (one-to-one)
+  - Multicast (one-to-many)
+  - Anycast (one-to-nearest)
+- IPv6 does **not** use broadcast.
+
+---
+
+## Special IP Networking Concepts
+
+### The Media Access Control Address
+- MAC address is a unique hardware address assigned to NICs.
+- 48-bit address in hexadecimal (e.g., 00:1A:2B:3C:4D:5E).
+- Operates at Layer 2 of the OSI model.
+
+### Collision Domains vs. Broadcast Domains
+- **Collision domain**: where data packets can collide (typically within hubs).
+- **Broadcast domain**: where a broadcast packet is propagated (limited by routers).
+- Switches separate collision domains; routers separate broadcast domains.
+
+### Types of Network Transmissions
+- **Unicast**: one sender to one receiver.
+- **Broadcast**: one sender to all devices (IPv4 only).
+- **Multicast**: one sender to specific group.
+- **Anycast**: one sender to the closest receiver (IPv6).
+
+---
+
+## Routing
+
+### Static Routing
+- Routes are manually configured by an admin.
+- Simple but not scalable; no automatic path updates.
+
+### Dynamic Routing
+- Routers learn routes from each other automatically.
+- Uses protocols like OSPF, EIGRP, RIP, and BGP.
+
+### Default Route
+- A catch-all route when no specific match is found.
+- Usually points to the internet gateway.
+- Represented as `0.0.0.0/0` or `::/0`.
+
+### Routing Table
+- Stores all known routes to destination networks.
+- Includes static, dynamic, and default routes.
+
+### Loopback Interface
+- A virtual interface used for diagnostics and stability.
+- IPv4: 127.0.0.1, IPv6: ::1
+
+### Routing Loop
+- A situation where packets endlessly circulate due to misconfiguration.
+- Prevented using TTL, split horizon, or route poisoning.
+
+### Routing Metrics
+- Values used to determine the best route.
+- Includes hop count, bandwidth, delay, reliability, and cost.
+
+### Routing Aggregation
+- Combines multiple routes into one summary route.
+- Reduces routing table size and simplifies configuration.
+
+### High Availability
+- Ensures continuous network operation through redundancy.
+- Technologies: VRRP, HSRP, GLBP, failover routing, load balancing.
+
+---
+
+## Routing Protocols
+
+
+
+
+
+## (PRACTICAL) Network and connectivity analysis
+
+### ping
+
+### traceroute
+
+### ip
+
+### nmap
+
+### netcat
+
