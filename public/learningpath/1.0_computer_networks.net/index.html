@@ -52,7 +52,7 @@ OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardiz
 OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
   <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
   <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="2200">
+  <meta itemprop="wordCount" content="2891">
   <meta itemprop="keywords" content="Computer Networks">
 
   <meta name="twitter:card" content="summary">
@@ -602,12 +602,137 @@ Best placed between firewall and internal network.</li>
 <h3 id="ip">ip</h3>
 <p>The <code>ip</code> command is used to manage network interfaces, addresses, routing tables, and ARP entries. It replaces older tools like <code>ifconfig</code>, <code>route</code>, and <code>arp</code>, providing more functionality and flexibility.
 <img src="ip.png" alt="ip"></p>
-<h3 id="nmap">nmap</h3>
-<p>Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
-<img src="nmap.png" alt="nmap"></p>
 <h3 id="netcat">netcat</h3>
 <p>Netcat is a flexible tool used for network diagnostics and debugging. It can open TCP or UDP connections, listen on ports, transfer files, and test services. It is also used for banner grabbing and setting up reverse shells in security contexts.
 <img src="netcat.png" alt="netcat"></p>
+<h2 id="unified-communication">Unified communication</h2>
+<h3 id="unified-communication-devices">Unified communication devices</h3>
+<p>Unified communication devices include hardware that enables integrated communications, such as IP phones, video conferencing systems, headsets, speakerphones, and collaboration hubs. These devices are optimized for services like VoIP, video calls, screen sharing, and real-time messaging.</p>
+<p>Examples:</p>
+<ul>
+<li>IP desk phones with video support</li>
+<li>USB headsets with noise cancellation</li>
+<li>Smart conferencing cameras with tracking</li>
+<li>Interactive whiteboards</li>
+</ul>
+<h3 id="voice-over-ip">Voice over IP</h3>
+<p>Voice over IP (VoIP) allows voice communication over the internet rather than traditional phone lines. It converts voice into digital packets and sends them over IP networks. VoIP reduces communication costs and enables integration with other services like video and chat.</p>
+<p>Advantages:</p>
+<ul>
+<li>Lower cost than PSTN</li>
+<li>Integration with UC platforms</li>
+<li>Scalability and portability</li>
+<li>Advanced call features (voicemail-to-email, call routing, etc.)</li>
+</ul>
+<p>Common VoIP Protocols:</p>
+<ul>
+<li>SIP (Session Initiation Protocol)</li>
+<li>RTP (Real-time Transport Protocol)</li>
+<li>H.323</li>
+</ul>
+<h2 id="virtualization">Virtualization</h2>
+<p>Virtualization is the process of creating a virtual version of physical hardware or resources, allowing multiple systems to run on a single physical machine. It improves hardware utilization, scalability, and flexibility in modern IT environments.</p>
+<h3 id="hypervisor">Hypervisor</h3>
+<p>A hypervisor is software that creates and runs virtual machines (VMs). It abstracts physical hardware and enables multiple operating systems to run independently on the same physical host.</p>
+<p>Types:</p>
+<ul>
+<li><strong>Type 1 (bare-metal)</strong>: Runs directly on hardware (e.g., VMware ESXi, Microsoft Hyper-V, Xen).</li>
+<li><strong>Type 2 (hosted)</strong>: Runs on top of a host OS (e.g., VirtualBox, VMware Workstation).</li>
+</ul>
+<h3 id="virtual-machine-manager">Virtual machine manager</h3>
+<p>A virtual machine manager (VMM) is the component that manages the execution of virtual machines. It allocates resources, handles VM states (start, pause, snapshot), and interfaces with the hypervisor.</p>
+<h3 id="components-of-virtualization">Components of virtualization</h3>
+<ul>
+<li><strong>Hypervisor</strong>: Creates and manages virtual machines.</li>
+<li><strong>Guest OS</strong>: Operating system installed inside the VM.</li>
+<li><strong>Virtual hardware</strong>: Emulated components (CPU, RAM, NIC).</li>
+<li><strong>Management tools</strong>: Interfaces for creating, monitoring, and configuring VMs.</li>
+</ul>
+<h3 id="software-defined-networking">Software defined networking</h3>
+<p>Software-Defined Networking (SDN) decouples the control plane from the data plane in network devices. Instead of configuring hardware individually, SDN enables centralized management via software controllers.</p>
+<p>Benefits:</p>
+<ul>
+<li>Centralized control</li>
+<li>Programmability</li>
+<li>Faster automation</li>
+<li>Improved scalability</li>
+</ul>
+<hr>
+<h2 id="storage-area-networks">Storage area networks</h2>
+<p>Storage Area Networks (SANs) are high-speed networks that provide access to consolidated storage resources. SANs are commonly used in enterprise environments for block-level storage, enabling efficient data transfer between servers and storage devices.</p>
+<p>Technologies:</p>
+<ul>
+<li><strong>Fibre Channel (FC)</strong></li>
+<li><strong>iSCSI</strong></li>
+<li><strong>FCoE (Fibre Channel over Ethernet)</strong></li>
+</ul>
+<p>Advantages:</p>
+<ul>
+<li>High performance</li>
+<li>Centralized storage</li>
+<li>Better backup and disaster recovery options</li>
+</ul>
+<hr>
+<h2 id="cloud-computing">Cloud computing</h2>
+<p>Cloud computing delivers computing services (e.g., servers, storage, databases, networking) over the internet (“the cloud”). It allows for on-demand resources, flexible scaling, and reduced infrastructure costs.</p>
+<h3 id="classification-of-cloud-computing">Classification of cloud computing</h3>
+<ul>
+<li><strong>Deployment Models</strong>:
+<ul>
+<li><strong>Public Cloud</strong>: Shared infrastructure (e.g., AWS, Azure).</li>
+<li><strong>Private Cloud</strong>: Dedicated resources for one organization.</li>
+<li><strong>Hybrid Cloud</strong>: Combination of public and private environments.</li>
+</ul>
+</li>
+<li><strong>Service Models</strong>:
+<ul>
+<li><strong>IaaS (Infrastructure as a Service)</strong>: Virtual machines, networks (e.g., AWS EC2).</li>
+<li><strong>PaaS (Platform as a Service)</strong>: Runtime environments for development (e.g., Heroku).</li>
+<li><strong>SaaS (Software as a Service)</strong>: End-user applications (e.g., Google Workspace, Office 365).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="network-monitoring">Network monitoring</h2>
+<p>Network monitoring involves observing network activity to detect performance issues, downtime, unauthorized access, or security incidents. Tools and logs play a critical role in maintaining operational integrity.</p>
+<h3 id="tools-to-monitor-the-network">Tools to monitor the network</h3>
+<p>Common tools include:</p>
+<ul>
+<li><strong>iftop</strong>: Real-time bandwidth monitoring by host.</li>
+<li><strong>nethogs</strong>: Per-process bandwidth usage.</li>
+<li><strong>iptraf-ng</strong>: Traffic monitoring and statistics.</li>
+<li><strong>Wireshark</strong>: Deep packet inspection.</li>
+<li><strong>tcpdump</strong>: Command-line packet capture.</li>
+<li><strong>Nagios/Zabbix</strong>: Monitoring servers and network devices for availability and performance.</li>
+</ul>
+<h3 id="log-files">Log files</h3>
+<p>Logs provide historical records of events that occur within a system or network. They are critical for troubleshooting, auditing, and forensic investigations.</p>
+<p>Key network-related logs:</p>
+<ul>
+<li><strong>Firewall logs</strong>: Blocked/allowed traffic.</li>
+<li><strong>DHCP logs</strong>: IP lease history.</li>
+<li><strong>DNS logs</strong>: Query/resolution attempts.</li>
+<li><strong>Router/Switch logs</strong>: Port activity, uptime, errors.</li>
+<li><strong>Authentication logs</strong>: Login attempts, SSH access.</li>
+</ul>
+<p>Log analysis can reveal:</p>
+<ul>
+<li>Intrusion attempts</li>
+<li>Misconfigurations</li>
+<li>Performance bottlenecks</li>
+<li>System failures</li>
+</ul>
+<h3 id="port-scanners">Port scanners</h3>
+<h4 id="nmap">nmap</h4>
+<p>Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
+<img src="nmap.png" alt="nmap"></p>
+<h3 id="interface-monitoringpacket-flow-monitoring">Interface monitoring/packet flow monitoring</h3>
+<h4 id="tcpdump">tcpdump</h4>
+<p>Tcpdump is a command-line packet analyzer that captures network traffic in real time. It allows users to filter, inspect, and save packets for further analysis. It&rsquo;s lightweight and widely used for diagnostics, scripting, and remote network troubleshooting.
+<img src="tcpdump.png" alt="tcpdump"></p>
+<h4 id="wireshark">wireshark</h4>
+<p>Wireshark is a graphical network protocol analyzer used to capture and interactively examine packets. It supports deep inspection of hundreds of protocols and is ideal for debugging, protocol development, and learning how networks operate.
+<img src="wireshark.png" alt="wireshark"></p>
 
             </div>
         </article>

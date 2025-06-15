@@ -420,10 +420,6 @@ Traceroute shows the path that packets take to reach a destination. It lists eac
 The `ip` command is used to manage network interfaces, addresses, routing tables, and ARP entries. It replaces older tools like `ifconfig`, `route`, and `arp`, providing more functionality and flexibility.
 ![ip](ip.png)
 
-### nmap
-Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
-![nmap](nmap.png)
-
 ### netcat
 Netcat is a flexible tool used for network diagnostics and debugging. It can open TCP or UDP connections, listen on ports, transfer files, and test services. It is also used for banner grabbing and setting up reverse shells in security contexts.
 ![netcat](netcat.png)
@@ -452,3 +448,111 @@ Common VoIP Protocols:
 - SIP (Session Initiation Protocol)
 - RTP (Real-time Transport Protocol)
 - H.323
+
+## Virtualization
+
+Virtualization is the process of creating a virtual version of physical hardware or resources, allowing multiple systems to run on a single physical machine. It improves hardware utilization, scalability, and flexibility in modern IT environments.
+
+### Hypervisor
+A hypervisor is software that creates and runs virtual machines (VMs). It abstracts physical hardware and enables multiple operating systems to run independently on the same physical host.
+
+Types:
+- **Type 1 (bare-metal)**: Runs directly on hardware (e.g., VMware ESXi, Microsoft Hyper-V, Xen).
+- **Type 2 (hosted)**: Runs on top of a host OS (e.g., VirtualBox, VMware Workstation).
+
+### Virtual machine manager
+A virtual machine manager (VMM) is the component that manages the execution of virtual machines. It allocates resources, handles VM states (start, pause, snapshot), and interfaces with the hypervisor.
+
+### Components of virtualization
+- **Hypervisor**: Creates and manages virtual machines.
+- **Guest OS**: Operating system installed inside the VM.
+- **Virtual hardware**: Emulated components (CPU, RAM, NIC).
+- **Management tools**: Interfaces for creating, monitoring, and configuring VMs.
+
+### Software defined networking
+Software-Defined Networking (SDN) decouples the control plane from the data plane in network devices. Instead of configuring hardware individually, SDN enables centralized management via software controllers.
+
+Benefits:
+- Centralized control
+- Programmability
+- Faster automation
+- Improved scalability
+
+---
+
+## Storage area networks
+
+Storage Area Networks (SANs) are high-speed networks that provide access to consolidated storage resources. SANs are commonly used in enterprise environments for block-level storage, enabling efficient data transfer between servers and storage devices.
+
+Technologies:
+- **Fibre Channel (FC)**
+- **iSCSI**
+- **FCoE (Fibre Channel over Ethernet)**
+
+Advantages:
+- High performance
+- Centralized storage
+- Better backup and disaster recovery options
+
+---
+
+## Cloud computing
+
+Cloud computing delivers computing services (e.g., servers, storage, databases, networking) over the internet (“the cloud”). It allows for on-demand resources, flexible scaling, and reduced infrastructure costs.
+
+### Classification of cloud computing
+- **Deployment Models**:
+  - **Public Cloud**: Shared infrastructure (e.g., AWS, Azure).
+  - **Private Cloud**: Dedicated resources for one organization.
+  - **Hybrid Cloud**: Combination of public and private environments.
+- **Service Models**:
+  - **IaaS (Infrastructure as a Service)**: Virtual machines, networks (e.g., AWS EC2).
+  - **PaaS (Platform as a Service)**: Runtime environments for development (e.g., Heroku).
+  - **SaaS (Software as a Service)**: End-user applications (e.g., Google Workspace, Office 365).
+
+---
+
+## Network monitoring
+
+Network monitoring involves observing network activity to detect performance issues, downtime, unauthorized access, or security incidents. Tools and logs play a critical role in maintaining operational integrity.
+
+### Tools to monitor the network
+Common tools include:
+- **iftop**: Real-time bandwidth monitoring by host.
+- **nethogs**: Per-process bandwidth usage.
+- **iptraf-ng**: Traffic monitoring and statistics.
+- **Wireshark**: Deep packet inspection.
+- **tcpdump**: Command-line packet capture.
+- **Nagios/Zabbix**: Monitoring servers and network devices for availability and performance.
+
+### Log files
+Logs provide historical records of events that occur within a system or network. They are critical for troubleshooting, auditing, and forensic investigations.
+
+Key network-related logs:
+- **Firewall logs**: Blocked/allowed traffic.
+- **DHCP logs**: IP lease history.
+- **DNS logs**: Query/resolution attempts.
+- **Router/Switch logs**: Port activity, uptime, errors.
+- **Authentication logs**: Login attempts, SSH access.
+
+Log analysis can reveal:
+- Intrusion attempts
+- Misconfigurations
+- Performance bottlenecks
+- System failures
+
+### Port scanners
+
+#### nmap
+Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
+![nmap](nmap.png)
+
+### Interface monitoring/packet flow monitoring
+
+#### tcpdump
+Tcpdump is a command-line packet analyzer that captures network traffic in real time. It allows users to filter, inspect, and save packets for further analysis. It's lightweight and widely used for diagnostics, scripting, and remote network troubleshooting.
+![tcpdump](tcpdump.png)
+
+#### wireshark
+Wireshark is a graphical network protocol analyzer used to capture and interactively examine packets. It supports deep inspection of hundreds of protocols and is ideal for debugging, protocol development, and learning how networks operate.
+![wireshark](wireshark.png)
