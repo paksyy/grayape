@@ -52,7 +52,7 @@ OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardiz
 OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
   <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
   <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="1487">
+  <meta itemprop="wordCount" content="2200">
   <meta itemprop="keywords" content="Computer Networks">
 
   <meta name="twitter:card" content="summary">
@@ -158,6 +158,7 @@ OSI Reference Model Layer 7 Application: Provides network services directly to u
 <li><strong>Layer 1 Physical</strong>: Transmits raw bit streams over physical media (Copper, Fiber)</li>
 </ul>
 <p>Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.</p>
+<hr>
 <h2 id="network-devices">Network Devices</h2>
 <h3 id="layer-1-devices">Layer 1 Devices:</h3>
 <ul>
@@ -207,6 +208,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>Load Balancer</strong>: Distributes traffic across servers (Round Robin, Least Connections)</li>
 <li><strong>Proxy Server</strong>: Intermediary for client requests (Forward/Reverse proxies)</li>
 </ul>
+<hr>
 <h2 id="practical-basic-monitoring">(PRACTICAL) Basic monitoring</h2>
 <ul>
 <li>
@@ -222,6 +224,7 @@ Best placed between firewall and internal network.</li>
 <p><img src="iptraf-ng.png" alt="iptraf-ng"></p>
 </li>
 </ul>
+<hr>
 <h2 id="network-access-applications">Network Access Applications</h2>
 <ul>
 <li><strong>VPN</strong>: Secure remote access (IPsec, SSL)</li>
@@ -242,6 +245,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>RADIUS</strong>: Centralized authentication (UDP 1812)</li>
 <li><strong>TACACS+</strong>: Cisco alternative (TCP 49, more secure)</li>
 </ul>
+<hr>
 <h2 id="dhcp">DHCP</h2>
 <p>Dynamic Host Configuration Protocol (DHCP) is a network management protocol used to automatically assign IP addresses and other network configuration parameters to client devices. It simplifies network management by reducing the need for manual IP configuration.</p>
 <ul>
@@ -284,6 +288,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>PAT (Port NAT)</strong>: Many private to single public</li>
 <li><strong>Address Types</strong>: Public/Private, RFC 1918</li>
 </ul>
+<hr>
 <h2 id="practical-service-enumeration">(PRACTICAL) Service Enumeration</h2>
 <p>Tools used for querying, discovering, and enumerating information about services, particularly DNS and web services:</p>
 <ul>
@@ -304,6 +309,7 @@ Best placed between firewall and internal network.</li>
 <p><img src="wget.png" alt="wget"></p>
 </li>
 </ul>
+<hr>
 <h2 id="wan-technologies">WAN Technologies</h2>
 <h3 id="pstn">PSTN</h3>
 <ul>
@@ -341,6 +347,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>Frame Relay</strong>: Legacy packet-switched</li>
 <li><strong>ATM</strong>: Fixed 53-byte cells (obsolete)</li>
 </ul>
+<hr>
 <h2 id="network-cabling">Network Cabling</h2>
 <h3 id="twisted-pair">Twisted Pair</h3>
 <ul>
@@ -403,7 +410,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>ST</strong>: Twist-lock connector, used in legacy fiber systems</li>
 <li><strong>MTP/MPO</strong>: Multi-fiber connectors for 40/100+ Gbps links</li>
 </ul>
-<h2 id="media-converters">Media Converters</h2>
+<h3 id="media-converters">Media Converters</h3>
 <p>Devices that allow different types of media to interconnect (e.g., copper to fiber). Useful in extending network distances or integrating older equipment.</p>
 <ul>
 <li><strong>Copper-to-Fiber</strong>: Converts electrical signals to optical</li>
@@ -421,6 +428,7 @@ Best placed between firewall and internal network.</li>
 <li><strong>TDR (Time Domain Reflectometer)</strong>: Tests copper cable length, detects breaks or shorts</li>
 <li><strong>OTDR (Optical Time Domain Reflectometer)</strong>: Tests fiber length, loss, and faults</li>
 </ul>
+<hr>
 <h2 id="network-topologies">Network Topologies</h2>
 <p>Describes how network devices are physically or logically arranged.</p>
 <ul>
@@ -445,6 +453,161 @@ Best placed between firewall and internal network.</li>
 <li><strong>SCADA (Supervisory Control and Data Acquisition)</strong>: Industrial control systems for monitoring and controlling infrastructure (e.g., power plants, water treatment)</li>
 <li><strong>Medianet</strong>: Cisco term for networks optimized for media (e.g., video conferencing, streaming)</li>
 </ul>
+<hr>
+<h2 id="ip-addressing">IP Addressing</h2>
+<h3 id="ipv4-properties">IPv4 Properties</h3>
+<ul>
+<li>IPv4 uses 32-bit addresses written in dotted decimal notation (e.g., 192.168.1.1).</li>
+<li>It supports around 4.3 billion unique addresses.</li>
+<li>Each address has a network and host portion.</li>
+<li>Paired with a subnet mask to define network boundaries.</li>
+</ul>
+<h3 id="classes-of-ipv4-addresses">Classes of IPv4 Addresses</h3>
+<ul>
+<li>Class A: 0.0.0.0 – 127.255.255.255</li>
+<li>Class B: 128.0.0.0 – 191.255.255.255</li>
+<li>Class C: 192.0.0.0 – 223.255.255.255</li>
+<li>Class D: 224.0.0.0 – 239.255.255.255 (Multicast)</li>
+<li>Class E: 240.0.0.0 – 255.255.255.255 (Experimental)</li>
+</ul>
+<h3 id="classless-ipv4-addresses">Classless IPv4 Addresses</h3>
+<ul>
+<li>CIDR (Classless Inter-Domain Routing) replaces class-based addressing.</li>
+<li>Allows flexible subnetting with prefix notation (e.g., /24).</li>
+<li>Enables efficient IP allocation and route aggregation.</li>
+</ul>
+<h3 id="subnetting-ipv4-addresses">Subnetting IPv4 Addresses</h3>
+<ul>
+<li>Divides networks into smaller subnetworks.</li>
+<li>Reduces broadcast domains, improves performance and security.</li>
+<li>Key concepts: subnet mask, network ID, broadcast address, host range.</li>
+</ul>
+<h3 id="ipv6-address-structure">IPv6 Address Structure</h3>
+<ul>
+<li>IPv6 uses 128-bit hexadecimal addresses (e.g., 2001:0db8::1).</li>
+<li>Written in eight 16-bit blocks, compressed with &ldquo;::&rdquo; where applicable.</li>
+<li>Vast address space to accommodate modern internet growth.</li>
+</ul>
+<h3 id="ipv6-network-transmissions">IPv6 Network Transmissions</h3>
+<ul>
+<li>IPv6 supports:
+<ul>
+<li>Unicast (one-to-one)</li>
+<li>Multicast (one-to-many)</li>
+<li>Anycast (one-to-nearest)</li>
+</ul>
+</li>
+<li>IPv6 does <strong>not</strong> use broadcast.</li>
+</ul>
+<hr>
+<h2 id="special-ip-networking-concepts">Special IP Networking Concepts</h2>
+<h3 id="the-media-access-control-address">The Media Access Control Address</h3>
+<ul>
+<li>MAC address is a unique hardware address assigned to NICs.</li>
+<li>48-bit address in hexadecimal (e.g., 00:1A:2B:3C:4D:5E).</li>
+<li>Operates at Layer 2 of the OSI model.</li>
+</ul>
+<h3 id="collision-domains-vs-broadcast-domains">Collision Domains vs. Broadcast Domains</h3>
+<ul>
+<li><strong>Collision domain</strong>: where data packets can collide (typically within hubs).</li>
+<li><strong>Broadcast domain</strong>: where a broadcast packet is propagated (limited by routers).</li>
+<li>Switches separate collision domains; routers separate broadcast domains.</li>
+</ul>
+<h3 id="types-of-network-transmissions">Types of Network Transmissions</h3>
+<ul>
+<li><strong>Unicast</strong>: one sender to one receiver.</li>
+<li><strong>Broadcast</strong>: one sender to all devices (IPv4 only).</li>
+<li><strong>Multicast</strong>: one sender to specific group.</li>
+<li><strong>Anycast</strong>: one sender to the closest receiver (IPv6).</li>
+</ul>
+<hr>
+<h2 id="routing">Routing</h2>
+<h3 id="static-routing">Static Routing</h3>
+<ul>
+<li>Routes are manually configured by an admin.</li>
+<li>Simple but not scalable; no automatic path updates.</li>
+</ul>
+<h3 id="dynamic-routing">Dynamic Routing</h3>
+<ul>
+<li>Routers learn routes from each other automatically.</li>
+<li>Uses protocols like OSPF, EIGRP, RIP, and BGP.</li>
+</ul>
+<h3 id="default-route">Default Route</h3>
+<ul>
+<li>A catch-all route when no specific match is found.</li>
+<li>Usually points to the internet gateway.</li>
+<li>Represented as <code>0.0.0.0/0</code> or <code>::/0</code>.</li>
+</ul>
+<h3 id="routing-table">Routing Table</h3>
+<ul>
+<li>Stores all known routes to destination networks.</li>
+<li>Includes static, dynamic, and default routes.</li>
+</ul>
+<h3 id="loopback-interface">Loopback Interface</h3>
+<ul>
+<li>A virtual interface used for diagnostics and stability.</li>
+<li>IPv4: 127.0.0.1, IPv6: ::1</li>
+</ul>
+<h3 id="routing-loop">Routing Loop</h3>
+<ul>
+<li>A situation where packets endlessly circulate due to misconfiguration.</li>
+<li>Prevented using TTL, split horizon, or route poisoning.</li>
+</ul>
+<h3 id="routing-metrics">Routing Metrics</h3>
+<ul>
+<li>Values used to determine the best route.</li>
+<li>Includes hop count, bandwidth, delay, reliability, and cost.</li>
+</ul>
+<h3 id="routing-aggregation">Routing Aggregation</h3>
+<ul>
+<li>Combines multiple routes into one summary route.</li>
+<li>Reduces routing table size and simplifies configuration.</li>
+</ul>
+<h3 id="high-availability">High Availability</h3>
+<ul>
+<li>Ensures continuous network operation through redundancy.</li>
+<li>Technologies: VRRP, HSRP, GLBP, failover routing, load balancing.</li>
+</ul>
+<h2 id="routing-protocols">Routing Protocols</h2>
+<h3 id="igp-interior-gateway-protocol">IGP (Interior Gateway Protocol)</h3>
+<ul>
+<li>IGPs are used for routing <strong>within a single autonomous system (AS)</strong>.</li>
+<li>Designed for internal network communication and fast convergence.</li>
+<li>Common IGPs:
+<ul>
+<li><strong>RIP (Routing Information Protocol)</strong> – Distance-vector, simple but limited.</li>
+<li><strong>OSPF (Open Shortest Path First)</strong> – Link-state, scalable, widely used.</li>
+<li><strong>EIGRP (Enhanced Interior Gateway Routing Protocol)</strong> – Cisco proprietary, advanced distance-vector.</li>
+</ul>
+</li>
+</ul>
+<h3 id="egp-exterior-gateway-protocol">EGP (Exterior Gateway Protocol)</h3>
+<ul>
+<li>EGPs are used for routing <strong>between autonomous systems</strong>, usually across the internet.</li>
+<li>The primary EGP is:
+<ul>
+<li><strong>BGP (Border Gateway Protocol)</strong> – Path-vector protocol used by ISPs and enterprises to exchange routing information on the internet.</li>
+</ul>
+</li>
+<li>EGPs focus on <strong>policy-based routing</strong> and scalability, rather than speed of convergence.</li>
+</ul>
+<hr>
+<h2 id="practical-network-and-connectivity-analysis">(PRACTICAL) Network and connectivity analysis</h2>
+<h3 id="ping">ping</h3>
+<p>Ping is used to test connectivity to another host on a network. It sends ICMP Echo Request messages and reports whether the host responds, along with the round-trip time. It helps detect basic network reachability issues.
+<img src="ping.png" alt="ping"></p>
+<h3 id="traceroute">traceroute</h3>
+<p>Traceroute shows the path that packets take to reach a destination. It lists each router (hop) along the path and measures latency to each one. It is useful for diagnosing where delays or drops occur in the route.
+<img src="traceroute.png" alt="traceroute"></p>
+<h3 id="ip">ip</h3>
+<p>The <code>ip</code> command is used to manage network interfaces, addresses, routing tables, and ARP entries. It replaces older tools like <code>ifconfig</code>, <code>route</code>, and <code>arp</code>, providing more functionality and flexibility.
+<img src="ip.png" alt="ip"></p>
+<h3 id="nmap">nmap</h3>
+<p>Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
+<img src="nmap.png" alt="nmap"></p>
+<h3 id="netcat">netcat</h3>
+<p>Netcat is a flexible tool used for network diagnostics and debugging. It can open TCP or UDP connections, listen on ports, transfer files, and test services. It is also used for banner grabbing and setting up reverse shells in security contexts.
+<img src="netcat.png" alt="netcat"></p>
 
             </div>
         </article>

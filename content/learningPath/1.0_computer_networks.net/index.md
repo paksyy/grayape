@@ -24,6 +24,8 @@ The Open Systems Interconnection (OSI) Model was created to standardize and stre
 
 Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.
 
+---
+
 ## Network Devices
 
 ### Layer 1 Devices:
@@ -67,6 +69,8 @@ Specialized device for managing multiple VPN connections:
 - **Load Balancer**: Distributes traffic across servers (Round Robin, Least Connections)
 - **Proxy Server**: Intermediary for client requests (Forward/Reverse proxies)
 
+---
+
 ## (PRACTICAL) Basic monitoring
 - iftop 
 
@@ -79,7 +83,9 @@ Specialized device for managing multiple VPN connections:
 - iptraf-ng
 
   ![iptraf-ng](iptraf-ng.png)
-  
+
+---
+
 ## Network Access Applications
 - **VPN**: Secure remote access (IPsec, SSL)
 - **Remote Access**: RDP, SSH, Telnet
@@ -96,6 +102,8 @@ Specialized device for managing multiple VPN connections:
 - **NIC**: Network Interface Card (Physical/MAC address)
 - **RADIUS**: Centralized authentication (UDP 1812)
 - **TACACS+**: Cisco alternative (TCP 49, more secure)
+
+---
 
 ## DHCP
 Dynamic Host Configuration Protocol (DHCP) is a network management protocol used to automatically assign IP addresses and other network configuration parameters to client devices. It simplifies network management by reducing the need for manual IP configuration.
@@ -132,6 +140,8 @@ The Domain Name System (DNS) translates domain names into IP addresses. It is a 
 - **PAT (Port NAT)**: Many private to single public
 - **Address Types**: Public/Private, RFC 1918
 
+---
+
 ## (PRACTICAL) Service Enumeration
 Tools used for querying, discovering, and enumerating information about services, particularly DNS and web services:
 
@@ -150,6 +160,8 @@ Tools used for querying, discovering, and enumerating information about services
 - **wget**: Retrieves content from web servers, often used for downloading files or mirroring websites.
 
   ![wget](wget.png)
+
+---
 
 ## WAN Technologies
 
@@ -178,6 +190,8 @@ Tools used for querying, discovering, and enumerating information about services
 - **MPLS**: Label switching for QoS
 - **Frame Relay**: Legacy packet-switched
 - **ATM**: Fixed 53-byte cells (obsolete)
+
+---
 
 ## Network Cabling
 
@@ -230,7 +244,7 @@ Tools used for querying, discovering, and enumerating information about services
 - **ST**: Twist-lock connector, used in legacy fiber systems
 - **MTP/MPO**: Multi-fiber connectors for 40/100+ Gbps links
 
-## Media Converters
+### Media Converters
 Devices that allow different types of media to interconnect (e.g., copper to fiber). Useful in extending network distances or integrating older equipment.
 
 - **Copper-to-Fiber**: Converts electrical signals to optical
@@ -247,6 +261,8 @@ Essential tools for installing, testing, and maintaining network cables.
 - **Cable tester**: Verifies correct pinouts, continuity, and detects shorts
 - **TDR (Time Domain Reflectometer)**: Tests copper cable length, detects breaks or shorts
 - **OTDR (Optical Time Domain Reflectometer)**: Tests fiber length, loss, and faults
+
+---
 
 ## Network Topologies
 Describes how network devices are physically or logically arranged.
@@ -271,6 +287,8 @@ Defines the scope and scale of network coverage.
 - **WAN (Wide Area Network)**: Covers large geographic areas (e.g., the Internet)
 - **SCADA (Supervisory Control and Data Acquisition)**: Industrial control systems for monitoring and controlling infrastructure (e.g., power plants, water treatment)
 - **Medianet**: Cisco term for networks optimized for media (e.g., video conferencing, streaming)
+
+---
 
 ## IP Addressing
 
@@ -370,23 +388,67 @@ Defines the scope and scale of network coverage.
 - Ensures continuous network operation through redundancy.
 - Technologies: VRRP, HSRP, GLBP, failover routing, load balancing.
 
----
-
 ## Routing Protocols
 
+### IGP (Interior Gateway Protocol)
+- IGPs are used for routing **within a single autonomous system (AS)**.
+- Designed for internal network communication and fast convergence.
+- Common IGPs:
+  - **RIP (Routing Information Protocol)** – Distance-vector, simple but limited.
+  - **OSPF (Open Shortest Path First)** – Link-state, scalable, widely used.
+  - **EIGRP (Enhanced Interior Gateway Routing Protocol)** – Cisco proprietary, advanced distance-vector.
 
+### EGP (Exterior Gateway Protocol)
+- EGPs are used for routing **between autonomous systems**, usually across the internet.
+- The primary EGP is:
+  - **BGP (Border Gateway Protocol)** – Path-vector protocol used by ISPs and enterprises to exchange routing information on the internet.
+- EGPs focus on **policy-based routing** and scalability, rather than speed of convergence.
 
-
+---
 
 ## (PRACTICAL) Network and connectivity analysis
 
 ### ping
+Ping is used to test connectivity to another host on a network. It sends ICMP Echo Request messages and reports whether the host responds, along with the round-trip time. It helps detect basic network reachability issues.
+![ping](ping.png)
 
 ### traceroute
+Traceroute shows the path that packets take to reach a destination. It lists each router (hop) along the path and measures latency to each one. It is useful for diagnosing where delays or drops occur in the route.
+![traceroute](traceroute.png)
 
 ### ip
+The `ip` command is used to manage network interfaces, addresses, routing tables, and ARP entries. It replaces older tools like `ifconfig`, `route`, and `arp`, providing more functionality and flexibility.
+![ip](ip.png)
 
 ### nmap
+Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
+![nmap](nmap.png)
 
 ### netcat
+Netcat is a flexible tool used for network diagnostics and debugging. It can open TCP or UDP connections, listen on ports, transfer files, and test services. It is also used for banner grabbing and setting up reverse shells in security contexts.
+![netcat](netcat.png)
 
+## Unified communication
+
+### Unified communication devices
+Unified communication devices include hardware that enables integrated communications, such as IP phones, video conferencing systems, headsets, speakerphones, and collaboration hubs. These devices are optimized for services like VoIP, video calls, screen sharing, and real-time messaging.
+
+Examples:
+- IP desk phones with video support
+- USB headsets with noise cancellation
+- Smart conferencing cameras with tracking
+- Interactive whiteboards
+
+### Voice over IP
+Voice over IP (VoIP) allows voice communication over the internet rather than traditional phone lines. It converts voice into digital packets and sends them over IP networks. VoIP reduces communication costs and enables integration with other services like video and chat.
+
+Advantages:
+- Lower cost than PSTN
+- Integration with UC platforms
+- Scalability and portability
+- Advanced call features (voicemail-to-email, call routing, etc.)
+
+Common VoIP Protocols:
+- SIP (Session Initiation Protocol)
+- RTP (Real-time Transport Protocol)
+- H.323
