@@ -908,3 +908,174 @@ A network scanning and packet crafting tool used to generate custom TCP/IP packe
 A powerful Python-based packet manipulation tool used for crafting, sending, sniffing, and analyzing network traffic. Supports multiple protocols and allows the creation of custom packet flows and fuzzing.
 
 ![Scapy](scapy.png)
+
+---
+
+## Network Hardening Techniques
+
+Network hardening involves reducing vulnerabilities in your network infrastructure to protect against attacks and unauthorized access.
+
+### Secure Protocols
+
+Use **secure alternatives** to insecure network protocols:
+
+| Insecure Protocol | Secure Alternative | Description                            |
+|-------------------|--------------------|----------------------------------------|
+| FTP               | SFTP / FTPS        | Secures file transfer with SSH or SSL  |
+| Telnet            | SSH                | Encrypts remote terminal communication |
+| HTTP              | HTTPS              | Encrypts web traffic using TLS         |
+| SNMPv1/v2         | SNMPv3             | Adds authentication and encryption     |
+| POP3 / IMAP       | POP3S / IMAPS      | Email protocols over SSL/TLS           |
+
+### Anti-Malware Software
+
+Protect endpoints and servers with:
+
+- **Signature-based detection** (detects known threats)
+- **Heuristic/Behavioral analysis** (detects unknown threats)
+- **Real-time protection** (active scanning of file activity)
+- **Automated updates** for malware definitions
+- **Centralized management** for enterprise deployments
+
+**Examples**: Windows Defender, ESET, Malwarebytes, CrowdStrike
+
+### Switch and Router Security Measures
+
+- Disable unused ports and interfaces
+- Use MAC address filtering
+- Enable port security (limit number of MACs per port)
+- Allow SSH access only (disable Telnet)
+- Change all default usernames and passwords
+- Use VLANs for network segmentation
+- Enable logging and use SNMPv3 for secure monitoring
+
+### Encryption Basics
+
+- **Symmetric encryption**: One shared key (e.g., AES, DES)
+- **Asymmetric encryption**: Public/private key pair (e.g., RSA, ECC)
+- **TLS/SSL**: Encrypts traffic for secure communications
+- **IPsec**: Encrypts network traffic (used in VPNs)
+- **Hashing**: Ensures data integrity (SHA-256, SHA-3)
+
+### Wireless Network Hardening
+
+- Use **WPA3** (or at least WPA2 with AES)
+- Disable **WPS** to prevent brute-force attacks
+- Change default **SSID** and admin credentials
+- Enable **MAC filtering**
+- Use **client isolation** on guest/public networks
+- Apply **firmware updates** regularly
+- Limit **signal range** to control exposure
+
+### User Authentication
+
+- Enforce strong password policies
+- Implement multi-factor authentication (MFA)
+- Apply account lockout after multiple failures
+- Audit and disable unused accounts regularly
+- Use session timeouts and re-authentication
+
+### Authentication and Authorization Methods
+
+- **PAP (Password Authentication Protocol)**  
+  Sends credentials in plaintext. Insecure and outdated.
+
+- **CHAP (Challenge Handshake Authentication Protocol)**  
+  Uses challenge-response and hashing. More secure than PAP.
+
+- **EAP (Extensible Authentication Protocol)**  
+  Framework for multiple authentication types (e.g., EAP-TLS, EAP-TTLS, PEAP). Common in WPA2/WPA3 Enterprise and 802.1X.
+
+- **Kerberos**  
+  Ticket-based mutual authentication using a **Key Distribution Center (KDC)**. Common in Active Directory environments.
+
+---
+
+## Physical Network Security
+
+Secure the physical infrastructure against unauthorized access, damage, or theft.
+
+### Credential Workaround
+
+- Set BIOS/UEFI passwords
+- Disable booting from USB or CD devices
+- Encrypt drives (e.g., BitLocker, LUKS)
+- Monitor and log access to devices and consoles
+
+### Basic Physical Security
+
+- Locked doors to server/network rooms
+- Surveillance cameras
+- Alarm systems
+- Cable management to prevent tampering
+
+### Intermediate Physical Security
+
+- Security guards and access controls
+- Access cards and RFID key fobs
+- Mantraps (double door entry)
+- Motion detectors
+- EMI/RFI shielding for cables
+
+### Advanced Physical Security
+
+- Biometric access (fingerprint, iris)
+- Faraday cages for sensitive hardware
+- Hardened server racks/cabinets
+- Fire suppression and climate control systems
+- Backup power (UPS/generators)
+
+### Methods of Physical Security
+
+- **Deterrence**: Cameras, lighting
+- **Detection**: Sensors, surveillance
+- **Delay**: Locks, reinforced doors
+- **Response**: Security staff, alarm systems
+
+---
+
+## Firewall Basics
+
+Firewalls monitor and control incoming and outgoing traffic based on defined security rules.
+
+### Types of Firewalls
+
+| Type                | Description                                      |
+|---------------------|--------------------------------------------------|
+| Packet Filtering    | Filters traffic by IP, port, protocol            |
+| Stateful Inspection | Tracks connections and ensures stateful traffic |
+| Application Layer   | Filters traffic for specific applications        |
+| Next-Gen Firewall   | Includes DPI, IDS/IPS, app awareness             |
+| Host-based Firewall | Installed on devices (e.g., Windows Firewall)    |
+| Network Firewall    | Protects entire segments (e.g., pfSense, Cisco)  |
+
+### Firewall Settings and Techniques
+
+- Use a **default deny** policy (block all, allow explicitly)
+- Only allow necessary ports and IP ranges
+- Enable **NAT** to hide internal network
+- Configure **intrusion detection/prevention (IDS/IPS)**
+- Enable **logging and monitoring**
+- Update firmware and apply patches regularly
+
+---
+
+## Network Access Control (NAC)
+
+- Restricts network access based on policies and device health
+- Integrates with **802.1X** and **RADIUS servers**
+- Enforces patch levels, antivirus status, device type
+- Helps detect and block **rogue devices**
+- Supports **guest network segmentation**
+
+---
+
+## Basic Forensic Concepts
+
+- **Chain of custody**: Document all evidence handling
+- **Disk imaging**: Bit-for-bit copy of storage for investigation
+- **Volatile vs non-volatile data**: RAM vs storage
+- **Hashing evidence**: Verifies integrity (SHA-256)
+- **Timeline analysis**: Order of attack events
+- **Live forensics**: Performed while system is running
+- **Anti-forensics**: Tools/methods to hide traces or mislead investigators

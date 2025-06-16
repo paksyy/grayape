@@ -52,7 +52,7 @@ OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardiz
 OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
   <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
   <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="5061">
+  <meta itemprop="wordCount" content="5705">
   <meta itemprop="keywords" content="Computer Networks">
 
   <meta name="twitter:card" content="summary">
@@ -995,6 +995,219 @@ Best placed between firewall and internal network.</li>
 <h3 id="scapy-python-library">Scapy (Python Library)</h3>
 <p>A powerful Python-based packet manipulation tool used for crafting, sending, sniffing, and analyzing network traffic. Supports multiple protocols and allows the creation of custom packet flows and fuzzing.</p>
 <p><img src="scapy.png" alt="Scapy"></p>
+<hr>
+<h2 id="network-hardening-techniques">Network Hardening Techniques</h2>
+<p>Network hardening involves reducing vulnerabilities in your network infrastructure to protect against attacks and unauthorized access.</p>
+<h3 id="secure-protocols">Secure Protocols</h3>
+<p>Use <strong>secure alternatives</strong> to insecure network protocols:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Insecure Protocol</th>
+          <th>Secure Alternative</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>FTP</td>
+          <td>SFTP / FTPS</td>
+          <td>Secures file transfer with SSH or SSL</td>
+      </tr>
+      <tr>
+          <td>Telnet</td>
+          <td>SSH</td>
+          <td>Encrypts remote terminal communication</td>
+      </tr>
+      <tr>
+          <td>HTTP</td>
+          <td>HTTPS</td>
+          <td>Encrypts web traffic using TLS</td>
+      </tr>
+      <tr>
+          <td>SNMPv1/v2</td>
+          <td>SNMPv3</td>
+          <td>Adds authentication and encryption</td>
+      </tr>
+      <tr>
+          <td>POP3 / IMAP</td>
+          <td>POP3S / IMAPS</td>
+          <td>Email protocols over SSL/TLS</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="anti-malware-software">Anti-Malware Software</h3>
+<p>Protect endpoints and servers with:</p>
+<ul>
+<li><strong>Signature-based detection</strong> (detects known threats)</li>
+<li><strong>Heuristic/Behavioral analysis</strong> (detects unknown threats)</li>
+<li><strong>Real-time protection</strong> (active scanning of file activity)</li>
+<li><strong>Automated updates</strong> for malware definitions</li>
+<li><strong>Centralized management</strong> for enterprise deployments</li>
+</ul>
+<p><strong>Examples</strong>: Windows Defender, ESET, Malwarebytes, CrowdStrike</p>
+<h3 id="switch-and-router-security-measures">Switch and Router Security Measures</h3>
+<ul>
+<li>Disable unused ports and interfaces</li>
+<li>Use MAC address filtering</li>
+<li>Enable port security (limit number of MACs per port)</li>
+<li>Allow SSH access only (disable Telnet)</li>
+<li>Change all default usernames and passwords</li>
+<li>Use VLANs for network segmentation</li>
+<li>Enable logging and use SNMPv3 for secure monitoring</li>
+</ul>
+<h3 id="encryption-basics">Encryption Basics</h3>
+<ul>
+<li><strong>Symmetric encryption</strong>: One shared key (e.g., AES, DES)</li>
+<li><strong>Asymmetric encryption</strong>: Public/private key pair (e.g., RSA, ECC)</li>
+<li><strong>TLS/SSL</strong>: Encrypts traffic for secure communications</li>
+<li><strong>IPsec</strong>: Encrypts network traffic (used in VPNs)</li>
+<li><strong>Hashing</strong>: Ensures data integrity (SHA-256, SHA-3)</li>
+</ul>
+<h3 id="wireless-network-hardening">Wireless Network Hardening</h3>
+<ul>
+<li>Use <strong>WPA3</strong> (or at least WPA2 with AES)</li>
+<li>Disable <strong>WPS</strong> to prevent brute-force attacks</li>
+<li>Change default <strong>SSID</strong> and admin credentials</li>
+<li>Enable <strong>MAC filtering</strong></li>
+<li>Use <strong>client isolation</strong> on guest/public networks</li>
+<li>Apply <strong>firmware updates</strong> regularly</li>
+<li>Limit <strong>signal range</strong> to control exposure</li>
+</ul>
+<h3 id="user-authentication">User Authentication</h3>
+<ul>
+<li>Enforce strong password policies</li>
+<li>Implement multi-factor authentication (MFA)</li>
+<li>Apply account lockout after multiple failures</li>
+<li>Audit and disable unused accounts regularly</li>
+<li>Use session timeouts and re-authentication</li>
+</ul>
+<h3 id="authentication-and-authorization-methods">Authentication and Authorization Methods</h3>
+<ul>
+<li>
+<p><strong>PAP (Password Authentication Protocol)</strong><br>
+Sends credentials in plaintext. Insecure and outdated.</p>
+</li>
+<li>
+<p><strong>CHAP (Challenge Handshake Authentication Protocol)</strong><br>
+Uses challenge-response and hashing. More secure than PAP.</p>
+</li>
+<li>
+<p><strong>EAP (Extensible Authentication Protocol)</strong><br>
+Framework for multiple authentication types (e.g., EAP-TLS, EAP-TTLS, PEAP). Common in WPA2/WPA3 Enterprise and 802.1X.</p>
+</li>
+<li>
+<p><strong>Kerberos</strong><br>
+Ticket-based mutual authentication using a <strong>Key Distribution Center (KDC)</strong>. Common in Active Directory environments.</p>
+</li>
+</ul>
+<hr>
+<h2 id="physical-network-security">Physical Network Security</h2>
+<p>Secure the physical infrastructure against unauthorized access, damage, or theft.</p>
+<h3 id="credential-workaround">Credential Workaround</h3>
+<ul>
+<li>Set BIOS/UEFI passwords</li>
+<li>Disable booting from USB or CD devices</li>
+<li>Encrypt drives (e.g., BitLocker, LUKS)</li>
+<li>Monitor and log access to devices and consoles</li>
+</ul>
+<h3 id="basic-physical-security">Basic Physical Security</h3>
+<ul>
+<li>Locked doors to server/network rooms</li>
+<li>Surveillance cameras</li>
+<li>Alarm systems</li>
+<li>Cable management to prevent tampering</li>
+</ul>
+<h3 id="intermediate-physical-security">Intermediate Physical Security</h3>
+<ul>
+<li>Security guards and access controls</li>
+<li>Access cards and RFID key fobs</li>
+<li>Mantraps (double door entry)</li>
+<li>Motion detectors</li>
+<li>EMI/RFI shielding for cables</li>
+</ul>
+<h3 id="advanced-physical-security">Advanced Physical Security</h3>
+<ul>
+<li>Biometric access (fingerprint, iris)</li>
+<li>Faraday cages for sensitive hardware</li>
+<li>Hardened server racks/cabinets</li>
+<li>Fire suppression and climate control systems</li>
+<li>Backup power (UPS/generators)</li>
+</ul>
+<h3 id="methods-of-physical-security">Methods of Physical Security</h3>
+<ul>
+<li><strong>Deterrence</strong>: Cameras, lighting</li>
+<li><strong>Detection</strong>: Sensors, surveillance</li>
+<li><strong>Delay</strong>: Locks, reinforced doors</li>
+<li><strong>Response</strong>: Security staff, alarm systems</li>
+</ul>
+<hr>
+<h2 id="firewall-basics">Firewall Basics</h2>
+<p>Firewalls monitor and control incoming and outgoing traffic based on defined security rules.</p>
+<h3 id="types-of-firewalls">Types of Firewalls</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Packet Filtering</td>
+          <td>Filters traffic by IP, port, protocol</td>
+      </tr>
+      <tr>
+          <td>Stateful Inspection</td>
+          <td>Tracks connections and ensures stateful traffic</td>
+      </tr>
+      <tr>
+          <td>Application Layer</td>
+          <td>Filters traffic for specific applications</td>
+      </tr>
+      <tr>
+          <td>Next-Gen Firewall</td>
+          <td>Includes DPI, IDS/IPS, app awareness</td>
+      </tr>
+      <tr>
+          <td>Host-based Firewall</td>
+          <td>Installed on devices (e.g., Windows Firewall)</td>
+      </tr>
+      <tr>
+          <td>Network Firewall</td>
+          <td>Protects entire segments (e.g., pfSense, Cisco)</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="firewall-settings-and-techniques">Firewall Settings and Techniques</h3>
+<ul>
+<li>Use a <strong>default deny</strong> policy (block all, allow explicitly)</li>
+<li>Only allow necessary ports and IP ranges</li>
+<li>Enable <strong>NAT</strong> to hide internal network</li>
+<li>Configure <strong>intrusion detection/prevention (IDS/IPS)</strong></li>
+<li>Enable <strong>logging and monitoring</strong></li>
+<li>Update firmware and apply patches regularly</li>
+</ul>
+<hr>
+<h2 id="network-access-control-nac">Network Access Control (NAC)</h2>
+<ul>
+<li>Restricts network access based on policies and device health</li>
+<li>Integrates with <strong>802.1X</strong> and <strong>RADIUS servers</strong></li>
+<li>Enforces patch levels, antivirus status, device type</li>
+<li>Helps detect and block <strong>rogue devices</strong></li>
+<li>Supports <strong>guest network segmentation</strong></li>
+</ul>
+<hr>
+<h2 id="basic-forensic-concepts">Basic Forensic Concepts</h2>
+<ul>
+<li><strong>Chain of custody</strong>: Document all evidence handling</li>
+<li><strong>Disk imaging</strong>: Bit-for-bit copy of storage for investigation</li>
+<li><strong>Volatile vs non-volatile data</strong>: RAM vs storage</li>
+<li><strong>Hashing evidence</strong>: Verifies integrity (SHA-256)</li>
+<li><strong>Timeline analysis</strong>: Order of attack events</li>
+<li><strong>Live forensics</strong>: Performed while system is running</li>
+<li><strong>Anti-forensics</strong>: Tools/methods to hide traces or mislead investigators</li>
+</ul>
 
             </div>
         </article>
