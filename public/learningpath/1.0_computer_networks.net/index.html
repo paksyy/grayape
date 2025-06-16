@@ -52,7 +52,7 @@ OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardiz
 OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
   <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
   <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="2891">
+  <meta itemprop="wordCount" content="5061">
   <meta itemprop="keywords" content="Computer Networks">
 
   <meta name="twitter:card" content="summary">
@@ -733,6 +733,268 @@ Best placed between firewall and internal network.</li>
 <h4 id="wireshark">wireshark</h4>
 <p>Wireshark is a graphical network protocol analyzer used to capture and interactively examine packets. It supports deep inspection of hundreds of protocols and is ideal for debugging, protocol development, and learning how networks operate.
 <img src="wireshark.png" alt="wireshark"></p>
+<h2 id="configuration-management">Configuration management</h2>
+<p>Configuration management is the process of systematically handling changes to maintain the integrity and performance of IT systems and networks. It ensures that hardware, software, firmware, and documentation are consistent and traceable.</p>
+<p>Key tools:</p>
+<ul>
+<li><strong>Ansible</strong>: Agentless configuration automation tool using YAML playbooks.</li>
+<li><strong>Puppet</strong>: Declarative configuration management for infrastructure as code.</li>
+<li><strong>Chef</strong>: Uses Ruby for defining infrastructure policies.</li>
+<li><strong>SaltStack</strong>: Scalable configuration management and remote execution.</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Reduced configuration errors</li>
+<li>Faster deployments</li>
+<li>Easier rollback and version control</li>
+<li>Improved compliance</li>
+</ul>
+<hr>
+<h2 id="documentation">Documentation</h2>
+<p>Network documentation refers to detailed records of the architecture, configuration, and policies governing a network. It&rsquo;s essential for troubleshooting, audits, onboarding, and maintaining consistency.</p>
+<p>Types of documentation:</p>
+<ul>
+<li><strong>Network topology diagrams</strong>: Visual representation of physical/logical layout.</li>
+<li><strong>IP address allocation</strong>: Subnets, reservations, DHCP scopes.</li>
+<li><strong>Device inventory</strong>: Switches, routers, firewalls, and their configurations.</li>
+<li><strong>Change logs</strong>: History of updates and modifications.</li>
+<li><strong>Access control</strong>: Who has access to what and why.</li>
+</ul>
+<p>Well-maintained documentation saves time and reduces risk during outages or staff transitions.</p>
+<hr>
+<h2 id="backups">Backups</h2>
+<p>Backups are copies of data or configurations stored separately to restore systems in case of failure, corruption, or disaster.</p>
+<p>Backup types:</p>
+<ul>
+<li><strong>Full</strong>: Complete copy of all selected data.</li>
+<li><strong>Incremental</strong>: Only data changed since the last backup.</li>
+<li><strong>Differential</strong>: Data changed since the last full backup.</li>
+</ul>
+<p>What to back up:</p>
+<ul>
+<li>Router and switch configs</li>
+<li>Server data and databases</li>
+<li>Virtual machines</li>
+<li>Firewall rules and ACLs</li>
+</ul>
+<p>Storage options:</p>
+<ul>
+<li>On-site (external drives, NAS)</li>
+<li>Off-site (remote data center)</li>
+<li>Cloud-based (AWS S3, Google Cloud Storage)</li>
+</ul>
+<p>Regular testing of backups is critical for disaster recovery readiness.</p>
+<hr>
+<h2 id="bring-your-own-device-policy">Bring your own device policy</h2>
+<p>A BYOD (Bring Your Own Device) policy governs how employees can use their personal devices (phones, laptops, tablets) to access corporate networks and data.</p>
+<p>Security considerations:</p>
+<ul>
+<li>Enforce strong authentication (e.g., MFA)</li>
+<li>Require device encryption</li>
+<li>Use mobile device management (MDM)</li>
+<li>Restrict access based on role or location</li>
+<li>Monitor for malicious or non-compliant behavior</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Increased flexibility and user satisfaction</li>
+<li>Reduced hardware costs</li>
+</ul>
+<p>Risks:</p>
+<ul>
+<li>Data leakage</li>
+<li>Malware introduction</li>
+<li>Non-compliant endpoints</li>
+</ul>
+<hr>
+<h2 id="network-segmentation">Network segmentation</h2>
+<p>Network segmentation is the practice of dividing a network into smaller subnetworks (segments) to improve performance and security.</p>
+<p>Types:</p>
+<ul>
+<li><strong>Physical segmentation</strong>: Using separate hardware (e.g., VLANs across switches).</li>
+<li><strong>Logical segmentation</strong>: Using VLANs, ACLs, firewalls to control traffic.</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>Limits lateral movement of attackers</li>
+<li>Improves network performance</li>
+<li>Enables role-based access control</li>
+<li>Helps contain malware or breaches to isolated segments</li>
+</ul>
+<p>Common segments:</p>
+<ul>
+<li>User LAN</li>
+<li>Server VLAN</li>
+<li>Management network</li>
+<li>Guest Wi-Fi</li>
+<li>IoT/OT devices</li>
+</ul>
+<p>Segmentation is a fundamental part of zero-trust architectures and defense-in-depth strategies.</p>
+<h2 id="switches">Switches</h2>
+<p>Switches are Layer 2 (and sometimes Layer 3) devices that forward Ethernet frames based on MAC addresses. They are essential for connecting devices within a local area network (LAN) and creating efficient, collision-free communication paths.</p>
+<h3 id="unmanaged-vs-managed-switches">Unmanaged vs. managed switches</h3>
+<p>Unmanaged switches are plug-and-play and offer no configuration capabilities. They are typically used in small networks or home environments.</p>
+<p>Managed switches provide features such as VLAN support, port mirroring, STP configuration, traffic monitoring, and SNMP integration. They are used in enterprise or complex networks where control and visibility are needed.</p>
+<h3 id="spanning-tree-protocol">Spanning tree protocol</h3>
+<p>Spanning Tree Protocol (STP) prevents loops in Layer 2 networks by detecting redundant paths and selectively blocking ports to maintain a loop-free topology. Enhanced versions like RSTP and MSTP provide faster convergence and multiple tree support.</p>
+<h3 id="switch-port">Switch port</h3>
+<p>A switch port is a physical interface that connects a device to the switch. Ports can be configured to behave differently:</p>
+<ul>
+<li>Access ports carry traffic for a single VLAN.</li>
+<li>Trunk ports carry traffic for multiple VLANs using tagging.</li>
+<li>Mirrored ports replicate traffic for monitoring or analysis.</li>
+</ul>
+<h3 id="vlan">VLAN</h3>
+<p>A Virtual LAN (VLAN) logically segments a network into isolated domains, even if they share the same physical infrastructure. VLANs help improve security, manageability, and traffic isolation.</p>
+<h3 id="trunking">Trunking</h3>
+<p>Trunking allows multiple VLANs to be transmitted over a single physical link between switches or between a switch and router. The IEEE 802.1Q standard is commonly used for tagging VLAN information in Ethernet frames.</p>
+<h3 id="port-bonding">Port bonding</h3>
+<p>Port bonding, also known as link aggregation or EtherChannel, combines multiple physical interfaces into one logical link. This provides increased bandwidth and redundancy between devices.</p>
+<h3 id="power-over-ethernet">Power over Ethernet</h3>
+<p>Power over Ethernet (PoE) delivers both electrical power and data over a single Ethernet cable. It is commonly used for powering access points, IP phones, and surveillance cameras without needing separate power sources.</p>
+<h3 id="port-mirroring">Port mirroring</h3>
+<p>Port mirroring is used to duplicate the traffic from one or more switch ports to another port for monitoring or analysis. It is commonly used with intrusion detection systems or packet capture tools.</p>
+<hr>
+<h2 id="wlan-infrastructure">WLAN infrastructure</h2>
+<p>Wireless LAN infrastructure enables network access using radio waves instead of physical cabling. It includes access points, wireless controllers, and antennas to provide reliable wireless coverage and performance.</p>
+<h3 id="wireless-access-standards">Wireless Access Standards</h3>
+<p>Wi-Fi standards define capabilities like frequency, speed, and channel width:</p>
+<ul>
+<li>802.11a: 5 GHz, up to 54 Mbps</li>
+<li>802.11b/g: 2.4 GHz, up to 11/54 Mbps</li>
+<li>802.11n: 2.4/5 GHz, up to 600 Mbps with MIMO</li>
+<li>802.11ac: 5 GHz, up to 1 Gbps with MU-MIMO</li>
+<li>802.11ax (Wi-Fi 6): High efficiency, works on both 2.4 and 5 GHz</li>
+</ul>
+<h3 id="antenna-technology">Antenna technology</h3>
+<p>Antenna types influence coverage and direction:</p>
+<ul>
+<li>Omnidirectional antennas radiate in all directions, ideal for general coverage.</li>
+<li>Directional antennas focus the signal in a specific direction, useful for point-to-point links.</li>
+<li>MIMO (Multiple Input, Multiple Output) improves speed and reliability using multiple antennas.</li>
+</ul>
+<h3 id="wireless-access-points">Wireless Access Points</h3>
+<p>Access points (APs) bridge wireless clients to the wired LAN. They support multiple SSIDs, VLAN tagging, and security features like WPA3. Enterprise APs can be managed individually or via a central controller or cloud platform.</p>
+<hr>
+<h2 id="wlan-topologies">WLAN topologies</h2>
+<h3 id="ad-hoc-topology">Ad hoc topology</h3>
+<p>In an ad hoc topology, devices communicate directly with one another without an access point. This setup is temporary and lacks central control or scalability.</p>
+<h3 id="infrastructure-topology">Infrastructure topology</h3>
+<p>The most common WLAN topology. Devices connect to the network through a central access point, which manages traffic and connects to the wired LAN.</p>
+<h3 id="mesh-topology">Mesh topology</h3>
+<p>In mesh networks, multiple APs connect to each other wirelessly, forming a resilient and self-healing network. If one node fails, traffic reroutes through others. Common in large areas or outdoor deployments.</p>
+<h3 id="ssid">SSID</h3>
+<p>The Service Set Identifier (SSID) is the name of the wireless network broadcasted by an access point. Clients use the SSID to identify and join the correct network. A single AP can broadcast multiple SSIDs, each mapped to a different VLAN or policy group.</p>
+<h3 id="bssid">BSSID</h3>
+<p>The Basic Service Set Identifier (BSSID) is the MAC address of the radio interface on the access point. While the SSID is the network name seen by users, the BSSID uniquely identifies each AP or radio. This helps differentiate between access points broadcasting the same SSID.</p>
+<h2 id="security-concepts">Security Concepts</h2>
+<h3 id="disaster-recovery-plan">Disaster Recovery Plan</h3>
+<p>A documented and structured approach that describes how an organization can quickly resume work after an unplanned incident. It focuses on restoring IT systems, applications, and data to ensure minimal downtime. It includes backup solutions, disaster recovery sites, regular testing, and emergency roles and responsibilities.</p>
+<h3 id="business-continuity-plan">Business Continuity Plan</h3>
+<p>A proactive plan to ensure that critical business operations can continue during and after a disaster. It includes risk assessments, continuity strategies, personnel roles, alternate communication methods, and physical/IT infrastructure requirements.</p>
+<h3 id="single-point-of-failure-spof">Single Point of Failure (SPOF)</h3>
+<p>A component in a system that, if it fails, will stop the entire system from working. Examples include a single server in a critical workflow or one network switch connecting all departments. Eliminated through redundancy, clustering, and high availability designs.</p>
+<h3 id="uninterruptable-power-supply-ups">Uninterruptable Power Supply (UPS)</h3>
+<p>A device that provides emergency power when the main power source fails. It protects hardware like servers and networking equipment from sudden power loss, allowing systems to safely shut down or switch to generators.</p>
+<h3 id="first-responders">First Responders</h3>
+<p>Individuals trained to react immediately to IT incidents such as cyberattacks or physical security breaches. They perform tasks such as evidence preservation, initiating containment procedures, and notifying relevant authorities or response teams.</p>
+<h3 id="data-breach">Data Breach</h3>
+<p>An incident where sensitive, protected, or confidential data is accessed, disclosed, or stolen by unauthorized individuals. Can occur due to poor security configurations, insider threats, or external attackers.</p>
+<hr>
+<h2 id="common-network-vulnerabilities">Common Network Vulnerabilities</h2>
+<h3 id="telnet">Telnet</h3>
+<p>A protocol used for remote login to devices, but it sends data in plaintext. Vulnerable to sniffing and man-in-the-middle attacks. It is largely replaced by SSH.</p>
+<h3 id="snmpv1-and-snmpv2">SNMPv1 and SNMPv2</h3>
+<p>Older versions of the Simple Network Management Protocol that do not offer encryption. SNMPv3 includes secure authentication and encryption features.</p>
+<h3 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h3>
+<p>Used for transferring files between systems but lacks encryption, making it vulnerable to interception of credentials and data.</p>
+<h3 id="tftp-trivial-file-transfer-protocol">TFTP (Trivial File Transfer Protocol)</h3>
+<p>A simple, unauthenticated version of FTP used mainly in LANs. Frequently exploited due to its lack of security features.</p>
+<h3 id="http">HTTP</h3>
+<p>Used to deliver web pages, but it transmits data in plaintext. Susceptible to interception. HTTPS should be used instead to ensure encryption.</p>
+<h3 id="slip-serial-line-internet-protocol">SLIP (Serial Line Internet Protocol)</h3>
+<p>An outdated protocol used to encapsulate IP packets over serial lines. It lacks error correction, encryption, and is no longer in use in modern systems.</p>
+<hr>
+<h2 id="vulnerable-network-practices">Vulnerable Network Practices</h2>
+<h3 id="unpatched-or-legacy-systems">Unpatched or Legacy Systems</h3>
+<p>Older systems or those missing security updates are prone to exploitation through known vulnerabilities. Maintaining patch management policies is critical.</p>
+<h3 id="open-ports">Open Ports</h3>
+<p>Ports that are open unnecessarily can serve as entry points for attackers. Regular port scanning and firewall policies are used to limit exposure.</p>
+<h3 id="unnecessary-running-services">Unnecessary Running Services</h3>
+<p>Services running on systems that are not needed can increase the attack surface. These should be disabled or removed.</p>
+<h3 id="clear-text-credentials">Clear Text Credentials</h3>
+<p>Credentials transmitted without encryption can be intercepted using sniffing tools. Use of encryption protocols (e.g., SSH, TLS) is mandatory.</p>
+<h3 id="unencrypted-channels">Unencrypted Channels</h3>
+<p>Communication channels (e.g., HTTP, Telnet) without encryption allow attackers to view and manipulate data in transit.</p>
+<h3 id="rf-emanation">RF Emanation</h3>
+<p>Radio Frequency signals emitted by devices can be intercepted to extract sensitive information (e.g., keyboard input or screen data). Shielding and secured zones can mitigate this.</p>
+<hr>
+<h2 id="common-network-threats">Common Network Threats</h2>
+<h3 id="inside-threats">Inside Threats</h3>
+<h4 id="malicious-employee">Malicious Employee</h4>
+<p>A trusted insider with malicious intent, often exploiting their access to steal data, sabotage systems, or exfiltrate information.</p>
+<h4 id="compromised-system">Compromised System</h4>
+<p>A system that has been taken over by malware or remote attackers, potentially being used for launching attacks within the network.</p>
+<h4 id="social-engineering">Social Engineering</h4>
+<p>Psychological manipulation that tricks users into giving up confidential information or performing unsafe actions. Common forms include phishing, vishing, and baiting.</p>
+<h4 id="arp-cache-poisoning">ARP Cache Poisoning</h4>
+<p>An attacker sends forged ARP responses to associate their MAC address with another host’s IP, enabling them to intercept, modify, or stop data intended for that host.</p>
+<h4 id="protocol-or-packet-abuse">Protocol or Packet Abuse</h4>
+<p>Malicious use of networking protocols to manipulate or overload devices, such as crafting malformed packets to bypass firewalls or crash systems.</p>
+<h4 id="man-in-the-middle-attack">Man-in-the-Middle Attack</h4>
+<p>The attacker secretly intercepts and possibly alters communication between two parties who believe they are directly communicating with each other.</p>
+<h4 id="vlan-hopping">VLAN Hopping</h4>
+<p>Exploiting network switch configurations to gain access to traffic on other VLANs, which are intended to be isolated from each other.</p>
+<h3 id="outside-threats">Outside Threats</h3>
+<h4 id="zero-day-attacks">Zero-Day Attacks</h4>
+<p>Attacks that exploit previously unknown vulnerabilities for which no patch exists. Extremely dangerous and hard to defend against.</p>
+<h4 id="brute-force-attacks">Brute Force Attacks</h4>
+<p>Systematic attempts to guess passwords or cryptographic keys by trying every possible combination.</p>
+<h4 id="spoofing">Spoofing</h4>
+<p>Impersonating another device or user on a network, such as IP spoofing or email spoofing, to bypass access controls or spread malware.</p>
+<h4 id="session-hijacking">Session Hijacking</h4>
+<p>Taking control of a user&rsquo;s active session by stealing or predicting session tokens, allowing attackers to impersonate them.</p>
+<h4 id="denial-of-service-dos">Denial of Service (DoS)</h4>
+<ul>
+<li><strong>Traditional DoS:</strong> Floods a target system with traffic, making it unavailable to legitimate users.</li>
+<li><strong>Permanent DoS (PDoS):</strong> Destroys or corrupts hardware or firmware, requiring replacement.</li>
+<li><strong>Unintentional DoS:</strong> Caused by configuration errors or legitimate use spikes.</li>
+<li><strong>Distributed DoS (DDoS):</strong> Coordinated attacks from multiple sources (botnets).</li>
+<li><strong>Reflective DoS:</strong> Exploits third-party servers to reflect and amplify traffic to the victim.
+<ul>
+<li>Reflective DNS</li>
+<li>Reflective NTP</li>
+</ul>
+</li>
+<li><strong>Smurf Attacks:</strong> Exploits ICMP and broadcast addresses to amplify attacks using spoofed source IPs.</li>
+</ul>
+<hr>
+<h2 id="wireless-network-threats">Wireless Network Threats</h2>
+<h3 id="wps-wi-fi-protected-setup">WPS (Wi-Fi Protected Setup)</h3>
+<p>A simplified wireless connection method that is vulnerable to brute-force attacks due to predictable PINs.</p>
+<h3 id="war-driving--war-chalking">War Driving / War Chalking</h3>
+<p>Scanning for unsecured wireless networks while driving. War chalking refers to marking these networks physically or digitally.</p>
+<h3 id="wep--wpa-cracking">WEP / WPA Cracking</h3>
+<p>Breaking weak encryption in outdated Wi-Fi protocols. WEP is especially vulnerable; WPA2 and WPA3 are preferred.</p>
+<h3 id="rogue-access-point">Rogue Access Point</h3>
+<p>Unauthorized wireless access point set up to intercept traffic or lure users into connecting.</p>
+<h3 id="evil-twin-attack">Evil Twin Attack</h3>
+<p>A fake wireless AP mimicking a legitimate one to perform man-in-the-middle attacks on connected users.</p>
+<h3 id="bluejacking">Bluejacking</h3>
+<p>Sending unsolicited messages to nearby Bluetooth devices. Not highly dangerous but often used to annoy or trick users.</p>
+<h3 id="bluesnarfing">Bluesnarfing</h3>
+<p>Unauthorized access to data on a Bluetooth-enabled device. Can expose contacts, emails, files, etc.</p>
+<hr>
+<h2 id="practical-tools">Practical Tools</h2>
+<h3 id="bettercap">Bettercap</h3>
+<p>A powerful, modular network attack and monitoring tool capable of conducting MITM attacks, sniffing traffic, manipulating packets, DNS spoofing, and injecting code in real time. Supports plugins and scripting.</p>
+<p><img src="bettercap.png" alt="Bettercap"></p>
+<h3 id="hping3">hping3</h3>
+<p>A network scanning and packet crafting tool used to generate custom TCP/IP packets. Commonly used for firewall testing, spoofing, and DoS simulations. Also useful in OS fingerprinting.</p>
+<p><img src="hping3.png" alt="hping3"></p>
+<h3 id="scapy-python-library">Scapy (Python Library)</h3>
+<p>A powerful Python-based packet manipulation tool used for crafting, sending, sniffing, and analyzing network traffic. Supports multiple protocols and allows the creation of custom packet flows and fuzzing.</p>
+<p><img src="scapy.png" alt="Scapy"></p>
 
             </div>
         </article>
