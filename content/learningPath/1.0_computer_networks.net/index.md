@@ -1079,3 +1079,145 @@ Firewalls monitor and control incoming and outgoing traffic based on defined sec
 - **Timeline analysis**: Order of attack events
 - **Live forensics**: Performed while system is running
 - **Anti-forensics**: Tools/methods to hide traces or mislead investigators
+
+## WAN components
+| Component | Purpose & Key Points |
+|-----------|---------------------|
+| **Copper line drivers / Repeaters** | Boost and reshape attenuated electrical signals on long copper runs (e.g., T-carriers, DSL) to extend distance and reduce bit errors. |
+| **Demarc (Demarcation Point)** | Legally defined hand-off between customer-premises equipment (CPE) and the service-provider network; responsibility for troubleshooting changes here. |
+| **Network Interface Unit (NIU)** | Basic telco hand-off device; presents RJ-11/RJ-45, offers surge protection, simple loopback testing. |
+| **Smartjack** | Enhanced NIU that adds diagnostics such as remote loopback, performance LEDs, and signal conditioning; common on T1/E1 circuits. |
+| **CSU/DSU** | Channel Service Unit/Data Service Unit; converts router serial signals to provider’s digital framing, supplies clocking, line coding, and loopback tests. |
+
+---
+
+## TCP/IP reference model
+| Layer | Duties | Example Protocols / PDU |
+|-------|--------|-------------------------|
+| **Application** | User-level services, formatting, encryption, authentication | HTTP, FTP, DNS – **Data** |
+| **Transport** | End-to-end delivery, segmentation, flow & error control | TCP, UDP – **Segment** |
+| **Internet** | Logical addressing, routing, path selection | IPv4, IPv6, ICMP – **Packet** |
+| **Network Access / Link** | Physical addressing, media access, framing | Ethernet, Wi-Fi, ARP – **Frame / Bit** |
+
+---
+
+## TCP and UDP
+### Transport-layer overview
+* Provides logical communication between processes on different hosts.  
+* Multiplexes using port numbers.
+
+### Introduction to **TCP**
+* Connection-oriented (three-way handshake).  
+* Reliable (ACKs, sequence numbers, retransmission, windowing).  
+* Ordered byte stream.
+
+### Introduction to **UDP**
+* Connectionless, best-effort.  
+* Low overhead; ideal for voice/video, DNS, DHCP.  
+* No built-in flow or error control.
+
+### Introduction to **ICMP**
+* Works at Internet layer but supports Transport.  
+* Sends control & error messages (echo, destination unreachable, TTL exceeded).
+
+---
+
+## Encapsulation
+1. **Data** created in Application layer.  
+2. **Segment** (TCP/UDP header added).  
+3. **Packet** (IP header added).  
+4. **Frame** (MAC header & trailer added).  
+5. **Bits** placed onto physical medium.
+
+---
+
+## Modulation
+* Converts digital data to analog signals for transmission.  
+* Common types: **ASK** (Amplitude Shift Keying), **FSK** (Frequency), **PSK** (Phase), **QAM** (Quadrature Amplitude).
+
+---
+
+## Network transmission concepts
+* **Bandwidth** vs. **Throughput** vs. **Goodput**  
+* **Latency** (propagation, processing, queuing)  
+* **Jitter** (variance in delay)  
+* **MTU** and fragmentation  
+* **Unicast, Broadcast, Multicast, Anycast**
+
+---
+
+## CSMA/CD vs. CSMA/CA
+| Feature | CSMA/CD | CSMA/CA |
+|---------|---------|---------|
+| Medium | Wired Ethernet (legacy half-duplex) | Wireless LAN (Wi-Fi) |
+| Method | Detects collisions, then back-offs | Avoids collisions via RTS/CTS & NAV timers |
+| Status | Obsolete on full-duplex links | Still essential for 802.11 |
+
+---
+
+## Numbering systems
+| Base | Digits | Typical Use |
+|------|--------|-------------|
+| **Binary (2)** | 0-1 | IPv4 subnetting, MAC addresses |
+| **Octal (8)** | 0-7 | Unix file permissions |
+| **Decimal (10)** | 0-9 | Human-readable values |
+| **Hexadecimal (16)** | 0-9, A-F | IPv6, MAC addresses, memory dumps |
+
+---
+
+## Conversion tables
+| Decimal | Binary | Hex |
+|---------|--------|-----|
+| 0 | 0000 | 0 |
+| 1 | 0001 | 1 |
+| 2 | 0010 | 2 |
+| 3 | 0011 | 3 |
+| 4 | 0100 | 4 |
+| 5 | 0101 | 5 |
+| 6 | 0110 | 6 |
+| 7 | 0111 | 7 |
+| 8 | 1000 | 8 |
+| 9 | 1001 | 9 |
+| 10 | 1010 | A |
+| 11 | 1011 | B |
+| 12 | 1100 | C |
+| 13 | 1101 | D |
+| 14 | 1110 | E |
+| 15 | 1111 | F |
+
+---
+
+## Wireless network standards
+| Standard | Band(s) | Max Data Rate | Notes |
+|----------|---------|--------------|-------|
+| **802.11a** | 5 GHz | 54 Mb/s | OFDM |
+| **802.11b** | 2.4 GHz | 11 Mb/s | DSSS |
+| **802.11g** | 2.4 GHz | 54 Mb/s | Backward-compatible with b |
+| **802.11n** | 2.4/5 GHz | 600 Mb/s | MIMO, HT |
+| **802.11ac** | 5 GHz | 6.9 Gb/s | Wider channels, MU-MIMO |
+| **802.11ax (Wi-Fi 6)** | 2.4/5/6 GHz | 9.6 Gb/s | OFDMA, TWT, BSS coloring |
+
+---
+
+## Wired network standards
+| Standard | Medium | Speed | Max Distance |
+|----------|--------|-------|--------------|
+| **10BASE-T** | Cat3 UTP | 10 Mb/s | 100 m |
+| **100BASE-TX** | Cat5 UTP | 100 Mb/s | 100 m |
+| **1000BASE-T** | Cat5e/6 UTP | 1 Gb/s | 100 m |
+| **10GBASE-T** | Cat6a/7 UTP | 10 Gb/s | 100 m |
+| **1000BASE-LX** | SMF | 1 Gb/s | 5 km |
+| **10GBASE-SR** | MMF | 10 Gb/s | 300 m |
+
+---
+
+## Networking protocols
+* **Routing:** RIP, OSPF, EIGRP, BGP  
+* **Secure remote access:** SSH, TLS, IPsec  
+* **Management & monitoring:** SNMP, NetFlow, Syslog, NTP  
+* **Name resolution:** DNS, mDNS  
+* **Addressing/assignment:** DHCP, SLAAC  
+* **Email:** SMTP, IMAP, POP3  
+* **File transfer & sharing:** FTP, SFTP, SMB, NFS  
+* **Web:** HTTP/HTTPS, QUIC  
+* **Messaging:** MQTT, AMQP  
