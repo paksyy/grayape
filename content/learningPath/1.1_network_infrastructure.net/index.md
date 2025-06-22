@@ -1,6 +1,6 @@
 ---
 title: "1.1_network_infrastructure.net"
-date: 2025-06-21T09:21:40-07:00
+date: 2025-06-21T09:21:40-00:00
 draft: false
 toc: false
 images:

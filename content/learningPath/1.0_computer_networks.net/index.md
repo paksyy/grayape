@@ -55,25 +55,34 @@ Most devices operate on more than one layer, but to determine which layer a devi
 
 ---
 
+## Numbering systems
+| Base | Digits | Typical Use |
+|------|--------|-------------|
+| **Binary (2)** | 0-1 | IPv4 subnetting, MAC addresses |
+| **Octal (8)** | 0-7 | Unix file permissions |
+| **Decimal (10)** | 0-9 | Human-readable values |
+| **Hexadecimal (16)** | 0-9, A-F | IPv6, MAC addresses, memory dumps |
+
+
 ## Conversion tables
-| Decimal | Binary | Hex |
-|---------|--------|-----|
-| 0 | 0000 | 0 |
-| 1 | 0001 | 1 |
-| 2 | 0010 | 2 |
-| 3 | 0011 | 3 |
-| 4 | 0100 | 4 |
-| 5 | 0101 | 5 |
-| 6 | 0110 | 6 |
-| 7 | 0111 | 7 |
-| 8 | 1000 | 8 |
-| 9 | 1001 | 9 |
-| 10 | 1010 | A |
-| 11 | 1011 | B |
-| 12 | 1100 | C |
-| 13 | 1101 | D |
-| 14 | 1110 | E |
-| 15 | 1111 | F |
+| Binary | Octal | Decimal | Hex |
+|--------|-------|---------|-----|
+| 0000   | 0     | 0  | 0 |
+| 0001   | 1     | 1  | 1 |
+| 0010   | 2     | 2  | 2 |
+| 0011   | 3     | 3  | 3 |
+| 0100   | 4     | 4  | 4 |
+| 0101   | 5     | 5  | 5 |
+| 0110   | 6     | 6  | 6 |
+| 0111   | 7     | 7  | 7 |
+| 1000   | 10    | 8  | 8 |
+| 1001   | 11    | 9  | 9 |
+| 1010   | 12    | 10 | A |
+| 1011   | 13    | 11 | B |
+| 1100   | 14    | 12 | C |
+| 1101   | 15    | 13 | D |
+| 1110   | 16    | 14 | E |
+| 1111   | 17    | 15 | F |
 
 ---
 
@@ -138,11 +147,3 @@ Most devices operate on more than one layer, but to determine which layer a devi
 - **Broadcast**: one sender to all devices (IPv4 only).
 - **Multicast**: one sender to specific group.
 - **Anycast**: one sender to the closest receiver (IPv6).
-
-## Numbering systems
-| Base | Digits | Typical Use |
-|------|--------|-------------|
-| **Binary (2)** | 0-1 | IPv4 subnetting, MAC addresses |
-| **Octal (8)** | 0-7 | Unix file permissions |
-| **Decimal (10)** | 0-9 | Human-readable values |
-| **Hexadecimal (16)** | 0-9, A-F | IPv6, MAC addresses, memory dumps |
