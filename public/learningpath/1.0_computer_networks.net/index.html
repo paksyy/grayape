@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
-<meta name="description" content="Computer networks rely on many devices, protocols, services, standards, etc. that enable us to communicate with one another.
-OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
-OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.
+<meta name="description" content="Computer networks rely on many devices, protocols, services, and standards that enable us to communicate with one another.
+1. Reference Models &amp; Architecture 1.1 OSI Model The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
+OSI Reference Model Layer 7 – Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 – Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 – Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 – Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 – Network: Handles logical addressing and routing (IP, ICMP) Layer 2 – Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 – Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer at which it functions.
 " />
 <meta name="keywords" content=", Computer Networks" />
 <meta name="robots" content="noodp" />
@@ -47,19 +47,19 @@ OSI Reference Model Layer 7 Application: Provides network services directly to u
 
 
   <meta itemprop="name" content="1.0_computer_networks.net">
-  <meta itemprop="description" content="Computer networks rely on many devices, protocols, services, standards, etc. that enable us to communicate with one another.
-OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
-OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
+  <meta itemprop="description" content="Computer networks rely on many devices, protocols, services, and standards that enable us to communicate with one another.
+1. Reference Models &amp; Architecture 1.1 OSI Model The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
+OSI Reference Model Layer 7 – Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 – Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 – Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 – Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 – Network: Handles logical addressing and routing (IP, ICMP) Layer 2 – Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 – Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer at which it functions.">
   <meta itemprop="datePublished" content="2025-06-10T09:23:40-07:00">
   <meta itemprop="dateModified" content="2025-06-10T09:23:40-07:00">
-  <meta itemprop="wordCount" content="5705">
+  <meta itemprop="wordCount" content="1268">
   <meta itemprop="keywords" content="Computer Networks">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="1.0_computer_networks.net">
-  <meta name="twitter:description" content="Computer networks rely on many devices, protocols, services, standards, etc. that enable us to communicate with one another.
-OSI MODEL The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
-OSI Reference Model Layer 7 Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 Network: Handles logical addressing and routing (IP, ICMP) Layer 2 Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.">
+  <meta name="twitter:description" content="Computer networks rely on many devices, protocols, services, and standards that enable us to communicate with one another.
+1. Reference Models &amp; Architecture 1.1 OSI Model The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.
+OSI Reference Model Layer 7 – Application: Provides network services directly to user applications (HTTP, FTP, SMTP) Layer 6 – Presentation: Handles data formatting, encryption/decryption (SSL, JPEG) Layer 5 – Session: Manages communication sessions between devices (RPC, NetBIOS) Layer 4 – Transport: Ensures reliable data transfer (TCP, UDP) Layer 3 – Network: Handles logical addressing and routing (IP, ICMP) Layer 2 – Data Link: Physical addressing and error detection (Ethernet, MAC) Layer 1 – Physical: Transmits raw bit streams over physical media (Copper, Fiber) Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer at which it functions.">
 
 
 
@@ -144,1069 +144,727 @@ OSI Reference Model Layer 7 Application: Provides network services directly to u
             
 
             <div class="post-content">
-                <p><em>Computer networks rely on many devices, protocols, services, standards, etc. that enable us to communicate with one another.</em></p>
-<h2 id="osi-model">OSI MODEL</h2>
+                <p><em>Computer networks rely on many devices, protocols, services, and standards that enable us to communicate with one another.</em></p>
+<hr>
+<h1 id="1-reference-models--architecture">1. Reference Models &amp; Architecture</h1>
+<h2 id="11-osi-model">1.1 OSI Model</h2>
 <p>The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.</p>
 <h3 id="osi-reference-model">OSI Reference Model</h3>
 <ul>
-<li><strong>Layer 7 Application</strong>: Provides network services directly to user applications (HTTP, FTP, SMTP)</li>
-<li><strong>Layer 6 Presentation</strong>: Handles data formatting, encryption/decryption (SSL, JPEG)</li>
-<li><strong>Layer 5 Session</strong>: Manages communication sessions between devices (RPC, NetBIOS)</li>
-<li><strong>Layer 4 Transport</strong>: Ensures reliable data transfer (TCP, UDP)</li>
-<li><strong>Layer 3 Network</strong>: Handles logical addressing and routing (IP, ICMP)</li>
-<li><strong>Layer 2 Data Link</strong>: Physical addressing and error detection (Ethernet, MAC)</li>
-<li><strong>Layer 1 Physical</strong>: Transmits raw bit streams over physical media (Copper, Fiber)</li>
+<li><strong>Layer 7 – Application</strong>: Provides network services directly to user applications (HTTP, FTP, SMTP)</li>
+<li><strong>Layer 6 – Presentation</strong>: Handles data formatting, encryption/decryption (SSL, JPEG)</li>
+<li><strong>Layer 5 – Session</strong>: Manages communication sessions between devices (RPC, NetBIOS)</li>
+<li><strong>Layer 4 – Transport</strong>: Ensures reliable data transfer (TCP, UDP)</li>
+<li><strong>Layer 3 – Network</strong>: Handles logical addressing and routing (IP, ICMP)</li>
+<li><strong>Layer 2 – Data Link</strong>: Physical addressing and error detection (Ethernet, MAC)</li>
+<li><strong>Layer 1 – Physical</strong>: Transmits raw bit streams over physical media (Copper, Fiber)</li>
 </ul>
-<p>Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer it is functioning on.</p>
+<p>Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer at which it functions.</p>
 <hr>
-<h2 id="network-devices">Network Devices</h2>
-<h3 id="layer-1-devices">Layer 1 Devices:</h3>
-<ul>
-<li><strong>Analog modem</strong>: Developed to create connections between network segments via PSTN using POTS. Provides single connection (56Kbps max).</li>
-<li><strong>Hub</strong>: Functions as a concentrator/repeater. Operates in half-duplex, creates single collision domain. Mostly obsolete.</li>
-</ul>
-<h3 id="layer-2-devices">Layer 2 Devices:</h3>
-<ul>
-<li><strong>Switch</strong>: Uses ASIC chips to learn MAC addresses and forward frames intelligently. Creates separate collision domains per port.</li>
-<li><strong>Wireless Access Point (WAP)</strong>: Bridges wireless and wired networks. Implements 802.11 standards (Wi-Fi 6, etc.).</li>
-</ul>
-<h3 id="layer-3-devices">Layer 3 Devices:</h3>
-<ul>
-<li><strong>Multilayer Switch (MLS)</strong>: Combines Layer 2 switching with Layer 3 routing capabilities. High-performance but expensive.</li>
-<li><strong>Router</strong>: Connects different networks using IP addressing. Maintains routing tables (static/dynamic routes).</li>
-</ul>
-<h2 id="security-devices">Security Devices</h2>
-<h3 id="firewall">Firewall</h3>
-<p>Operates at Layers 2-4 and 7 with two inspection methods:</p>
-<ul>
-<li><strong>Stateless</strong>: Simple packet filtering (ACLs)</li>
-<li><strong>Stateful</strong>: Tracks connection state (more secure)</li>
-</ul>
-<h3 id="intrusion-detection-system-ids">Intrusion Detection System (IDS)</h3>
-<ul>
-<li><strong>Signature-Based</strong>: Matches known attack patterns</li>
-<li><strong>Anomaly-Based</strong>: Detects deviations from baseline</li>
-<li><strong>Policy-Based</strong>: Enforces admin-defined rules</li>
-</ul>
-<h3 id="intrusion-prevention-system-ips">Intrusion Prevention System (IPS)</h3>
-<p>Active system that can:</p>
-<ul>
-<li>Block malicious traffic</li>
-<li>Terminate connections</li>
-<li>Quarantine hosts
-Best placed between firewall and internal network.</li>
-</ul>
-<h3 id="vpn-concentrator">VPN Concentrator</h3>
-<p>Specialized device for managing multiple VPN connections:</p>
-<ul>
-<li>Protocols: IPsec, SSL/TLS</li>
-<li>Functions: Authentication, encryption, access control</li>
-<li>Use cases: Remote access, site-to-site VPNs</li>
-</ul>
-<h2 id="optimization-devices">Optimization Devices</h2>
-<ul>
-<li><strong>Load Balancer</strong>: Distributes traffic across servers (Round Robin, Least Connections)</li>
-<li><strong>Proxy Server</strong>: Intermediary for client requests (Forward/Reverse proxies)</li>
-</ul>
+<h2 id="12-tcpip-reference-model">1.2 TCP/IP Reference Model</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Layer</th>
+          <th>Duties</th>
+          <th>Example Protocols / PDU</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Application</strong></td>
+          <td>User‑level services, formatting, encryption, authentication</td>
+          <td>HTTP, FTP, DNS – <strong>Data</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Transport</strong></td>
+          <td>End‑to‑end delivery, segmentation, flow &amp; error control</td>
+          <td>TCP, UDP – <strong>Segment</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Internet</strong></td>
+          <td>Logical addressing, routing, path selection</td>
+          <td>IPv4, IPv6, ICMP – <strong>Packet</strong></td>
+      </tr>
+      <tr>
+          <td><strong>Network Access / Link</strong></td>
+          <td>Physical addressing, media access, framing</td>
+          <td>Ethernet, Wi‑Fi, ARP – <strong>Frame / Bit</strong></td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h2 id="practical-basic-monitoring">(PRACTICAL) Basic monitoring</h2>
-<ul>
-<li>
-<p>iftop</p>
-<p><img src="iftop.png" alt="iftop"></p>
-</li>
-<li>
-<p>nethog</p>
-<p><img src="nethog.png" alt="nethog"></p>
-</li>
-<li>
-<p>iptraf-ng</p>
-<p><img src="iptraf-ng.png" alt="iptraf-ng"></p>
-</li>
-</ul>
+<h2 id="13-osi-vs-tcpip-sidebyside">1.3 OSI vs. TCP/IP Side‑by‑Side</h2>
+<table>
+  <thead>
+      <tr>
+          <th>OSI (7)</th>
+          <th>TCP/IP (4)</th>
+          <th>Typical PDU</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Application</td>
+          <td>Application</td>
+          <td><strong>Data</strong></td>
+      </tr>
+      <tr>
+          <td>Presentation</td>
+          <td>Application</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Session</td>
+          <td>Application</td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Transport</td>
+          <td>Transport</td>
+          <td><strong>Segment</strong></td>
+      </tr>
+      <tr>
+          <td>Network</td>
+          <td>Internet</td>
+          <td><strong>Packet</strong></td>
+      </tr>
+      <tr>
+          <td>Data‑Link</td>
+          <td>Network Access</td>
+          <td><strong>Frame</strong></td>
+      </tr>
+      <tr>
+          <td>Physical</td>
+          <td>Network Access</td>
+          <td><strong>Bits</strong></td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Tip:</strong> The three upper‑layer OSI functions (Presentation, Session, Application) are grouped into a single <em>Application</em> layer in the TCP/IP model.</p></blockquote>
 <hr>
-<h2 id="network-access-applications">Network Access Applications</h2>
-<ul>
-<li><strong>VPN</strong>: Secure remote access (IPsec, SSL)</li>
-<li><strong>Remote Access</strong>: RDP, SSH, Telnet</li>
-<li><strong>Web Services</strong>: HTTP/HTTPS, REST APIs</li>
-<li><strong>Unified Voice</strong>: VoIP, SIP trunking</li>
-</ul>
-<h2 id="vpn-protocols">VPN Protocols</h2>
-<ul>
-<li><strong>IPsec</strong>: Secure encrypted tunnels (IKE, ESP)</li>
-<li><strong>GRE</strong>: Generic Routing Encapsulation (no encryption)</li>
-<li><strong>PPTP</strong>: Obsolete (MS-CHAP vulnerabilities)</li>
-<li><strong>TLS/SSL</strong>: Common in web-based VPNs</li>
-</ul>
-<h2 id="network-access-services">Network Access Services</h2>
-<ul>
-<li><strong>NIC</strong>: Network Interface Card (Physical/MAC address)</li>
-<li><strong>RADIUS</strong>: Centralized authentication (UDP 1812)</li>
-<li><strong>TACACS+</strong>: Cisco alternative (TCP 49, more secure)</li>
-</ul>
+<h2 id="14-device--pdu-quick-reference">1.4 Device &amp; PDU Quick Reference</h2>
+<table>
+  <thead>
+      <tr>
+          <th>OSI Layer</th>
+          <th>PDU</th>
+          <th>Common Devices</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>7‑5 Upper Layers</td>
+          <td>Data</td>
+          <td><strong>Proxy server</strong>, <strong>Web server</strong>, <strong>DNS server</strong></td>
+      </tr>
+      <tr>
+          <td>4 Transport</td>
+          <td>Segment</td>
+          <td><strong>Load balancer</strong>, <strong>Firewall ALG</strong></td>
+      </tr>
+      <tr>
+          <td>3 Network</td>
+          <td>Packet</td>
+          <td><strong>Router</strong>, <strong>Layer‑3 switch</strong>, <strong>VPN concentrator</strong></td>
+      </tr>
+      <tr>
+          <td>2 Data‑Link</td>
+          <td>Frame</td>
+          <td><strong>Switch</strong>, <strong>Wireless AP</strong>, <strong>Bridge</strong></td>
+      </tr>
+      <tr>
+          <td>1 Physical</td>
+          <td>Bits</td>
+          <td><strong>Hub</strong>, <strong>Media converter</strong>, <strong>Transceiver</strong></td>
+      </tr>
+  </tbody>
+</table>
+<p><em>(See <code>1.1_network_infrastructure.net</code> for deep dives into each device.)</em></p>
 <hr>
-<h2 id="dhcp">DHCP</h2>
-<p>Dynamic Host Configuration Protocol (DHCP) is a network management protocol used to automatically assign IP addresses and other network configuration parameters to client devices. It simplifies network management by reducing the need for manual IP configuration.</p>
+<h1 id="2-transport--control-protocols">2. Transport &amp; Control Protocols</h1>
+<h2 id="21-tcp-udp--icmp">2.1 TCP, UDP &amp; ICMP</h2>
+<h3 id="211-transportlayer-overview">2.1.1 Transport‑Layer Overview</h3>
 <ul>
-<li><strong>Static IP</strong>: Manually configured IP address that does not change over time. Useful for servers, printers, and other critical devices.</li>
-<li><strong>Dynamic IP</strong>: Automatically assigned by the DHCP server from a predefined pool. The address may change when the lease expires or the device reconnects.</li>
-<li><strong>DHCP Process (DORA)</strong>:
+<li>Provides logical communication between processes on different hosts.</li>
+<li>Multiplexes using port numbers.</li>
+</ul>
+<h3 id="212-tcp-essentials">2.1.2 TCP Essentials</h3>
 <ul>
-<li><strong>Discover</strong>: Client sends broadcast request to locate a DHCP server.</li>
-<li><strong>Offer</strong>: Server responds with an available IP address and configuration options.</li>
-<li><strong>Request</strong>: Client requests the offered IP from one of the servers.</li>
-<li><strong>Acknowledgment</strong>: Server confirms the lease and completes the configuration.</li>
+<li><strong>Connection‑oriented</strong> – three‑way handshake (SYN → SYN/ACK → ACK).</li>
+<li><strong>Reliable</strong> – sequence numbers, ACKs, retransmission, sliding window.</li>
+<li><strong>Ordered</strong> byte stream.</li>
 </ul>
-</li>
-<li><strong>Ports</strong>: DHCP communication uses <strong>UDP port 67</strong> (server) and <strong>UDP port 68</strong> (client).</li>
-<li><strong>Leases</strong>: IP addresses are assigned for a limited period (lease time). Clients must renew leases before expiration to keep their IPs.</li>
-<li><strong>Options</strong>: Additional parameters provided by the DHCP server, such as default gateway, DNS servers, domain name, NTP servers, and more.</li>
-<li><strong>Preferred IP configuration</strong>: Clients can request a specific IP address, and the server may honor the request if available.</li>
-<li><strong>DHCP Relay (IP Helper)</strong>: Allows DHCP requests to be forwarded across subnets to a central DHCP server. Common in large networks to avoid deploying a DHCP server per subnet.</li>
-</ul>
-<h2 id="dns">DNS</h2>
-<p>The Domain Name System (DNS) translates domain names into IP addresses. It is a critical component of network communication and internet functionality.</p>
+<h4 id="tcp-flag-cheat-sheet">TCP Flag Cheat Sheet</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Flag</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SYN</strong></td>
+          <td>Start connection, synchronize seq #</td>
+      </tr>
+      <tr>
+          <td><strong>ACK</strong></td>
+          <td>Acknowledgment of received data</td>
+      </tr>
+      <tr>
+          <td><strong>FIN</strong></td>
+          <td>Gracefully close connection</td>
+      </tr>
+      <tr>
+          <td><strong>RST</strong></td>
+          <td>Abort connection immediately</td>
+      </tr>
+      <tr>
+          <td><strong>PSH</strong></td>
+          <td>Push buffered data to application</td>
+      </tr>
+      <tr>
+          <td><strong>URG</strong></td>
+          <td>Urgent pointer field significant</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>The classic <strong>three‑way handshake</strong> uses SYN and ACK; termination typically uses FIN/ACK pairs.</p></blockquote>
+<h4 id="congestioncontrol-in-one-paragraph">Congestion‑Control in One Paragraph</h4>
+<p>TCP adjusts its <strong>congestion window (cwnd)</strong> using <em>slow start</em> and <em>additive‑increase/multiplicative‑decrease (AIMD)</em> to probe available bandwidth, backing off when packet loss implies congestion.</p>
+<h3 id="213-udp-essentials">2.1.3 UDP Essentials</h3>
 <ul>
-<li><strong>Servers</strong>: Include root, TLD, authoritative, and caching resolvers. Resolve queries from users to locate websites or services.</li>
-<li><strong>Records</strong>:
+<li><strong>Connectionless</strong>, best‑effort delivery.</li>
+<li>Low overhead; ideal for voice/video (VoIP), DNS, DHCP.</li>
+<li>No built‑in flow or error control.</li>
+</ul>
+<h3 id="214-icmp-essentials">2.1.4 ICMP Essentials</h3>
 <ul>
-<li><strong>A/AAAA</strong>: IPv4/IPv6 address records.</li>
-<li><strong>CNAME</strong>: Alias for another domain.</li>
-<li><strong>MX</strong>: Mail exchange server.</li>
-<li><strong>NS</strong>: Delegates a subdomain to a DNS server.</li>
-<li><strong>PTR</strong>: Reverse DNS mapping.</li>
-<li><strong>TXT</strong>: Text records (e.g., SPF, DKIM).</li>
+<li>Sends control &amp; error messages (echo request/reply, destination unreachable, TTL exceeded).</li>
 </ul>
-</li>
-<li><strong>Dynamic DNS</strong>: Automatically updates DNS records in real-time when devices join or leave the network, useful in environments with frequently changing IPs.</li>
-</ul>
-<h2 id="nat-network-address-translation">NAT (Network Address Translation)</h2>
-<ul>
-<li><strong>Static NAT</strong>: 1:1 mapping (public:private)</li>
-<li><strong>Dynamic NAT</strong>: Pool of public addresses</li>
-<li><strong>PAT (Port NAT)</strong>: Many private to single public</li>
-<li><strong>Address Types</strong>: Public/Private, RFC 1918</li>
-</ul>
+<h4 id="common-icmp-typecode-values">Common ICMP Type/Code Values</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Code</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>Echo Reply</td>
+      </tr>
+      <tr>
+          <td>3</td>
+          <td>0‑15</td>
+          <td>Destination Unreachable sub‑codes</td>
+      </tr>
+      <tr>
+          <td>8</td>
+          <td>0</td>
+          <td>Echo Request</td>
+      </tr>
+      <tr>
+          <td>11</td>
+          <td>0‑1</td>
+          <td>Time Exceeded (TTL/fragment reassembly)</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h2 id="practical-service-enumeration">(PRACTICAL) Service Enumeration</h2>
-<p>Tools used for querying, discovering, and enumerating information about services, particularly DNS and web services:</p>
-<ul>
-<li>
-<p><strong>dig</strong>: A powerful DNS lookup tool for querying specific DNS records and analyzing DNS responses.</p>
-<p><img src="dig.png" alt="dig"></p>
-</li>
-<li>
-<p><strong>dnsrecon</strong>: Python-based tool for performing DNS enumeration, including brute force, zone transfers, and record collection.</p>
-<p><img src="dnsrecon.png" alt="dnsrecon"></p>
-</li>
-<li>
-<p><strong>curl</strong>: Transfers data from or to a server using supported protocols (HTTP, FTP, etc.), ideal for testing endpoints.</p>
-<p><img src="curl.png" alt="curl"></p>
-</li>
-<li>
-<p><strong>wget</strong>: Retrieves content from web servers, often used for downloading files or mirroring websites.</p>
-<p><img src="wget.png" alt="wget"></p>
-</li>
-</ul>
+<h2 id="22-wellknown-ports">2.2 Well‑Known Ports</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Port</th>
+          <th>Protocol</th>
+          <th>Typical Service</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>20/21</strong></td>
+          <td>TCP</td>
+          <td>FTP data/control</td>
+      </tr>
+      <tr>
+          <td><strong>22</strong></td>
+          <td>TCP</td>
+          <td>SSH / SFTP</td>
+      </tr>
+      <tr>
+          <td><strong>23</strong></td>
+          <td>TCP</td>
+          <td>Telnet (legacy)</td>
+      </tr>
+      <tr>
+          <td><strong>25</strong></td>
+          <td>TCP</td>
+          <td>SMTP</td>
+      </tr>
+      <tr>
+          <td><strong>53</strong></td>
+          <td>UDP/TCP</td>
+          <td>DNS</td>
+      </tr>
+      <tr>
+          <td><strong>67/68</strong></td>
+          <td>UDP</td>
+          <td>DHCP server/client</td>
+      </tr>
+      <tr>
+          <td><strong>80</strong></td>
+          <td>TCP</td>
+          <td>HTTP</td>
+      </tr>
+      <tr>
+          <td><strong>110</strong></td>
+          <td>TCP</td>
+          <td>POP3</td>
+      </tr>
+      <tr>
+          <td><strong>123</strong></td>
+          <td>UDP</td>
+          <td>NTP</td>
+      </tr>
+      <tr>
+          <td><strong>143</strong></td>
+          <td>TCP</td>
+          <td>IMAP</td>
+      </tr>
+      <tr>
+          <td><strong>161/162</strong></td>
+          <td>UDP</td>
+          <td>SNMP</td>
+      </tr>
+      <tr>
+          <td><strong>389</strong></td>
+          <td>TCP/UDP</td>
+          <td>LDAP</td>
+      </tr>
+      <tr>
+          <td><strong>443</strong></td>
+          <td>TCP</td>
+          <td>HTTPS</td>
+      </tr>
+      <tr>
+          <td><strong>587</strong></td>
+          <td>TCP</td>
+          <td>SMTP submission</td>
+      </tr>
+      <tr>
+          <td><strong>993</strong></td>
+          <td>TCP</td>
+          <td>IMAPS</td>
+      </tr>
+      <tr>
+          <td><strong>3389</strong></td>
+          <td>TCP</td>
+          <td>RDP</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h2 id="wan-technologies">WAN Technologies</h2>
-<h3 id="pstn">PSTN</h3>
-<ul>
-<li><strong>Dial-up</strong>: 56Kbps max (POTS)</li>
-<li><strong>ISDN</strong>: Digital (128Kbps, BRI/PRI)</li>
-<li><strong>xDSL</strong>: Digital Subscriber Line variants:
-<ul>
-<li>ADSL: Asymmetric (faster download)</li>
-<li>VDSL: Very-high-bitrate (fiber hybrid)</li>
-</ul>
-</li>
-</ul>
-<h3 id="broadband">Broadband</h3>
-<ul>
-<li><strong>DOCSIS</strong>: Cable modem standard (3.1 = 10Gbps)</li>
-<li><strong>Fiber</strong>:
-<ul>
-<li>FTTH: Fiber to Home</li>
-<li>FTTC: Fiber to Curb</li>
-<li>FTTN: Fiber to Node</li>
-</ul>
-</li>
-</ul>
-<h3 id="wireless">Wireless</h3>
-<ul>
-<li><strong>Cellular</strong>: 4G LTE, 5G (mmWave)</li>
-<li><strong>WiMAX</strong>: IEEE 802.16 (alternative to DSL)</li>
-<li><strong>Satellite</strong>: High latency (Geostationary/LEO)</li>
-</ul>
-<h3 id="enterprise-wan">Enterprise WAN</h3>
-<ul>
-<li><strong>Metro Ethernet</strong>: Ethernet over MAN</li>
-<li><strong>Leased Lines</strong>: T1 (1.544Mbps), E1 (2.048Mbps)</li>
-<li><strong>MPLS</strong>: Label switching for QoS</li>
-<li><strong>Frame Relay</strong>: Legacy packet-switched</li>
-<li><strong>ATM</strong>: Fixed 53-byte cells (obsolete)</li>
-</ul>
+<h1 id="3-numbering-systems--conversions">3. Numbering Systems &amp; Conversions</h1>
+<h2 id="31-numbering-systems">3.1 Numbering Systems</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Base</th>
+          <th>Digits</th>
+          <th>Typical Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Binary (2)</strong></td>
+          <td>0–1</td>
+          <td>IPv4 subnetting, MAC addresses</td>
+      </tr>
+      <tr>
+          <td><strong>Octal (8)</strong></td>
+          <td>0–7</td>
+          <td>Unix file permissions</td>
+      </tr>
+      <tr>
+          <td><strong>Decimal (10)</strong></td>
+          <td>0–9</td>
+          <td>Human‑readable values</td>
+      </tr>
+      <tr>
+          <td><strong>Hexadecimal (16)</strong></td>
+          <td>0–9, A–F</td>
+          <td>IPv6, MAC addresses, memory dumps</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="32-conversion-table">3.2 Conversion Table</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Binary</th>
+          <th>Octal</th>
+          <th>Decimal</th>
+          <th>Hex</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0000</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>0001</td>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+      </tr>
+      <tr>
+          <td>0010</td>
+          <td>2</td>
+          <td>2</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>0011</td>
+          <td>3</td>
+          <td>3</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>0100</td>
+          <td>4</td>
+          <td>4</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>0101</td>
+          <td>5</td>
+          <td>5</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>0110</td>
+          <td>6</td>
+          <td>6</td>
+          <td>6</td>
+      </tr>
+      <tr>
+          <td>0111</td>
+          <td>7</td>
+          <td>7</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>1000</td>
+          <td>10</td>
+          <td>8</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>1001</td>
+          <td>11</td>
+          <td>9</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>1010</td>
+          <td>12</td>
+          <td>10</td>
+          <td>A</td>
+      </tr>
+      <tr>
+          <td>1011</td>
+          <td>13</td>
+          <td>11</td>
+          <td>B</td>
+      </tr>
+      <tr>
+          <td>1100</td>
+          <td>14</td>
+          <td>12</td>
+          <td>C</td>
+      </tr>
+      <tr>
+          <td>1101</td>
+          <td>15</td>
+          <td>13</td>
+          <td>D</td>
+      </tr>
+      <tr>
+          <td>1110</td>
+          <td>16</td>
+          <td>14</td>
+          <td>E</td>
+      </tr>
+      <tr>
+          <td>1111</td>
+          <td>17</td>
+          <td>15</td>
+          <td>F</td>
+      </tr>
+  </tbody>
+</table>
 <hr>
-<h2 id="network-cabling">Network Cabling</h2>
-<h3 id="twisted-pair">Twisted Pair</h3>
-<ul>
-<li><strong>UTP</strong>: Unshielded (Cat5/6)</li>
-<li><strong>STP</strong>: Shielded (industrial environments)</li>
-<li><strong>Plenum</strong>: Fire-retardant jacket</li>
-<li><strong>Cable Types</strong>:
-<ul>
-<li><strong>Straight-through</strong>: Host to switch</li>
-<li><strong>Crossover</strong>: Like devices (e.g., switch to switch)</li>
-<li><strong>Rollover</strong>: Console access (used with serial connections)</li>
-</ul>
-</li>
-</ul>
-<h4 id="connectors">Connectors</h4>
-<ul>
-<li><strong>RJ11</strong>: 6P2C, used for telephone connections</li>
-<li><strong>RJ45</strong>: 8P8C, used for Ethernet networking</li>
-<li><strong>66/110 Block</strong>: Punch-down blocks used in structured cabling</li>
-<li><strong>Serial (DB9/DB25)</strong>: Legacy connectors for console and serial data</li>
-</ul>
-<h4 id="categories">Categories</h4>
-<ul>
-<li><strong>Cat5</strong>: 100 MHz, up to 100 Mbps (obsolete)</li>
-<li><strong>Cat5e</strong>: 100 MHz, up to 1 Gbps</li>
-<li><strong>Cat6</strong>: 250 MHz, up to 10 Gbps (up to 55m)</li>
-<li><strong>Cat6a</strong>: 500 MHz, up to 10 Gbps (up to 100m)</li>
-</ul>
-<h3 id="coaxial-cabling">Coaxial Cabling</h3>
-<ul>
-<li><strong>Shielded Core</strong>: Central copper conductor with insulating layer and metallic shield</li>
-<li><strong>Use Cases</strong>: Cable TV, broadband internet, CCTV</li>
-</ul>
-<h4 id="cable-types">Cable Types</h4>
-<ul>
-<li><strong>RG-6</strong>: Modern standard for TV/Internet; thicker, less signal loss</li>
-<li><strong>RG-59</strong>: Older CCTV applications; thinner, more signal loss</li>
-<li><strong>RG-11</strong>: Best for long-distance runs; thick and less flexible</li>
-</ul>
-<h4 id="connectors-1">Connectors</h4>
-<ul>
-<li><strong>BNC</strong>: Quick-connect used in CCTV and legacy Ethernet</li>
-<li><strong>F-type</strong>: Screw-type connector for TV and modems</li>
-<li><strong>N-type</strong>: Durable connector for outdoor and industrial RF use</li>
-</ul>
-<h3 id="fiber-optic-cabling">Fiber Optic Cabling</h3>
-<ul>
-<li><strong>Glass or Plastic Core</strong>: Transmits light signals instead of electricity</li>
-<li><strong>Use Cases</strong>: High-speed LANs, WANs, backbone cabling</li>
-</ul>
-<h4 id="cable-types-1">Cable Types</h4>
-<ul>
-<li><strong>Single-mode (SMF)</strong>: 9µm core, laser light, long-range (up to 100km)</li>
-<li><strong>Multi-mode (MMF)</strong>: 50/62.5µm core, LED light, short-range (up to 2km)</li>
-</ul>
-<h4 id="connectors-2">Connectors</h4>
-<ul>
-<li><strong>LC</strong>: Compact connector, common in data centers</li>
-<li><strong>SC</strong>: Push-pull connector, widely used in telecom</li>
-<li><strong>ST</strong>: Twist-lock connector, used in legacy fiber systems</li>
-<li><strong>MTP/MPO</strong>: Multi-fiber connectors for 40/100+ Gbps links</li>
-</ul>
-<h3 id="media-converters">Media Converters</h3>
-<p>Devices that allow different types of media to interconnect (e.g., copper to fiber). Useful in extending network distances or integrating older equipment.</p>
-<ul>
-<li><strong>Copper-to-Fiber</strong>: Converts electrical signals to optical</li>
-<li><strong>Single-mode to Multi-mode</strong>: Adapts fiber types</li>
-<li><strong>Bidirectional (BiDi)</strong>: Uses a single fiber strand for TX/RX</li>
-<li><strong>Managed vs Unmanaged</strong>: Managed converters offer SNMP/monitoring</li>
-</ul>
-<h2 id="cabling-tools">Cabling Tools</h2>
-<p>Essential tools for installing, testing, and maintaining network cables.</p>
-<ul>
-<li><strong>Crimpers</strong>: Used to attach RJ45/RJ11 connectors to cable ends</li>
-<li><strong>Wire strippers</strong>: Remove insulation from cables without damaging conductors</li>
-<li><strong>Punchdown tool</strong>: Terminates wires into punchdown blocks (66/110)</li>
-<li><strong>Cable tester</strong>: Verifies correct pinouts, continuity, and detects shorts</li>
-<li><strong>TDR (Time Domain Reflectometer)</strong>: Tests copper cable length, detects breaks or shorts</li>
-<li><strong>OTDR (Optical Time Domain Reflectometer)</strong>: Tests fiber length, loss, and faults</li>
-</ul>
+<h1 id="4-encapsulation--data-flow">4. Encapsulation &amp; Data Flow</h1>
+<h2 id="41-encapsulation-steps">4.1 Encapsulation Steps</h2>
+<ol>
+<li><strong>Data</strong> created at the Application layer.</li>
+<li><strong>Segment</strong> (TCP/UDP header added).</li>
+<li><strong>Packet</strong> (IP header added).</li>
+<li><strong>Frame</strong> (MAC header &amp; trailer added).</li>
+<li><strong>Bits</strong> placed onto the physical medium.</li>
+</ol>
+<h2 id="42-visualising-encapsulation">4.2 Visualising Encapsulation</h2>
+<pre tabindex="0"><code>Application ▸ Presentation ▸ Session ▸ Transport ▸ Network ▸ Data‑Link ▸ Physical
+      Data ▸            Segment ▸      Packet ▸        Frame ▸            Bits
+</code></pre><p><em>(Lines show the journey down the stack during transmit; on reception the order is reversed.)</em></p>
 <hr>
-<h2 id="network-topologies">Network Topologies</h2>
-<p>Describes how network devices are physically or logically arranged.</p>
+<h1 id="5-addressing--ip-concepts">5. Addressing &amp; IP Concepts</h1>
+<h2 id="51-ipv4-fundamentals">5.1 IPv4 Fundamentals</h2>
 <ul>
-<li><strong>Peer-to-peer</strong>: Devices communicate directly without central server</li>
-<li><strong>Client/server</strong>: Centralized services with dedicated servers</li>
-<li><strong>Hybrid</strong>: Mix of two or more topologies</li>
-<li><strong>Bus</strong>: Single backbone with terminators at ends (legacy)</li>
-<li><strong>Ring</strong>: Devices connected in circular fashion; one device failure can disrupt network</li>
-<li><strong>Star</strong>: All devices connect to a central hub or switch</li>
-<li><strong>Mesh</strong>: Devices interconnect with many redundant paths (full/partial)</li>
-<li><strong>Point-to-point</strong>: Direct connection between two devices</li>
-<li><strong>Point-to-multipoint</strong>: Central node communicates with multiple endpoints</li>
-<li><strong>MPLS</strong>: Logical overlay that uses labels instead of IP routes for fast, efficient routing</li>
-</ul>
-<h2 id="network-infrastructure-implementations">Network Infrastructure Implementations</h2>
-<p>Defines the scope and scale of network coverage.</p>
-<ul>
-<li><strong>PAN (Personal Area Network)</strong>: Short-range (e.g., Bluetooth, USB tethering)</li>
-<li><strong>LAN (Local Area Network)</strong>: Covers a single building or campus</li>
-<li><strong>MAN (Metropolitan Area Network)</strong>: Spans a city or large campus</li>
-<li><strong>WAN (Wide Area Network)</strong>: Covers large geographic areas (e.g., the Internet)</li>
-<li><strong>SCADA (Supervisory Control and Data Acquisition)</strong>: Industrial control systems for monitoring and controlling infrastructure (e.g., power plants, water treatment)</li>
-<li><strong>Medianet</strong>: Cisco term for networks optimized for media (e.g., video conferencing, streaming)</li>
-</ul>
-<hr>
-<h2 id="ip-addressing">IP Addressing</h2>
-<h3 id="ipv4-properties">IPv4 Properties</h3>
-<ul>
-<li>IPv4 uses 32-bit addresses written in dotted decimal notation (e.g., 192.168.1.1).</li>
-<li>It supports around 4.3 billion unique addresses.</li>
-<li>Each address has a network and host portion.</li>
-<li>Paired with a subnet mask to define network boundaries.</li>
+<li>IPv4 uses 32‑bit addresses written in dotted‑decimal notation (e.g., 192.168.1.1).</li>
+<li>Supports about 4.3 billion unique addresses.</li>
+<li>Each address has a network and host portion, paired with a subnet mask.</li>
 </ul>
 <h3 id="classes-of-ipv4-addresses">Classes of IPv4 Addresses</h3>
 <ul>
 <li>Class A: 0.0.0.0 – 127.255.255.255</li>
 <li>Class B: 128.0.0.0 – 191.255.255.255</li>
 <li>Class C: 192.0.0.0 – 223.255.255.255</li>
-<li>Class D: 224.0.0.0 – 239.255.255.255 (Multicast)</li>
-<li>Class E: 240.0.0.0 – 255.255.255.255 (Experimental)</li>
+<li>Class D: 224.0.0.0 – 239.255.255.255 <em>(Multicast)</em></li>
+<li>Class E: 240.0.0.0 – 255.255.255.255 <em>(Experimental)</em></li>
 </ul>
-<h3 id="classless-ipv4-addresses">Classless IPv4 Addresses</h3>
+<h3 id="private--apipa-ranges">Private &amp; APIPA Ranges</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Purpose</th>
+          <th>CIDR</th>
+          <th>Range</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Private A</strong></td>
+          <td>10.0.0.0/8</td>
+          <td>10.0.0.0 – 10.255.255.255</td>
+      </tr>
+      <tr>
+          <td><strong>Private B</strong></td>
+          <td>172.16.0.0/12</td>
+          <td>172.16.0.0 – 172.31.255.255</td>
+      </tr>
+      <tr>
+          <td><strong>Private C</strong></td>
+          <td>192.168.0.0/16</td>
+          <td>192.168.0.0 – 192.168.255.255</td>
+      </tr>
+      <tr>
+          <td><strong>APIPA</strong></td>
+          <td>169.254.0.0/16</td>
+          <td>169.254.0.0 – 169.254.255.255</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="classless-ipv4-addresses-cidr">Classless IPv4 Addresses (CIDR)</h3>
 <ul>
-<li>CIDR (Classless Inter-Domain Routing) replaces class-based addressing.</li>
+<li>Replaces class‑based addressing.</li>
 <li>Allows flexible subnetting with prefix notation (e.g., /24).</li>
 <li>Enables efficient IP allocation and route aggregation.</li>
 </ul>
 <h3 id="subnetting-ipv4-addresses">Subnetting IPv4 Addresses</h3>
 <ul>
-<li>Divides networks into smaller subnetworks.</li>
+<li>Divides networks into smaller subnets.</li>
 <li>Reduces broadcast domains, improves performance and security.</li>
 <li>Key concepts: subnet mask, network ID, broadcast address, host range.</li>
 </ul>
+<h3 id="ipv4-header-essentials">IPv4 Header Essentials</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Bits</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Version</td>
+          <td>4</td>
+          <td>IP version (4)</td>
+      </tr>
+      <tr>
+          <td>IHL</td>
+          <td>4</td>
+          <td>Header length</td>
+      </tr>
+      <tr>
+          <td>Total Length</td>
+          <td>16</td>
+          <td>Entire packet size</td>
+      </tr>
+      <tr>
+          <td>Identification / Flags / Fragment Offset</td>
+          <td>32</td>
+          <td>Fragmentation control</td>
+      </tr>
+      <tr>
+          <td>TTL</td>
+          <td>8</td>
+          <td>Packet lifespan</td>
+      </tr>
+      <tr>
+          <td>Protocol</td>
+          <td>8</td>
+          <td>Upper‑layer (TCP=6, UDP=17)</td>
+      </tr>
+      <tr>
+          <td>Header Checksum</td>
+          <td>16</td>
+          <td>Error check of header</td>
+      </tr>
+      <tr>
+          <td>Source / Destination Address</td>
+          <td>32 + 32</td>
+          <td>Sender / receiver IP</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="fragmentation--pathmtu-discovery">Fragmentation &amp; Path‑MTU Discovery</h3>
+<p>If a packet exceeds the <strong>Maximum Transmission Unit (MTU)</strong> of a link, IPv4 can fragment it (unless <em>Don’t Fragment</em> flag set). Modern hosts prefer <strong>PMTUD</strong> to learn the smallest MTU along a path and avoid fragmentation.</p>
+<hr>
+<h2 id="52-ipv6-fundamentals">5.2 IPv6 Fundamentals</h2>
 <h3 id="ipv6-address-structure">IPv6 Address Structure</h3>
 <ul>
-<li>IPv6 uses 128-bit hexadecimal addresses (e.g., 2001:0db8::1).</li>
-<li>Written in eight 16-bit blocks, compressed with &ldquo;::&rdquo; where applicable.</li>
-<li>Vast address space to accommodate modern internet growth.</li>
+<li>128‑bit hexadecimal addresses (e.g., 2001:0db8::1).</li>
+<li>Written in eight 16‑bit blocks, compressible with “::”.</li>
+<li>Vast address space to accommodate modern Internet growth.</li>
 </ul>
-<h3 id="ipv6-network-transmissions">IPv6 Network Transmissions</h3>
+<h3 id="ipv6-transmission-types">IPv6 Transmission Types</h3>
 <ul>
-<li>IPv6 supports:
-<ul>
-<li>Unicast (one-to-one)</li>
-<li>Multicast (one-to-many)</li>
-<li>Anycast (one-to-nearest)</li>
-</ul>
-</li>
+<li><strong>Unicast</strong> – one‑to‑one</li>
+<li><strong>Multicast</strong> – one‑to‑many</li>
+<li><strong>Anycast</strong> – one‑to‑nearest</li>
 <li>IPv6 does <strong>not</strong> use broadcast.</li>
 </ul>
-<hr>
-<h2 id="special-ip-networking-concepts">Special IP Networking Concepts</h2>
-<h3 id="the-media-access-control-address">The Media Access Control Address</h3>
-<ul>
-<li>MAC address is a unique hardware address assigned to NICs.</li>
-<li>48-bit address in hexadecimal (e.g., 00:1A:2B:3C:4D:5E).</li>
-<li>Operates at Layer 2 of the OSI model.</li>
-</ul>
-<h3 id="collision-domains-vs-broadcast-domains">Collision Domains vs. Broadcast Domains</h3>
-<ul>
-<li><strong>Collision domain</strong>: where data packets can collide (typically within hubs).</li>
-<li><strong>Broadcast domain</strong>: where a broadcast packet is propagated (limited by routers).</li>
-<li>Switches separate collision domains; routers separate broadcast domains.</li>
-</ul>
-<h3 id="types-of-network-transmissions">Types of Network Transmissions</h3>
-<ul>
-<li><strong>Unicast</strong>: one sender to one receiver.</li>
-<li><strong>Broadcast</strong>: one sender to all devices (IPv4 only).</li>
-<li><strong>Multicast</strong>: one sender to specific group.</li>
-<li><strong>Anycast</strong>: one sender to the closest receiver (IPv6).</li>
-</ul>
-<hr>
-<h2 id="routing">Routing</h2>
-<h3 id="static-routing">Static Routing</h3>
-<ul>
-<li>Routes are manually configured by an admin.</li>
-<li>Simple but not scalable; no automatic path updates.</li>
-</ul>
-<h3 id="dynamic-routing">Dynamic Routing</h3>
-<ul>
-<li>Routers learn routes from each other automatically.</li>
-<li>Uses protocols like OSPF, EIGRP, RIP, and BGP.</li>
-</ul>
-<h3 id="default-route">Default Route</h3>
-<ul>
-<li>A catch-all route when no specific match is found.</li>
-<li>Usually points to the internet gateway.</li>
-<li>Represented as <code>0.0.0.0/0</code> or <code>::/0</code>.</li>
-</ul>
-<h3 id="routing-table">Routing Table</h3>
-<ul>
-<li>Stores all known routes to destination networks.</li>
-<li>Includes static, dynamic, and default routes.</li>
-</ul>
-<h3 id="loopback-interface">Loopback Interface</h3>
-<ul>
-<li>A virtual interface used for diagnostics and stability.</li>
-<li>IPv4: 127.0.0.1, IPv6: ::1</li>
-</ul>
-<h3 id="routing-loop">Routing Loop</h3>
-<ul>
-<li>A situation where packets endlessly circulate due to misconfiguration.</li>
-<li>Prevented using TTL, split horizon, or route poisoning.</li>
-</ul>
-<h3 id="routing-metrics">Routing Metrics</h3>
-<ul>
-<li>Values used to determine the best route.</li>
-<li>Includes hop count, bandwidth, delay, reliability, and cost.</li>
-</ul>
-<h3 id="routing-aggregation">Routing Aggregation</h3>
-<ul>
-<li>Combines multiple routes into one summary route.</li>
-<li>Reduces routing table size and simplifies configuration.</li>
-</ul>
-<h3 id="high-availability">High Availability</h3>
-<ul>
-<li>Ensures continuous network operation through redundancy.</li>
-<li>Technologies: VRRP, HSRP, GLBP, failover routing, load balancing.</li>
-</ul>
-<h2 id="routing-protocols">Routing Protocols</h2>
-<h3 id="igp-interior-gateway-protocol">IGP (Interior Gateway Protocol)</h3>
-<ul>
-<li>IGPs are used for routing <strong>within a single autonomous system (AS)</strong>.</li>
-<li>Designed for internal network communication and fast convergence.</li>
-<li>Common IGPs:
-<ul>
-<li><strong>RIP (Routing Information Protocol)</strong> – Distance-vector, simple but limited.</li>
-<li><strong>OSPF (Open Shortest Path First)</strong> – Link-state, scalable, widely used.</li>
-<li><strong>EIGRP (Enhanced Interior Gateway Routing Protocol)</strong> – Cisco proprietary, advanced distance-vector.</li>
-</ul>
-</li>
-</ul>
-<h3 id="egp-exterior-gateway-protocol">EGP (Exterior Gateway Protocol)</h3>
-<ul>
-<li>EGPs are used for routing <strong>between autonomous systems</strong>, usually across the internet.</li>
-<li>The primary EGP is:
-<ul>
-<li><strong>BGP (Border Gateway Protocol)</strong> – Path-vector protocol used by ISPs and enterprises to exchange routing information on the internet.</li>
-</ul>
-</li>
-<li>EGPs focus on <strong>policy-based routing</strong> and scalability, rather than speed of convergence.</li>
-</ul>
-<hr>
-<h2 id="practical-network-and-connectivity-analysis">(PRACTICAL) Network and connectivity analysis</h2>
-<h3 id="ping">ping</h3>
-<p>Ping is used to test connectivity to another host on a network. It sends ICMP Echo Request messages and reports whether the host responds, along with the round-trip time. It helps detect basic network reachability issues.
-<img src="ping.png" alt="ping"></p>
-<h3 id="traceroute">traceroute</h3>
-<p>Traceroute shows the path that packets take to reach a destination. It lists each router (hop) along the path and measures latency to each one. It is useful for diagnosing where delays or drops occur in the route.
-<img src="traceroute.png" alt="traceroute"></p>
-<h3 id="ip">ip</h3>
-<p>The <code>ip</code> command is used to manage network interfaces, addresses, routing tables, and ARP entries. It replaces older tools like <code>ifconfig</code>, <code>route</code>, and <code>arp</code>, providing more functionality and flexibility.
-<img src="ip.png" alt="ip"></p>
-<h3 id="netcat">netcat</h3>
-<p>Netcat is a flexible tool used for network diagnostics and debugging. It can open TCP or UDP connections, listen on ports, transfer files, and test services. It is also used for banner grabbing and setting up reverse shells in security contexts.
-<img src="netcat.png" alt="netcat"></p>
-<h2 id="unified-communication">Unified communication</h2>
-<h3 id="unified-communication-devices">Unified communication devices</h3>
-<p>Unified communication devices include hardware that enables integrated communications, such as IP phones, video conferencing systems, headsets, speakerphones, and collaboration hubs. These devices are optimized for services like VoIP, video calls, screen sharing, and real-time messaging.</p>
-<p>Examples:</p>
-<ul>
-<li>IP desk phones with video support</li>
-<li>USB headsets with noise cancellation</li>
-<li>Smart conferencing cameras with tracking</li>
-<li>Interactive whiteboards</li>
-</ul>
-<h3 id="voice-over-ip">Voice over IP</h3>
-<p>Voice over IP (VoIP) allows voice communication over the internet rather than traditional phone lines. It converts voice into digital packets and sends them over IP networks. VoIP reduces communication costs and enables integration with other services like video and chat.</p>
-<p>Advantages:</p>
-<ul>
-<li>Lower cost than PSTN</li>
-<li>Integration with UC platforms</li>
-<li>Scalability and portability</li>
-<li>Advanced call features (voicemail-to-email, call routing, etc.)</li>
-</ul>
-<p>Common VoIP Protocols:</p>
-<ul>
-<li>SIP (Session Initiation Protocol)</li>
-<li>RTP (Real-time Transport Protocol)</li>
-<li>H.323</li>
-</ul>
-<h2 id="virtualization">Virtualization</h2>
-<p>Virtualization is the process of creating a virtual version of physical hardware or resources, allowing multiple systems to run on a single physical machine. It improves hardware utilization, scalability, and flexibility in modern IT environments.</p>
-<h3 id="hypervisor">Hypervisor</h3>
-<p>A hypervisor is software that creates and runs virtual machines (VMs). It abstracts physical hardware and enables multiple operating systems to run independently on the same physical host.</p>
-<p>Types:</p>
-<ul>
-<li><strong>Type 1 (bare-metal)</strong>: Runs directly on hardware (e.g., VMware ESXi, Microsoft Hyper-V, Xen).</li>
-<li><strong>Type 2 (hosted)</strong>: Runs on top of a host OS (e.g., VirtualBox, VMware Workstation).</li>
-</ul>
-<h3 id="virtual-machine-manager">Virtual machine manager</h3>
-<p>A virtual machine manager (VMM) is the component that manages the execution of virtual machines. It allocates resources, handles VM states (start, pause, snapshot), and interfaces with the hypervisor.</p>
-<h3 id="components-of-virtualization">Components of virtualization</h3>
-<ul>
-<li><strong>Hypervisor</strong>: Creates and manages virtual machines.</li>
-<li><strong>Guest OS</strong>: Operating system installed inside the VM.</li>
-<li><strong>Virtual hardware</strong>: Emulated components (CPU, RAM, NIC).</li>
-<li><strong>Management tools</strong>: Interfaces for creating, monitoring, and configuring VMs.</li>
-</ul>
-<h3 id="software-defined-networking">Software defined networking</h3>
-<p>Software-Defined Networking (SDN) decouples the control plane from the data plane in network devices. Instead of configuring hardware individually, SDN enables centralized management via software controllers.</p>
-<p>Benefits:</p>
-<ul>
-<li>Centralized control</li>
-<li>Programmability</li>
-<li>Faster automation</li>
-<li>Improved scalability</li>
-</ul>
-<hr>
-<h2 id="storage-area-networks">Storage area networks</h2>
-<p>Storage Area Networks (SANs) are high-speed networks that provide access to consolidated storage resources. SANs are commonly used in enterprise environments for block-level storage, enabling efficient data transfer between servers and storage devices.</p>
-<p>Technologies:</p>
-<ul>
-<li><strong>Fibre Channel (FC)</strong></li>
-<li><strong>iSCSI</strong></li>
-<li><strong>FCoE (Fibre Channel over Ethernet)</strong></li>
-</ul>
-<p>Advantages:</p>
-<ul>
-<li>High performance</li>
-<li>Centralized storage</li>
-<li>Better backup and disaster recovery options</li>
-</ul>
-<hr>
-<h2 id="cloud-computing">Cloud computing</h2>
-<p>Cloud computing delivers computing services (e.g., servers, storage, databases, networking) over the internet (“the cloud”). It allows for on-demand resources, flexible scaling, and reduced infrastructure costs.</p>
-<h3 id="classification-of-cloud-computing">Classification of cloud computing</h3>
-<ul>
-<li><strong>Deployment Models</strong>:
-<ul>
-<li><strong>Public Cloud</strong>: Shared infrastructure (e.g., AWS, Azure).</li>
-<li><strong>Private Cloud</strong>: Dedicated resources for one organization.</li>
-<li><strong>Hybrid Cloud</strong>: Combination of public and private environments.</li>
-</ul>
-</li>
-<li><strong>Service Models</strong>:
-<ul>
-<li><strong>IaaS (Infrastructure as a Service)</strong>: Virtual machines, networks (e.g., AWS EC2).</li>
-<li><strong>PaaS (Platform as a Service)</strong>: Runtime environments for development (e.g., Heroku).</li>
-<li><strong>SaaS (Software as a Service)</strong>: End-user applications (e.g., Google Workspace, Office 365).</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h2 id="network-monitoring">Network monitoring</h2>
-<p>Network monitoring involves observing network activity to detect performance issues, downtime, unauthorized access, or security incidents. Tools and logs play a critical role in maintaining operational integrity.</p>
-<h3 id="tools-to-monitor-the-network">Tools to monitor the network</h3>
-<p>Common tools include:</p>
-<ul>
-<li><strong>iftop</strong>: Real-time bandwidth monitoring by host.</li>
-<li><strong>nethogs</strong>: Per-process bandwidth usage.</li>
-<li><strong>iptraf-ng</strong>: Traffic monitoring and statistics.</li>
-<li><strong>Wireshark</strong>: Deep packet inspection.</li>
-<li><strong>tcpdump</strong>: Command-line packet capture.</li>
-<li><strong>Nagios/Zabbix</strong>: Monitoring servers and network devices for availability and performance.</li>
-</ul>
-<h3 id="log-files">Log files</h3>
-<p>Logs provide historical records of events that occur within a system or network. They are critical for troubleshooting, auditing, and forensic investigations.</p>
-<p>Key network-related logs:</p>
-<ul>
-<li><strong>Firewall logs</strong>: Blocked/allowed traffic.</li>
-<li><strong>DHCP logs</strong>: IP lease history.</li>
-<li><strong>DNS logs</strong>: Query/resolution attempts.</li>
-<li><strong>Router/Switch logs</strong>: Port activity, uptime, errors.</li>
-<li><strong>Authentication logs</strong>: Login attempts, SSH access.</li>
-</ul>
-<p>Log analysis can reveal:</p>
-<ul>
-<li>Intrusion attempts</li>
-<li>Misconfigurations</li>
-<li>Performance bottlenecks</li>
-<li>System failures</li>
-</ul>
-<h3 id="port-scanners">Port scanners</h3>
-<h4 id="nmap">nmap</h4>
-<p>Nmap is a powerful network scanner used to discover hosts, open ports, and services running on a network. It is widely used in security auditing and penetration testing for network reconnaissance and vulnerability detection.
-<img src="nmap.png" alt="nmap"></p>
-<h3 id="interface-monitoringpacket-flow-monitoring">Interface monitoring/packet flow monitoring</h3>
-<h4 id="tcpdump">tcpdump</h4>
-<p>Tcpdump is a command-line packet analyzer that captures network traffic in real time. It allows users to filter, inspect, and save packets for further analysis. It&rsquo;s lightweight and widely used for diagnostics, scripting, and remote network troubleshooting.
-<img src="tcpdump.png" alt="tcpdump"></p>
-<h4 id="wireshark">wireshark</h4>
-<p>Wireshark is a graphical network protocol analyzer used to capture and interactively examine packets. It supports deep inspection of hundreds of protocols and is ideal for debugging, protocol development, and learning how networks operate.
-<img src="wireshark.png" alt="wireshark"></p>
-<h2 id="configuration-management">Configuration management</h2>
-<p>Configuration management is the process of systematically handling changes to maintain the integrity and performance of IT systems and networks. It ensures that hardware, software, firmware, and documentation are consistent and traceable.</p>
-<p>Key tools:</p>
-<ul>
-<li><strong>Ansible</strong>: Agentless configuration automation tool using YAML playbooks.</li>
-<li><strong>Puppet</strong>: Declarative configuration management for infrastructure as code.</li>
-<li><strong>Chef</strong>: Uses Ruby for defining infrastructure policies.</li>
-<li><strong>SaltStack</strong>: Scalable configuration management and remote execution.</li>
-</ul>
-<p>Benefits:</p>
-<ul>
-<li>Reduced configuration errors</li>
-<li>Faster deployments</li>
-<li>Easier rollback and version control</li>
-<li>Improved compliance</li>
-</ul>
-<hr>
-<h2 id="documentation">Documentation</h2>
-<p>Network documentation refers to detailed records of the architecture, configuration, and policies governing a network. It&rsquo;s essential for troubleshooting, audits, onboarding, and maintaining consistency.</p>
-<p>Types of documentation:</p>
-<ul>
-<li><strong>Network topology diagrams</strong>: Visual representation of physical/logical layout.</li>
-<li><strong>IP address allocation</strong>: Subnets, reservations, DHCP scopes.</li>
-<li><strong>Device inventory</strong>: Switches, routers, firewalls, and their configurations.</li>
-<li><strong>Change logs</strong>: History of updates and modifications.</li>
-<li><strong>Access control</strong>: Who has access to what and why.</li>
-</ul>
-<p>Well-maintained documentation saves time and reduces risk during outages or staff transitions.</p>
-<hr>
-<h2 id="backups">Backups</h2>
-<p>Backups are copies of data or configurations stored separately to restore systems in case of failure, corruption, or disaster.</p>
-<p>Backup types:</p>
-<ul>
-<li><strong>Full</strong>: Complete copy of all selected data.</li>
-<li><strong>Incremental</strong>: Only data changed since the last backup.</li>
-<li><strong>Differential</strong>: Data changed since the last full backup.</li>
-</ul>
-<p>What to back up:</p>
-<ul>
-<li>Router and switch configs</li>
-<li>Server data and databases</li>
-<li>Virtual machines</li>
-<li>Firewall rules and ACLs</li>
-</ul>
-<p>Storage options:</p>
-<ul>
-<li>On-site (external drives, NAS)</li>
-<li>Off-site (remote data center)</li>
-<li>Cloud-based (AWS S3, Google Cloud Storage)</li>
-</ul>
-<p>Regular testing of backups is critical for disaster recovery readiness.</p>
-<hr>
-<h2 id="bring-your-own-device-policy">Bring your own device policy</h2>
-<p>A BYOD (Bring Your Own Device) policy governs how employees can use their personal devices (phones, laptops, tablets) to access corporate networks and data.</p>
-<p>Security considerations:</p>
-<ul>
-<li>Enforce strong authentication (e.g., MFA)</li>
-<li>Require device encryption</li>
-<li>Use mobile device management (MDM)</li>
-<li>Restrict access based on role or location</li>
-<li>Monitor for malicious or non-compliant behavior</li>
-</ul>
-<p>Benefits:</p>
-<ul>
-<li>Increased flexibility and user satisfaction</li>
-<li>Reduced hardware costs</li>
-</ul>
-<p>Risks:</p>
-<ul>
-<li>Data leakage</li>
-<li>Malware introduction</li>
-<li>Non-compliant endpoints</li>
-</ul>
-<hr>
-<h2 id="network-segmentation">Network segmentation</h2>
-<p>Network segmentation is the practice of dividing a network into smaller subnetworks (segments) to improve performance and security.</p>
-<p>Types:</p>
-<ul>
-<li><strong>Physical segmentation</strong>: Using separate hardware (e.g., VLANs across switches).</li>
-<li><strong>Logical segmentation</strong>: Using VLANs, ACLs, firewalls to control traffic.</li>
-</ul>
-<p>Benefits:</p>
-<ul>
-<li>Limits lateral movement of attackers</li>
-<li>Improves network performance</li>
-<li>Enables role-based access control</li>
-<li>Helps contain malware or breaches to isolated segments</li>
-</ul>
-<p>Common segments:</p>
-<ul>
-<li>User LAN</li>
-<li>Server VLAN</li>
-<li>Management network</li>
-<li>Guest Wi-Fi</li>
-<li>IoT/OT devices</li>
-</ul>
-<p>Segmentation is a fundamental part of zero-trust architectures and defense-in-depth strategies.</p>
-<h2 id="switches">Switches</h2>
-<p>Switches are Layer 2 (and sometimes Layer 3) devices that forward Ethernet frames based on MAC addresses. They are essential for connecting devices within a local area network (LAN) and creating efficient, collision-free communication paths.</p>
-<h3 id="unmanaged-vs-managed-switches">Unmanaged vs. managed switches</h3>
-<p>Unmanaged switches are plug-and-play and offer no configuration capabilities. They are typically used in small networks or home environments.</p>
-<p>Managed switches provide features such as VLAN support, port mirroring, STP configuration, traffic monitoring, and SNMP integration. They are used in enterprise or complex networks where control and visibility are needed.</p>
-<h3 id="spanning-tree-protocol">Spanning tree protocol</h3>
-<p>Spanning Tree Protocol (STP) prevents loops in Layer 2 networks by detecting redundant paths and selectively blocking ports to maintain a loop-free topology. Enhanced versions like RSTP and MSTP provide faster convergence and multiple tree support.</p>
-<h3 id="switch-port">Switch port</h3>
-<p>A switch port is a physical interface that connects a device to the switch. Ports can be configured to behave differently:</p>
-<ul>
-<li>Access ports carry traffic for a single VLAN.</li>
-<li>Trunk ports carry traffic for multiple VLANs using tagging.</li>
-<li>Mirrored ports replicate traffic for monitoring or analysis.</li>
-</ul>
-<h3 id="vlan">VLAN</h3>
-<p>A Virtual LAN (VLAN) logically segments a network into isolated domains, even if they share the same physical infrastructure. VLANs help improve security, manageability, and traffic isolation.</p>
-<h3 id="trunking">Trunking</h3>
-<p>Trunking allows multiple VLANs to be transmitted over a single physical link between switches or between a switch and router. The IEEE 802.1Q standard is commonly used for tagging VLAN information in Ethernet frames.</p>
-<h3 id="port-bonding">Port bonding</h3>
-<p>Port bonding, also known as link aggregation or EtherChannel, combines multiple physical interfaces into one logical link. This provides increased bandwidth and redundancy between devices.</p>
-<h3 id="power-over-ethernet">Power over Ethernet</h3>
-<p>Power over Ethernet (PoE) delivers both electrical power and data over a single Ethernet cable. It is commonly used for powering access points, IP phones, and surveillance cameras without needing separate power sources.</p>
-<h3 id="port-mirroring">Port mirroring</h3>
-<p>Port mirroring is used to duplicate the traffic from one or more switch ports to another port for monitoring or analysis. It is commonly used with intrusion detection systems or packet capture tools.</p>
-<hr>
-<h2 id="wlan-infrastructure">WLAN infrastructure</h2>
-<p>Wireless LAN infrastructure enables network access using radio waves instead of physical cabling. It includes access points, wireless controllers, and antennas to provide reliable wireless coverage and performance.</p>
-<h3 id="wireless-access-standards">Wireless Access Standards</h3>
-<p>Wi-Fi standards define capabilities like frequency, speed, and channel width:</p>
-<ul>
-<li>802.11a: 5 GHz, up to 54 Mbps</li>
-<li>802.11b/g: 2.4 GHz, up to 11/54 Mbps</li>
-<li>802.11n: 2.4/5 GHz, up to 600 Mbps with MIMO</li>
-<li>802.11ac: 5 GHz, up to 1 Gbps with MU-MIMO</li>
-<li>802.11ax (Wi-Fi 6): High efficiency, works on both 2.4 and 5 GHz</li>
-</ul>
-<h3 id="antenna-technology">Antenna technology</h3>
-<p>Antenna types influence coverage and direction:</p>
-<ul>
-<li>Omnidirectional antennas radiate in all directions, ideal for general coverage.</li>
-<li>Directional antennas focus the signal in a specific direction, useful for point-to-point links.</li>
-<li>MIMO (Multiple Input, Multiple Output) improves speed and reliability using multiple antennas.</li>
-</ul>
-<h3 id="wireless-access-points">Wireless Access Points</h3>
-<p>Access points (APs) bridge wireless clients to the wired LAN. They support multiple SSIDs, VLAN tagging, and security features like WPA3. Enterprise APs can be managed individually or via a central controller or cloud platform.</p>
-<hr>
-<h2 id="wlan-topologies">WLAN topologies</h2>
-<h3 id="ad-hoc-topology">Ad hoc topology</h3>
-<p>In an ad hoc topology, devices communicate directly with one another without an access point. This setup is temporary and lacks central control or scalability.</p>
-<h3 id="infrastructure-topology">Infrastructure topology</h3>
-<p>The most common WLAN topology. Devices connect to the network through a central access point, which manages traffic and connects to the wired LAN.</p>
-<h3 id="mesh-topology">Mesh topology</h3>
-<p>In mesh networks, multiple APs connect to each other wirelessly, forming a resilient and self-healing network. If one node fails, traffic reroutes through others. Common in large areas or outdoor deployments.</p>
-<h3 id="ssid">SSID</h3>
-<p>The Service Set Identifier (SSID) is the name of the wireless network broadcasted by an access point. Clients use the SSID to identify and join the correct network. A single AP can broadcast multiple SSIDs, each mapped to a different VLAN or policy group.</p>
-<h3 id="bssid">BSSID</h3>
-<p>The Basic Service Set Identifier (BSSID) is the MAC address of the radio interface on the access point. While the SSID is the network name seen by users, the BSSID uniquely identifies each AP or radio. This helps differentiate between access points broadcasting the same SSID.</p>
-<h2 id="security-concepts">Security Concepts</h2>
-<h3 id="disaster-recovery-plan">Disaster Recovery Plan</h3>
-<p>A documented and structured approach that describes how an organization can quickly resume work after an unplanned incident. It focuses on restoring IT systems, applications, and data to ensure minimal downtime. It includes backup solutions, disaster recovery sites, regular testing, and emergency roles and responsibilities.</p>
-<h3 id="business-continuity-plan">Business Continuity Plan</h3>
-<p>A proactive plan to ensure that critical business operations can continue during and after a disaster. It includes risk assessments, continuity strategies, personnel roles, alternate communication methods, and physical/IT infrastructure requirements.</p>
-<h3 id="single-point-of-failure-spof">Single Point of Failure (SPOF)</h3>
-<p>A component in a system that, if it fails, will stop the entire system from working. Examples include a single server in a critical workflow or one network switch connecting all departments. Eliminated through redundancy, clustering, and high availability designs.</p>
-<h3 id="uninterruptable-power-supply-ups">Uninterruptable Power Supply (UPS)</h3>
-<p>A device that provides emergency power when the main power source fails. It protects hardware like servers and networking equipment from sudden power loss, allowing systems to safely shut down or switch to generators.</p>
-<h3 id="first-responders">First Responders</h3>
-<p>Individuals trained to react immediately to IT incidents such as cyberattacks or physical security breaches. They perform tasks such as evidence preservation, initiating containment procedures, and notifying relevant authorities or response teams.</p>
-<h3 id="data-breach">Data Breach</h3>
-<p>An incident where sensitive, protected, or confidential data is accessed, disclosed, or stolen by unauthorized individuals. Can occur due to poor security configurations, insider threats, or external attackers.</p>
-<hr>
-<h2 id="common-network-vulnerabilities">Common Network Vulnerabilities</h2>
-<h3 id="telnet">Telnet</h3>
-<p>A protocol used for remote login to devices, but it sends data in plaintext. Vulnerable to sniffing and man-in-the-middle attacks. It is largely replaced by SSH.</p>
-<h3 id="snmpv1-and-snmpv2">SNMPv1 and SNMPv2</h3>
-<p>Older versions of the Simple Network Management Protocol that do not offer encryption. SNMPv3 includes secure authentication and encryption features.</p>
-<h3 id="ftp-file-transfer-protocol">FTP (File Transfer Protocol)</h3>
-<p>Used for transferring files between systems but lacks encryption, making it vulnerable to interception of credentials and data.</p>
-<h3 id="tftp-trivial-file-transfer-protocol">TFTP (Trivial File Transfer Protocol)</h3>
-<p>A simple, unauthenticated version of FTP used mainly in LANs. Frequently exploited due to its lack of security features.</p>
-<h3 id="http">HTTP</h3>
-<p>Used to deliver web pages, but it transmits data in plaintext. Susceptible to interception. HTTPS should be used instead to ensure encryption.</p>
-<h3 id="slip-serial-line-internet-protocol">SLIP (Serial Line Internet Protocol)</h3>
-<p>An outdated protocol used to encapsulate IP packets over serial lines. It lacks error correction, encryption, and is no longer in use in modern systems.</p>
-<hr>
-<h2 id="vulnerable-network-practices">Vulnerable Network Practices</h2>
-<h3 id="unpatched-or-legacy-systems">Unpatched or Legacy Systems</h3>
-<p>Older systems or those missing security updates are prone to exploitation through known vulnerabilities. Maintaining patch management policies is critical.</p>
-<h3 id="open-ports">Open Ports</h3>
-<p>Ports that are open unnecessarily can serve as entry points for attackers. Regular port scanning and firewall policies are used to limit exposure.</p>
-<h3 id="unnecessary-running-services">Unnecessary Running Services</h3>
-<p>Services running on systems that are not needed can increase the attack surface. These should be disabled or removed.</p>
-<h3 id="clear-text-credentials">Clear Text Credentials</h3>
-<p>Credentials transmitted without encryption can be intercepted using sniffing tools. Use of encryption protocols (e.g., SSH, TLS) is mandatory.</p>
-<h3 id="unencrypted-channels">Unencrypted Channels</h3>
-<p>Communication channels (e.g., HTTP, Telnet) without encryption allow attackers to view and manipulate data in transit.</p>
-<h3 id="rf-emanation">RF Emanation</h3>
-<p>Radio Frequency signals emitted by devices can be intercepted to extract sensitive information (e.g., keyboard input or screen data). Shielding and secured zones can mitigate this.</p>
-<hr>
-<h2 id="common-network-threats">Common Network Threats</h2>
-<h3 id="inside-threats">Inside Threats</h3>
-<h4 id="malicious-employee">Malicious Employee</h4>
-<p>A trusted insider with malicious intent, often exploiting their access to steal data, sabotage systems, or exfiltrate information.</p>
-<h4 id="compromised-system">Compromised System</h4>
-<p>A system that has been taken over by malware or remote attackers, potentially being used for launching attacks within the network.</p>
-<h4 id="social-engineering">Social Engineering</h4>
-<p>Psychological manipulation that tricks users into giving up confidential information or performing unsafe actions. Common forms include phishing, vishing, and baiting.</p>
-<h4 id="arp-cache-poisoning">ARP Cache Poisoning</h4>
-<p>An attacker sends forged ARP responses to associate their MAC address with another host’s IP, enabling them to intercept, modify, or stop data intended for that host.</p>
-<h4 id="protocol-or-packet-abuse">Protocol or Packet Abuse</h4>
-<p>Malicious use of networking protocols to manipulate or overload devices, such as crafting malformed packets to bypass firewalls or crash systems.</p>
-<h4 id="man-in-the-middle-attack">Man-in-the-Middle Attack</h4>
-<p>The attacker secretly intercepts and possibly alters communication between two parties who believe they are directly communicating with each other.</p>
-<h4 id="vlan-hopping">VLAN Hopping</h4>
-<p>Exploiting network switch configurations to gain access to traffic on other VLANs, which are intended to be isolated from each other.</p>
-<h3 id="outside-threats">Outside Threats</h3>
-<h4 id="zero-day-attacks">Zero-Day Attacks</h4>
-<p>Attacks that exploit previously unknown vulnerabilities for which no patch exists. Extremely dangerous and hard to defend against.</p>
-<h4 id="brute-force-attacks">Brute Force Attacks</h4>
-<p>Systematic attempts to guess passwords or cryptographic keys by trying every possible combination.</p>
-<h4 id="spoofing">Spoofing</h4>
-<p>Impersonating another device or user on a network, such as IP spoofing or email spoofing, to bypass access controls or spread malware.</p>
-<h4 id="session-hijacking">Session Hijacking</h4>
-<p>Taking control of a user&rsquo;s active session by stealing or predicting session tokens, allowing attackers to impersonate them.</p>
-<h4 id="denial-of-service-dos">Denial of Service (DoS)</h4>
-<ul>
-<li><strong>Traditional DoS:</strong> Floods a target system with traffic, making it unavailable to legitimate users.</li>
-<li><strong>Permanent DoS (PDoS):</strong> Destroys or corrupts hardware or firmware, requiring replacement.</li>
-<li><strong>Unintentional DoS:</strong> Caused by configuration errors or legitimate use spikes.</li>
-<li><strong>Distributed DoS (DDoS):</strong> Coordinated attacks from multiple sources (botnets).</li>
-<li><strong>Reflective DoS:</strong> Exploits third-party servers to reflect and amplify traffic to the victim.
-<ul>
-<li>Reflective DNS</li>
-<li>Reflective NTP</li>
-</ul>
-</li>
-<li><strong>Smurf Attacks:</strong> Exploits ICMP and broadcast addresses to amplify attacks using spoofed source IPs.</li>
-</ul>
-<hr>
-<h2 id="wireless-network-threats">Wireless Network Threats</h2>
-<h3 id="wps-wi-fi-protected-setup">WPS (Wi-Fi Protected Setup)</h3>
-<p>A simplified wireless connection method that is vulnerable to brute-force attacks due to predictable PINs.</p>
-<h3 id="war-driving--war-chalking">War Driving / War Chalking</h3>
-<p>Scanning for unsecured wireless networks while driving. War chalking refers to marking these networks physically or digitally.</p>
-<h3 id="wep--wpa-cracking">WEP / WPA Cracking</h3>
-<p>Breaking weak encryption in outdated Wi-Fi protocols. WEP is especially vulnerable; WPA2 and WPA3 are preferred.</p>
-<h3 id="rogue-access-point">Rogue Access Point</h3>
-<p>Unauthorized wireless access point set up to intercept traffic or lure users into connecting.</p>
-<h3 id="evil-twin-attack">Evil Twin Attack</h3>
-<p>A fake wireless AP mimicking a legitimate one to perform man-in-the-middle attacks on connected users.</p>
-<h3 id="bluejacking">Bluejacking</h3>
-<p>Sending unsolicited messages to nearby Bluetooth devices. Not highly dangerous but often used to annoy or trick users.</p>
-<h3 id="bluesnarfing">Bluesnarfing</h3>
-<p>Unauthorized access to data on a Bluetooth-enabled device. Can expose contacts, emails, files, etc.</p>
-<hr>
-<h2 id="practical-tools">Practical Tools</h2>
-<h3 id="bettercap">Bettercap</h3>
-<p>A powerful, modular network attack and monitoring tool capable of conducting MITM attacks, sniffing traffic, manipulating packets, DNS spoofing, and injecting code in real time. Supports plugins and scripting.</p>
-<p><img src="bettercap.png" alt="Bettercap"></p>
-<h3 id="hping3">hping3</h3>
-<p>A network scanning and packet crafting tool used to generate custom TCP/IP packets. Commonly used for firewall testing, spoofing, and DoS simulations. Also useful in OS fingerprinting.</p>
-<p><img src="hping3.png" alt="hping3"></p>
-<h3 id="scapy-python-library">Scapy (Python Library)</h3>
-<p>A powerful Python-based packet manipulation tool used for crafting, sending, sniffing, and analyzing network traffic. Supports multiple protocols and allows the creation of custom packet flows and fuzzing.</p>
-<p><img src="scapy.png" alt="Scapy"></p>
-<hr>
-<h2 id="network-hardening-techniques">Network Hardening Techniques</h2>
-<p>Network hardening involves reducing vulnerabilities in your network infrastructure to protect against attacks and unauthorized access.</p>
-<h3 id="secure-protocols">Secure Protocols</h3>
-<p>Use <strong>secure alternatives</strong> to insecure network protocols:</p>
+<h3 id="ipv6-header-essentials">IPv6 Header Essentials</h3>
 <table>
   <thead>
       <tr>
-          <th>Insecure Protocol</th>
-          <th>Secure Alternative</th>
-          <th>Description</th>
+          <th>Field</th>
+          <th>Bits</th>
+          <th>Purpose</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>FTP</td>
-          <td>SFTP / FTPS</td>
-          <td>Secures file transfer with SSH or SSL</td>
+          <td>Version</td>
+          <td>4</td>
+          <td>IP version (6)</td>
       </tr>
       <tr>
-          <td>Telnet</td>
-          <td>SSH</td>
-          <td>Encrypts remote terminal communication</td>
+          <td>Traffic Class</td>
+          <td>8</td>
+          <td>QoS markings</td>
       </tr>
       <tr>
-          <td>HTTP</td>
-          <td>HTTPS</td>
-          <td>Encrypts web traffic using TLS</td>
+          <td>Flow Label</td>
+          <td>20</td>
+          <td>Identify packet flows</td>
       </tr>
       <tr>
-          <td>SNMPv1/v2</td>
-          <td>SNMPv3</td>
-          <td>Adds authentication and encryption</td>
+          <td>Payload Length</td>
+          <td>16</td>
+          <td>Size of data after header</td>
       </tr>
       <tr>
-          <td>POP3 / IMAP</td>
-          <td>POP3S / IMAPS</td>
-          <td>Email protocols over SSL/TLS</td>
+          <td>Next Header</td>
+          <td>8</td>
+          <td>Upper‑layer or extension header</td>
+      </tr>
+      <tr>
+          <td>Hop Limit</td>
+          <td>8</td>
+          <td>IPv6 TTL equivalent</td>
+      </tr>
+      <tr>
+          <td>Source / Destination Address</td>
+          <td>128 + 128</td>
+          <td>Sender / receiver IPv6</td>
       </tr>
   </tbody>
 </table>
-<h3 id="anti-malware-software">Anti-Malware Software</h3>
-<p>Protect endpoints and servers with:</p>
+<hr>
+<h2 id="53-additional-iplayer-concepts">5.3 Additional IP‑Layer Concepts</h2>
+<h3 id="mac-address-media-access-control">MAC Address (Media Access Control)</h3>
 <ul>
-<li><strong>Signature-based detection</strong> (detects known threats)</li>
-<li><strong>Heuristic/Behavioral analysis</strong> (detects unknown threats)</li>
-<li><strong>Real-time protection</strong> (active scanning of file activity)</li>
-<li><strong>Automated updates</strong> for malware definitions</li>
-<li><strong>Centralized management</strong> for enterprise deployments</li>
+<li>Unique 48‑bit hardware address (e.g., 00:1A:2B:3C:4D:5E).</li>
+<li>Operates at Layer 2.</li>
 </ul>
-<p><strong>Examples</strong>: Windows Defender, ESET, Malwarebytes, CrowdStrike</p>
-<h3 id="switch-and-router-security-measures">Switch and Router Security Measures</h3>
+<h3 id="collision-vs-broadcast-domains">Collision vs. Broadcast Domains</h3>
 <ul>
-<li>Disable unused ports and interfaces</li>
-<li>Use MAC address filtering</li>
-<li>Enable port security (limit number of MACs per port)</li>
-<li>Allow SSH access only (disable Telnet)</li>
-<li>Change all default usernames and passwords</li>
-<li>Use VLANs for network segmentation</li>
-<li>Enable logging and use SNMPv3 for secure monitoring</li>
+<li><strong>Collision domain</strong>: where packets can collide (e.g., within hubs).</li>
+<li><strong>Broadcast domain</strong>: where a broadcast propagates (bounded by routers).</li>
+<li>Switches break collision domains; routers break broadcast domains.</li>
 </ul>
-<h3 id="encryption-basics">Encryption Basics</h3>
+<h3 id="transmission-types-recap">Transmission Types Recap</h3>
 <ul>
-<li><strong>Symmetric encryption</strong>: One shared key (e.g., AES, DES)</li>
-<li><strong>Asymmetric encryption</strong>: Public/private key pair (e.g., RSA, ECC)</li>
-<li><strong>TLS/SSL</strong>: Encrypts traffic for secure communications</li>
-<li><strong>IPsec</strong>: Encrypts network traffic (used in VPNs)</li>
-<li><strong>Hashing</strong>: Ensures data integrity (SHA-256, SHA-3)</li>
-</ul>
-<h3 id="wireless-network-hardening">Wireless Network Hardening</h3>
-<ul>
-<li>Use <strong>WPA3</strong> (or at least WPA2 with AES)</li>
-<li>Disable <strong>WPS</strong> to prevent brute-force attacks</li>
-<li>Change default <strong>SSID</strong> and admin credentials</li>
-<li>Enable <strong>MAC filtering</strong></li>
-<li>Use <strong>client isolation</strong> on guest/public networks</li>
-<li>Apply <strong>firmware updates</strong> regularly</li>
-<li>Limit <strong>signal range</strong> to control exposure</li>
-</ul>
-<h3 id="user-authentication">User Authentication</h3>
-<ul>
-<li>Enforce strong password policies</li>
-<li>Implement multi-factor authentication (MFA)</li>
-<li>Apply account lockout after multiple failures</li>
-<li>Audit and disable unused accounts regularly</li>
-<li>Use session timeouts and re-authentication</li>
-</ul>
-<h3 id="authentication-and-authorization-methods">Authentication and Authorization Methods</h3>
-<ul>
-<li>
-<p><strong>PAP (Password Authentication Protocol)</strong><br>
-Sends credentials in plaintext. Insecure and outdated.</p>
-</li>
-<li>
-<p><strong>CHAP (Challenge Handshake Authentication Protocol)</strong><br>
-Uses challenge-response and hashing. More secure than PAP.</p>
-</li>
-<li>
-<p><strong>EAP (Extensible Authentication Protocol)</strong><br>
-Framework for multiple authentication types (e.g., EAP-TLS, EAP-TTLS, PEAP). Common in WPA2/WPA3 Enterprise and 802.1X.</p>
-</li>
-<li>
-<p><strong>Kerberos</strong><br>
-Ticket-based mutual authentication using a <strong>Key Distribution Center (KDC)</strong>. Common in Active Directory environments.</p>
-</li>
+<li><strong>Unicast</strong> • <strong>Broadcast</strong> • <strong>Multicast</strong> • <strong>Anycast</strong></li>
 </ul>
 <hr>
-<h2 id="physical-network-security">Physical Network Security</h2>
-<p>Secure the physical infrastructure against unauthorized access, damage, or theft.</p>
-<h3 id="credential-workaround">Credential Workaround</h3>
+<h1 id="6-physical-layer--media-access">6. Physical Layer &amp; Media Access</h1>
+<h2 id="61-modulation">6.1 Modulation</h2>
+<p>Converts digital data to analog signals for transmission.
+Common methods: <strong>ASK</strong>, <strong>FSK</strong>, <strong>PSK</strong>, <strong>QAM</strong>.</p>
+<h2 id="62-network-transmission-metrics">6.2 Network Transmission Metrics</h2>
 <ul>
-<li>Set BIOS/UEFI passwords</li>
-<li>Disable booting from USB or CD devices</li>
-<li>Encrypt drives (e.g., BitLocker, LUKS)</li>
-<li>Monitor and log access to devices and consoles</li>
+<li><strong>Bandwidth</strong> vs. <strong>Throughput</strong> vs. <strong>Goodput</strong></li>
+<li><strong>Latency</strong> (propagation, processing, queuing)</li>
+<li><strong>Jitter</strong> (variation in delay)</li>
+<li><strong>MTU</strong> and fragmentation</li>
 </ul>
-<h3 id="basic-physical-security">Basic Physical Security</h3>
-<ul>
-<li>Locked doors to server/network rooms</li>
-<li>Surveillance cameras</li>
-<li>Alarm systems</li>
-<li>Cable management to prevent tampering</li>
-</ul>
-<h3 id="intermediate-physical-security">Intermediate Physical Security</h3>
-<ul>
-<li>Security guards and access controls</li>
-<li>Access cards and RFID key fobs</li>
-<li>Mantraps (double door entry)</li>
-<li>Motion detectors</li>
-<li>EMI/RFI shielding for cables</li>
-</ul>
-<h3 id="advanced-physical-security">Advanced Physical Security</h3>
-<ul>
-<li>Biometric access (fingerprint, iris)</li>
-<li>Faraday cages for sensitive hardware</li>
-<li>Hardened server racks/cabinets</li>
-<li>Fire suppression and climate control systems</li>
-<li>Backup power (UPS/generators)</li>
-</ul>
-<h3 id="methods-of-physical-security">Methods of Physical Security</h3>
-<ul>
-<li><strong>Deterrence</strong>: Cameras, lighting</li>
-<li><strong>Detection</strong>: Sensors, surveillance</li>
-<li><strong>Delay</strong>: Locks, reinforced doors</li>
-<li><strong>Response</strong>: Security staff, alarm systems</li>
-</ul>
-<hr>
-<h2 id="firewall-basics">Firewall Basics</h2>
-<p>Firewalls monitor and control incoming and outgoing traffic based on defined security rules.</p>
-<h3 id="types-of-firewalls">Types of Firewalls</h3>
+<h2 id="63-csmacd-vs-csmaca">6.3 CSMA/CD vs. CSMA/CA</h2>
 <table>
   <thead>
       <tr>
-          <th>Type</th>
-          <th>Description</th>
+          <th>Feature</th>
+          <th>CSMA/CD</th>
+          <th>CSMA/CA</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td>Packet Filtering</td>
-          <td>Filters traffic by IP, port, protocol</td>
+          <td>Medium</td>
+          <td>Wired Ethernet (half‑duplex legacy)</td>
+          <td>Wireless LAN (Wi‑Fi)</td>
       </tr>
       <tr>
-          <td>Stateful Inspection</td>
-          <td>Tracks connections and ensures stateful traffic</td>
+          <td>Method</td>
+          <td>Detects collisions, then backs off</td>
+          <td>Avoids collisions via RTS/CTS &amp; NAV timers</td>
       </tr>
       <tr>
-          <td>Application Layer</td>
-          <td>Filters traffic for specific applications</td>
-      </tr>
-      <tr>
-          <td>Next-Gen Firewall</td>
-          <td>Includes DPI, IDS/IPS, app awareness</td>
-      </tr>
-      <tr>
-          <td>Host-based Firewall</td>
-          <td>Installed on devices (e.g., Windows Firewall)</td>
-      </tr>
-      <tr>
-          <td>Network Firewall</td>
-          <td>Protects entire segments (e.g., pfSense, Cisco)</td>
+          <td>Status</td>
+          <td>Obsolete on full‑duplex links</td>
+          <td>Still essential for 802.11</td>
       </tr>
   </tbody>
 </table>
-<h3 id="firewall-settings-and-techniques">Firewall Settings and Techniques</h3>
-<ul>
-<li>Use a <strong>default deny</strong> policy (block all, allow explicitly)</li>
-<li>Only allow necessary ports and IP ranges</li>
-<li>Enable <strong>NAT</strong> to hide internal network</li>
-<li>Configure <strong>intrusion detection/prevention (IDS/IPS)</strong></li>
-<li>Enable <strong>logging and monitoring</strong></li>
-<li>Update firmware and apply patches regularly</li>
-</ul>
 <hr>
-<h2 id="network-access-control-nac">Network Access Control (NAC)</h2>
+<h1 id="7-quick-lab-tips">7. Quick Lab Tips</h1>
 <ul>
-<li>Restricts network access based on policies and device health</li>
-<li>Integrates with <strong>802.1X</strong> and <strong>RADIUS servers</strong></li>
-<li>Enforces patch levels, antivirus status, device type</li>
-<li>Helps detect and block <strong>rogue devices</strong></li>
-<li>Supports <strong>guest network segmentation</strong></li>
-</ul>
-<hr>
-<h2 id="basic-forensic-concepts">Basic Forensic Concepts</h2>
-<ul>
-<li><strong>Chain of custody</strong>: Document all evidence handling</li>
-<li><strong>Disk imaging</strong>: Bit-for-bit copy of storage for investigation</li>
-<li><strong>Volatile vs non-volatile data</strong>: RAM vs storage</li>
-<li><strong>Hashing evidence</strong>: Verifies integrity (SHA-256)</li>
-<li><strong>Timeline analysis</strong>: Order of attack events</li>
-<li><strong>Live forensics</strong>: Performed while system is running</li>
-<li><strong>Anti-forensics</strong>: Tools/methods to hide traces or mislead investigators</li>
+<li><code>ping -c 4 &lt;host&gt;</code> – basic reachability &amp; RTT.</li>
+<li><code>traceroute &lt;host&gt;</code> – view hop path &amp; latency per hop.</li>
+<li><code>ip addr</code>, <code>ip -6 route</code>, <code>ss -tulpn</code> – inspect interfaces, routing, open sockets.</li>
 </ul>
 
             </div>

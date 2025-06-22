@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/grayape/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=grayape/livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Cryptographic walls, layered defenses, and relentless monitoring transform fragile links into fortress-grade networks.
+1 Defensive Infrastructure 1.1 Security Devices Firewall Operates at Layers 2–4 and (in next‑gen models) Layer 7. It enforces policy at the edge or host level.
+Mode How it works Typical use cases Stateless filtering Simple ACL checks on source/destination IP, port, and protocol. High‑speed backbone filtering, low‑resource IoT gateways. Stateful inspection Maintains a connection table (five‑tuple) and allows only packets that match an established session. Enterprise perimeter firewalls, data‑center cores. Tip: Combine stateless “trash filters” (bogons, multicast, Martians) with stateful rules for legitimate flows.
+" />
+<meta name="keywords" content=", Computer Networks" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/grayape/learningpath/1.4_network_security.net/" />
+
+
+    <title>
+        
+            1.4_network_security.net :: grayape 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/grayape/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/grayape/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/grayape/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/grayape/favicon-16x16.png">
+    <link rel="manifest" href="/grayape/site.webmanifest">
+    <link rel="mask-icon" href="/grayape/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/grayape/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="1.4_network_security.net">
+  <meta itemprop="description" content="Cryptographic walls, layered defenses, and relentless monitoring transform fragile links into fortress-grade networks.
+1 Defensive Infrastructure 1.1 Security Devices Firewall Operates at Layers 2–4 and (in next‑gen models) Layer 7. It enforces policy at the edge or host level.
+Mode How it works Typical use cases Stateless filtering Simple ACL checks on source/destination IP, port, and protocol. High‑speed backbone filtering, low‑resource IoT gateways. Stateful inspection Maintains a connection table (five‑tuple) and allows only packets that match an established session. Enterprise perimeter firewalls, data‑center cores. Tip: Combine stateless “trash filters” (bogons, multicast, Martians) with stateful rules for legitimate flows.">
+  <meta itemprop="datePublished" content="2025-06-21T09:22:10-07:00">
+  <meta itemprop="dateModified" content="2025-06-21T09:22:10-07:00">
+  <meta itemprop="wordCount" content="1064">
+  <meta itemprop="keywords" content="Computer Networks">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1.4_network_security.net">
+  <meta name="twitter:description" content="Cryptographic walls, layered defenses, and relentless monitoring transform fragile links into fortress-grade networks.
+1 Defensive Infrastructure 1.1 Security Devices Firewall Operates at Layers 2–4 and (in next‑gen models) Layer 7. It enforces policy at the edge or host level.
+Mode How it works Typical use cases Stateless filtering Simple ACL checks on source/destination IP, port, and protocol. High‑speed backbone filtering, low‑resource IoT gateways. Stateful inspection Maintains a connection table (five‑tuple) and allows only packets that match an established session. Enterprise perimeter firewalls, data‑center cores. Tip: Combine stateless “trash filters” (bogons, multicast, Martians) with stateful rules for legitimate flows.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-06-21 09:22:10 -0700 PDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/grayape" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                grayape@monkeybrain:~$</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/grayape/projects/">projects</a></li><li><a href="/grayape/learningpath/">learningPath</a></li><li><a href="/grayape/hacklog/">hacklog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://localhost:1313/grayape/learningpath/1.4_network_security.net/">1.4_network_security.net</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><em>Cryptographic walls, layered defenses, and relentless monitoring transform fragile links into fortress-grade networks.</em></p>
+<hr>
+<h1 id="1defensive-infrastructure">1  Defensive Infrastructure</h1>
+<h2 id="11security-devices">1.1  Security Devices</h2>
+<h3 id="firewall">Firewall</h3>
+<p>Operates at Layers 2–4 and (in next‑gen models) Layer 7. It enforces policy at the edge or host level.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>How it works</th>
+          <th>Typical use cases</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Stateless filtering</strong></td>
+          <td>Simple ACL checks on source/destination IP, port, and protocol.</td>
+          <td>High‑speed backbone filtering, low‑resource IoT gateways.</td>
+      </tr>
+      <tr>
+          <td><strong>Stateful inspection</strong></td>
+          <td>Maintains a connection table (five‑tuple) and allows only packets that match an established session.</td>
+          <td>Enterprise perimeter firewalls, data‑center cores.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Tip:</strong> Combine stateless “trash filters” (bogons, multicast, Martians) with stateful rules for legitimate flows.</p></blockquote>
+<h3 id="intrusion-detection--prevention-systems">Intrusion Detection / Prevention Systems</h3>
+<p><em>IDS</em> monitors; <em>IPS</em> monitors <strong>and</strong> blocks.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Engine</th>
+          <th>Strengths</th>
+          <th>Weaknesses</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Signature‑based</strong></td>
+          <td>Low false‑positive rate, fast.</td>
+          <td>Misses zero‑day / obfuscated payloads.</td>
+      </tr>
+      <tr>
+          <td><strong>Anomaly‑based</strong></td>
+          <td>Detects novel attacks.</td>
+          <td>Requires clean baselines; prone to noise.</td>
+      </tr>
+      <tr>
+          <td><strong>Policy‑based</strong></td>
+          <td>Human‑readable, easy audits.</td>
+          <td>Policy drift creates blind spots.</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Placement:</strong> Behind the edge firewall (clean traffic) and before critical VLANs (early threat break).</p>
+<h3 id="vpn-concentrator">VPN Concentrator</h3>
+<p>Aggregates hundreds of tunnels, handling:</p>
+<ul>
+<li><strong>Authentication</strong> – X.509, LDAP, RADIUS, MFA</li>
+<li><strong>Negotiation</strong> – IKEv2 (IPsec) or TLS handshake (SSL‑VPN)</li>
+<li><strong>Traffic segregation</strong> – Split‑tunnel vs. full‑tunnel, per‑group ACLs</li>
+</ul>
+<p>A dedicated concentrator offloads crypto from border firewalls.</p>
+<hr>
+<h2 id="12firewall-administration-essentials">1.2  Firewall Administration Essentials</h2>
+<ul>
+<li>Start with a <strong>default‑deny</strong> egress <strong>and</strong> ingress stance.</li>
+<li>Review rule sets at least <strong>quarterly</strong>; ~30 % of stale rules are common in mature networks.</li>
+<li>Enable <strong>NAT/PAT</strong> to obscure internal addressing and to limit inbound paths.</li>
+<li>Log to a <strong>remote, tamper‑proof server</strong>; rotate &amp; compress daily.</li>
+<li>Subscribe to vendor advisories; patch <strong>critical</strong> vulns within <strong>72 h</strong>.</li>
+</ul>
+<hr>
+<h2 id="13network-access-control-nac">1.3  Network Access Control (NAC)</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Role</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>802.1X supplicant</strong></td>
+          <td>Sends credentials (EAPOL) to switch/AP.</td>
+      </tr>
+      <tr>
+          <td><strong>Authenticator (switch/AP)</strong></td>
+          <td>L2 middle‑point that relays to RADIUS.</td>
+      </tr>
+      <tr>
+          <td><strong>RADIUS server</strong></td>
+          <td>Verifies identity, checks posture (AV, patch level), returns VLAN / ACL.</td>
+      </tr>
+  </tbody>
+</table>
+<p>If posture fails, clients land in a <strong>quarantine VLAN</strong> with patch servers only.</p>
+<hr>
+<h1 id="2vulnerabilities--weak-practices">2  Vulnerabilities &amp; Weak Practices</h1>
+<h2 id="21classic-protocol-weaknesses">2.1  Classic Protocol Weaknesses</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Protocol</th>
+          <th>Why it is weak</th>
+          <th>Modern fix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Telnet</strong></td>
+          <td>Plain‑text auth; no integrity.</td>
+          <td>SSH‑2 with key‑based auth.</td>
+      </tr>
+      <tr>
+          <td><strong>SNMP v1/v2c</strong></td>
+          <td>Community strings in clear text.</td>
+          <td>SNMP v3 with AES + HMAC.</td>
+      </tr>
+      <tr>
+          <td><strong>FTP</strong></td>
+          <td>User/pass visible; passive mode firewall‑unfriendly.</td>
+          <td>SFTP or HTTPS object store.</td>
+      </tr>
+      <tr>
+          <td><strong>TFTP</strong></td>
+          <td>No auth at all; UDP susceptible to spoofing.</td>
+          <td>Secure boot/PXE with IPsec.</td>
+      </tr>
+      <tr>
+          <td><strong>HTTP</strong></td>
+          <td>No encryption; MITM &amp; cookie hijack.</td>
+          <td>Enforce HSTS + TLS 1.3.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="22weak-operational-practices">2.2  Weak Operational Practices</h2>
+<ul>
+<li><strong>Patch latency</strong> – 30‑day delay exposes known CVEs (~60 % of breaches).</li>
+<li><strong>Service sprawl</strong> – Legacy RPC, NetBIOS, multicast left running.</li>
+<li><strong>Flat networks</strong> – No segmentation → lateral movement is trivial.</li>
+<li><strong>Hard‑coded creds</strong> in scripts &amp; IoT.</li>
+<li><strong>Electromagnetic leakage</strong> – Unshielded racks leak keystrokes (TEMPEST).</li>
+</ul>
+<hr>
+<h1 id="3threat-landscape">3  Threat Landscape</h1>
+<h2 id="31insider-threats">3.1  Insider Threats</h2>
+<ul>
+<li>Disgruntled staff wiping backups or exfiltrating IP over covert DNS.</li>
+<li>Phished accounts → pass‑the‑hash pivot.</li>
+<li>$10 Raspberry Pi bridging secure &amp; guest VLANs.</li>
+</ul>
+<blockquote>
+<p><strong>Mitigation:</strong> Mandatory vacations, least‑privilege RBAC, UEBA, strict USB controls.</p></blockquote>
+<h2 id="32external-attacks">3.2  External Attacks</h2>
+<ul>
+<li><strong>Zero‑day exploits</strong> – Micro‑segmentation limits blast radius.</li>
+<li><strong>Brute‑force / credential stuffing</strong> – Rate‑limit logins; MFA.</li>
+<li><strong>BGP hijacking</strong> – Adopt RPKI; monitor route origin validation.</li>
+<li><strong>DNS poisoning</strong> – Deploy DNSSEC; pin resolvers to DoH upstreams.</li>
+</ul>
+<h3 id="denialofservice-variants">Denial‑of‑Service Variants</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Variant</th>
+          <th>Tactic</th>
+          <th>Counter‑measure</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>DDoS</strong></td>
+          <td>Botnet floods (L3–L7).</td>
+          <td>Upstream scrubbing center; Anycast CDN.</td>
+      </tr>
+      <tr>
+          <td><strong>Reflection</strong></td>
+          <td>DNS/NTP/CLDAP amplifiers.</td>
+          <td>Rate‑limit udp/53 replies; BCP 38 egress filtering.</td>
+      </tr>
+      <tr>
+          <td><strong>PDoS</strong></td>
+          <td>Permanent (malicious firmware flashing).</td>
+          <td>Signed firmware + hardware watchdog.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="33wireless-threats-80211ax6e">3.3  Wireless Threats (802.11ax/6E)</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Threat</th>
+          <th>Impact</th>
+          <th>Defense</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Evil twin</strong></td>
+          <td>Fake SSID → creds captured.</td>
+          <td>WPA3‑SAE, Hotspot 2.0, PMF.</td>
+      </tr>
+      <tr>
+          <td><strong>PMKID attack</strong></td>
+          <td>Offline hash crack.</td>
+          <td>Disable WPA2‑personal; SAE groups 19+.</td>
+      </tr>
+      <tr>
+          <td><strong>Frame injection</strong></td>
+          <td>Deauth flood.</td>
+          <td>802.11w PMF + client isolation.</td>
+      </tr>
+      <tr>
+          <td><strong>WPS brute‑force</strong></td>
+          <td>8‑digit PIN trivial.</td>
+          <td>Disable WPS; use NFC provisioning.</td>
+      </tr>
+      <tr>
+          <td><strong>6 GHz spoof</strong></td>
+          <td>Spoofed control signal channel (CSC).</td>
+          <td>Firmware &gt;2025‑05; monitor AFC changes.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="348021x-bypass">3.4  802.1X Bypass</h2>
+<p>Even with 802.1X, attackers leverage:</p>
+<ul>
+<li><strong>MAC Authentication Bypass (MAB)</strong> – Replay a printer’s MAC; switch opens VLAN 20.</li>
+<li><strong>Certificate spoofing</strong> – Clone a laptop’s smart‑card cert; without OCSP the switch can’t know it’s revoked.</li>
+<li><strong>EAP‑MSCHAPv2 relay (Petit‑Potam)</strong> – Coerce DC to auth to attacker; NTLM relay opens SMB ticket.</li>
+</ul>
+<p><strong>Tools:</strong> <em>silentbridge</em>, <em>open1x</em> automate bridging &amp; credential replay.</p>
+<h2 id="35ipv6centric-attacks">3.5  IPv6‑Centric Attacks</h2>
+<ul>
+<li><strong>Rogue RA</strong> – Attacker becomes default gateway.</li>
+<li><strong>SLAAC prefix hijack</strong> – Shorter‑prefix RA wins; re‑routes traffic.</li>
+<li><strong>DHCPv6 rogue</strong> – Push malicious DNS/WPAD.</li>
+<li><strong>NDP spoofing</strong> – IPv6 ARP → MITM.</li>
+<li><strong>Transition tunneling</strong> – 6to4/Teredo bypass IPv4 firewalls.</li>
+</ul>
+<blockquote>
+<p><strong>Blind spot:</strong> Hosts run IPv6 while admins secure only IPv4.</p></blockquote>
+<hr>
+<h1 id="4hardening--mitigation-strategies">4  Hardening &amp; Mitigation Strategies</h1>
+<h2 id="41secure-protocol-substitutions">4.1  Secure Protocol Substitutions</h2>
+<p>Standardize via configuration templates and automated compliance scans (e.g., Ansible roles that fail CI if Telnet, SNMP v1/v2c, or FTP are detected).</p>
+<h2 id="42endpoint--network-hygiene">4.2  Endpoint &amp; Network Hygiene</h2>
+<ol>
+<li><strong>Baselining:</strong> NetFlow, CPU, mem patterns.</li>
+<li><strong>Least‑function:</strong> Disable IPv6 where unused; strip print services on servers.</li>
+<li><strong>Central logging:</strong> Syslog + TLS / Elastic‑Beats to tamper‑proof S3.</li>
+<li><strong>Scanning:</strong> Weekly Authenticated scans; monthly unauth external.</li>
+<li><strong>Patch cadence:</strong> Critical ≤ 72 h; High ≤ 7 d; Moderate ≤ 30 d.</li>
+</ol>
+<h2 id="43device-hardening-checklist">4.3  Device Hardening Checklist</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Area</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Switches</strong></td>
+          <td>Sticky MACs, BPDU‑Guard, Root‑Guard, disable CDP/LLDP on edges.</td>
+      </tr>
+      <tr>
+          <td><strong>Routers</strong></td>
+          <td>uRPF, BGP TTL‑hack, limit ICMP unreachable, secure SNMP.</td>
+      </tr>
+      <tr>
+          <td><strong>Servers</strong></td>
+          <td>CIS L1 benchmark, secure boot, disable unused NICs, hardware TXT.</td>
+      </tr>
+      <tr>
+          <td><strong>Firewalls</strong></td>
+          <td>Deny all → allow explicit, weekly rule audit, signed firmware.</td>
+      </tr>
+      <tr>
+          <td><strong>Endpoints</strong></td>
+          <td>EDR agent, full‑disk encryption, USB mass‑storage block.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="44segmentation--zerotrust">4.4  Segmentation &amp; Zero‑Trust</h2>
+<ul>
+<li><strong>Micro‑segmentation</strong> – East/West traffic filtered by stateful L4 policies.</li>
+<li><strong>Software‑defined perimeters (SDP)</strong> – Identity‑centric access to services.</li>
+<li><strong>ZTNA gateways</strong> enforce user/device posture before session establishment.</li>
+</ul>
+<h2 id="45incident-response--monitoring">4.5  Incident Response &amp; Monitoring</h2>
+<ul>
+<li><strong>Detect:</strong> SIEM rules, threshold alerts, UEBA outliers.</li>
+<li><strong>Contain:</strong> NAC VLAN‑bounce, firewall RTBH (remote trigger black‑hole).</li>
+<li><strong>Eradicate:</strong> Patch or isolate compromised hosts; re‑issue creds.</li>
+<li><strong>Recover:</strong> Validate backups; phased service restoration.</li>
+<li><strong>Lessons learned:</strong> RCA report; update playbooks.</li>
+</ul>
+<hr>
+<h1 id="5physical-security">5  Physical Security</h1>
+<h2 id="51environmental-controls-data-center">5.1  Environmental Controls (Data Center)</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Parameter</th>
+          <th>Target</th>
+          <th>Rationale</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Temperature</strong></td>
+          <td>18‑27 °C ASHRAE‑A1</td>
+          <td>Prevents thermal throttling.</td>
+      </tr>
+      <tr>
+          <td><strong>Humidity</strong></td>
+          <td>40‑60 % RH</td>
+          <td>Avoid ESD &amp; condensation.</td>
+      </tr>
+      <tr>
+          <td><strong>Power</strong></td>
+          <td>Dual UPS + diesel genset</td>
+          <td>15 min battery @ full load.</td>
+      </tr>
+      <tr>
+          <td><strong>Fire</strong></td>
+          <td>FM‑200 or Novec 1230 gas</td>
+          <td>Non‑conductive, residue‑free.</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="52layered-physical-controls">5.2  Layered Physical Controls</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Tier</th>
+          <th>Measures</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Perimeter</strong></td>
+          <td>Fences, CCTV, security guards, lighting.</td>
+      </tr>
+      <tr>
+          <td><strong>Entry</strong></td>
+          <td>Card/RFID, turnstiles, mantraps, visitor logs.</td>
+      </tr>
+      <tr>
+          <td><strong>Room</strong></td>
+          <td>Biometrics, video, rack locks, Faraday cages.</td>
+      </tr>
+      <tr>
+          <td><strong>Rack</strong></td>
+          <td>Sealed cabinets, tamper‑evident seals.</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Four Ds:</strong> <em>Deterrence • Detection • Delay • Response</em></p>
+<h2 id="53credential-workarounds--device-security">5.3  Credential Workarounds &amp; Device Security</h2>
+<ul>
+<li>BIOS/UEFI passwords; disable external boot.</li>
+<li>Full‑disk encryption (AES‑256 XTS).</li>
+<li>Console access logging &amp; port‑knock sequences.</li>
+<li>Portable device lockers for laptops in hot desks.</li>
+</ul>
+<hr>
+<h1 id="6practical-security-tools">6  Practical Security Tools</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Tool &amp; Image</th>
+          <th>Primary Use</th>
+          <th>Pro Tip</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Bettercap</strong> <img src="bettercap.png" alt="Bettercap"></td>
+          <td>MITM, sniffing, DNS spoofing</td>
+          <td>Use <code>caplets</code> to automate multi‑phase attacks.</td>
+      </tr>
+      <tr>
+          <td><strong>hping3</strong> <img src="hping3.png" alt="hping3"></td>
+          <td>Custom packet crafting, firewall testing, DoS simulation</td>
+          <td><code>--rand-source</code> tests stateless ACLs.</td>
+      </tr>
+      <tr>
+          <td><strong>Scapy</strong> <img src="scapy.png" alt="Scapy"></td>
+          <td>Packet crafting/sniffing/fuzzing (Python)</td>
+          <td>Combine with <code>nfqueue</code> for live L7 edits.</td>
+      </tr>
+  </tbody>
+</table>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="http://localhost:1313/grayape/tags/computer-networks/">Computer Networks</a></span>
+        
+    </p>
+
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/grayape/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>

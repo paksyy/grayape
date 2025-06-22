@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/grayape/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=grayape/livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Wireless signals extend the network’s reach, transforming radio waves into seamless connectivity across offices, campuses, and cities.
+1 WLAN Infrastructure Overview Wireless LANs replace the copper last‑drop with radio, yet still rely on familiar Ethernet switching and IP routing behind the access layer.
+Component Role Notes Access Point (AP) 802.11 transceiver bridging RF ↔ wired LAN Split‑MAC (CAPWAP) or autonomous (local MAC) Wireless LAN Controller (WLC) Centralised policy, RF management, seamless roaming CAPWAP tunnels, dynamic channel/power (RRM) Cloud‑Managed Platform SaaS orchestration, zero‑touch provisioning Telemetry, AI‑driven RF optimisation PoE Switch Powers APs (802.3at/bt) Budget 30 W per Wi‑Fi 6 AP, 60 W for tri‑radio 6E RADIUS / LDAP 802.1X authentication backend WPA2‑/WPA3‑Enterprise CAPWAP (Control And Provisioning of Wireless Access Points) tunnels control messages over UDP 5246 and optionally data over UDP 5247.
+" />
+<meta name="keywords" content=", Computer Networks" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/grayape/learningpath/1.3_wireless_networks.net/" />
+
+
+    <title>
+        
+            1.3_wireless_networks.net :: grayape 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/grayape/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/grayape/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/grayape/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/grayape/favicon-16x16.png">
+    <link rel="manifest" href="/grayape/site.webmanifest">
+    <link rel="mask-icon" href="/grayape/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/grayape/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="1.3_wireless_networks.net">
+  <meta itemprop="description" content="Wireless signals extend the network’s reach, transforming radio waves into seamless connectivity across offices, campuses, and cities.
+1 WLAN Infrastructure Overview Wireless LANs replace the copper last‑drop with radio, yet still rely on familiar Ethernet switching and IP routing behind the access layer.
+Component Role Notes Access Point (AP) 802.11 transceiver bridging RF ↔ wired LAN Split‑MAC (CAPWAP) or autonomous (local MAC) Wireless LAN Controller (WLC) Centralised policy, RF management, seamless roaming CAPWAP tunnels, dynamic channel/power (RRM) Cloud‑Managed Platform SaaS orchestration, zero‑touch provisioning Telemetry, AI‑driven RF optimisation PoE Switch Powers APs (802.3at/bt) Budget 30 W per Wi‑Fi 6 AP, 60 W for tri‑radio 6E RADIUS / LDAP 802.1X authentication backend WPA2‑/WPA3‑Enterprise CAPWAP (Control And Provisioning of Wireless Access Points) tunnels control messages over UDP 5246 and optionally data over UDP 5247.">
+  <meta itemprop="datePublished" content="2025-06-21T09:22:00-07:00">
+  <meta itemprop="dateModified" content="2025-06-21T09:22:00-07:00">
+  <meta itemprop="wordCount" content="693">
+  <meta itemprop="keywords" content="Computer Networks">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1.3_wireless_networks.net">
+  <meta name="twitter:description" content="Wireless signals extend the network’s reach, transforming radio waves into seamless connectivity across offices, campuses, and cities.
+1 WLAN Infrastructure Overview Wireless LANs replace the copper last‑drop with radio, yet still rely on familiar Ethernet switching and IP routing behind the access layer.
+Component Role Notes Access Point (AP) 802.11 transceiver bridging RF ↔ wired LAN Split‑MAC (CAPWAP) or autonomous (local MAC) Wireless LAN Controller (WLC) Centralised policy, RF management, seamless roaming CAPWAP tunnels, dynamic channel/power (RRM) Cloud‑Managed Platform SaaS orchestration, zero‑touch provisioning Telemetry, AI‑driven RF optimisation PoE Switch Powers APs (802.3at/bt) Budget 30 W per Wi‑Fi 6 AP, 60 W for tri‑radio 6E RADIUS / LDAP 802.1X authentication backend WPA2‑/WPA3‑Enterprise CAPWAP (Control And Provisioning of Wireless Access Points) tunnels control messages over UDP 5246 and optionally data over UDP 5247.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-06-21 09:22:00 -0700 PDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/grayape" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                grayape@monkeybrain:~$</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/grayape/projects/">projects</a></li><li><a href="/grayape/learningpath/">learningPath</a></li><li><a href="/grayape/hacklog/">hacklog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://localhost:1313/grayape/learningpath/1.3_wireless_networks.net/">1.3_wireless_networks.net</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><em>Wireless signals extend the network’s reach, transforming radio waves into seamless connectivity across offices, campuses, and cities.</em></p>
+<hr>
+<h1 id="1wlan-infrastructure-overview">1  WLAN Infrastructure Overview</h1>
+<p>Wireless LANs replace the copper last‑drop with radio, yet still rely on familiar Ethernet switching and IP routing behind the access layer.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Role</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Access Point (AP)</strong></td>
+          <td>802.11 transceiver bridging RF ↔ wired LAN</td>
+          <td>Split‑MAC (CAPWAP) or autonomous (local MAC)</td>
+      </tr>
+      <tr>
+          <td><strong>Wireless LAN Controller (WLC)</strong></td>
+          <td>Centralised policy, RF management, seamless roaming</td>
+          <td>CAPWAP tunnels, dynamic channel/power (RRM)</td>
+      </tr>
+      <tr>
+          <td><strong>Cloud‑Managed Platform</strong></td>
+          <td>SaaS orchestration, zero‑touch provisioning</td>
+          <td>Telemetry, AI‑driven RF optimisation</td>
+      </tr>
+      <tr>
+          <td><strong>PoE Switch</strong></td>
+          <td>Powers APs (802.3at/bt)</td>
+          <td>Budget 30 W per Wi‑Fi 6 AP, 60 W for tri‑radio 6E</td>
+      </tr>
+      <tr>
+          <td><strong>RADIUS / LDAP</strong></td>
+          <td>802.1X authentication backend</td>
+          <td>WPA2‑/WPA3‑Enterprise</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>CAPWAP</strong> (Control And Provisioning of Wireless Access Points) tunnels control messages over UDP 5246 and optionally data over UDP 5247.</p></blockquote>
+<hr>
+<h1 id="2wifi-80211-standards-evolution">2  Wi‑Fi (802.11) Standards Evolution</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Std</th>
+          <th>Wi‑Fi Name</th>
+          <th>Bands</th>
+          <th>Max PHY*</th>
+          <th>Channel Width</th>
+          <th>Key Enhancements</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>802.11a</td>
+          <td>—</td>
+          <td>5 GHz</td>
+          <td>54 Mb/s</td>
+          <td>20 MHz</td>
+          <td>OFDM</td>
+      </tr>
+      <tr>
+          <td>802.11b</td>
+          <td>—</td>
+          <td>2.4 GHz</td>
+          <td>11 Mb/s</td>
+          <td>22 MHz</td>
+          <td>DSSS</td>
+      </tr>
+      <tr>
+          <td>802.11g</td>
+          <td>—</td>
+          <td>2.4 GHz</td>
+          <td>54 Mb/s</td>
+          <td>20 MHz</td>
+          <td>Back‑compat with b</td>
+      </tr>
+      <tr>
+          <td>802.11n</td>
+          <td>Wi‑Fi 4</td>
+          <td>2.4/5 GHz</td>
+          <td>600 Mb/s</td>
+          <td>20/40 MHz</td>
+          <td>MIMO 4×4, HT</td>
+      </tr>
+      <tr>
+          <td>802.11ac</td>
+          <td>Wi‑Fi 5</td>
+          <td>5 GHz</td>
+          <td>6.9 Gb/s</td>
+          <td>20/40/80/160 MHz</td>
+          <td>256‑QAM, MU‑MIMO</td>
+      </tr>
+      <tr>
+          <td>802.11ax</td>
+          <td>Wi‑Fi 6 / 6E</td>
+          <td>2.4/5/6 GHz</td>
+          <td>9.6 Gb/s</td>
+          <td>20‑160 MHz</td>
+          <td>OFDMA, 1024‑QAM, TWT, BSS Color</td>
+      </tr>
+      <tr>
+          <td>802.11be</td>
+          <td>Wi‑Fi 7 †</td>
+          <td>2.4/5/6 GHz</td>
+          <td>46 Gb/s</td>
+          <td>20‑320 MHz</td>
+          <td>4096‑QAM, Multi‑Link Ops, CMU‑MIMO</td>
+      </tr>
+  </tbody>
+</table>
+<p>*PHY = physical‑layer data rate; real throughput ≈ 45–60 % after MAC/airtime overhead.
+†Draft at time of writing.</p>
+<hr>
+<h1 id="3rf--channel-planning-basics">3  RF &amp; Channel Planning Basics</h1>
+<ul>
+<li><strong>2.4 GHz</strong> – 3 non‑overlapping 20 MHz channels (1, 6, 11). Longer range, higher interference.</li>
+<li><strong>5 GHz</strong> – 24 non‑DFS 20 MHz channels; DFS spectrum adds 15 more (radar detection required). Supports channel bonding up to 160 MHz.</li>
+<li><strong>6 GHz (Wi‑Fi 6E)</strong> – 59 channels (20 MHz) in FCC domain; entirely DFS‑free, ideal for high‑density uplinks.</li>
+</ul>
+<blockquote>
+<p>Plan adjacent APs on non‑overlapping channels, aiming for ‑65 dBm RSSI and ≥ 25 dB SNR at client locations.</p></blockquote>
+<p>Formula: <strong>FSPL (dB) = 32.4 + 20 log₁₀ d(km) + 20 log₁₀ f(MHz)</strong></p>
+<hr>
+<h1 id="4antenna-technology">4  Antenna Technology</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Pattern</th>
+          <th>Typical Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Omnidirectional</strong></td>
+          <td>360° azimuth, 30°–60° elevation</td>
+          <td>Indoor ceiling‑mount APs</td>
+      </tr>
+      <tr>
+          <td><strong>Patch/Panel</strong></td>
+          <td>60°–90° beam</td>
+          <td>Stadium sectors, warehouse aisles</td>
+      </tr>
+      <tr>
+          <td><strong>Yagi / Dish</strong></td>
+          <td>10°–25° highly directional</td>
+          <td>Bridging buildings, backhaul</td>
+      </tr>
+      <tr>
+          <td><strong>Sector</strong></td>
+          <td>120°</td>
+          <td>Outdoor campus or WISP tower</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Gain (dBi)</em> ≈ directivity; doubling gain ↑ 3 dB halves beamwidth. <strong>Polarisation diversity</strong> &amp; <strong>MIMO</strong> (spatial streams) boost resilience and throughput.</p>
+<hr>
+<h1 id="5authentication--encryption">5  Authentication &amp; Encryption</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Cipher</th>
+          <th>Auth Method</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Open + OWE</strong></td>
+          <td>None / AES‑CCMP</td>
+          <td>None</td>
+          <td>Opportunistic Encryption (RFC 8110) replaces “open” hotspots</td>
+      </tr>
+      <tr>
+          <td><strong>WPA2‑Personal</strong></td>
+          <td>AES‑CCMP</td>
+          <td>Pre‑Shared Key</td>
+          <td>Home/SMB; PSK‑based</td>
+      </tr>
+      <tr>
+          <td><strong>WPA3‑Personal</strong></td>
+          <td>AES‑CCMP‑128</td>
+          <td><strong>SAE</strong> (Dragonfly)</td>
+          <td>Resistant to offline dictionary attacks</td>
+      </tr>
+      <tr>
+          <td><strong>WPA2‑Enterprise</strong></td>
+          <td>AES‑CCMP</td>
+          <td>802.1X (EAP‑TLS, PEAP)</td>
+          <td>Requires RADIUS; per‑user creds</td>
+      </tr>
+      <tr>
+          <td><strong>WPA3‑Enterprise</strong></td>
+          <td>AES‑GCM‑256</td>
+          <td>802.1X (EAP‑TLS‑TLS1.3)</td>
+          <td>Mandatory PMF, 192‑bit suite</td>
+      </tr>
+  </tbody>
+</table>
+<p>Pairwise Master Key (PMK) caching &amp; <strong>Fast BSS Transition</strong> (802.11r) cut roam times to &lt; 50 ms for VoIP.</p>
+<hr>
+<h1 id="6roaming--radio-resource-management">6  Roaming &amp; Radio Resource Management</h1>
+<ul>
+<li><strong>802.11k</strong> – Neighbor reports let clients pre‑scan candidate APs.</li>
+<li><strong>802.11v</strong> – BSS Transition Management steers clients to better AP/channel.</li>
+<li><strong>802.11r</strong> – Fast BSS Transition (FT) derives new PTK without full handshake.</li>
+</ul>
+<p>Controllers compute <strong>Radio Resource Management (RRM)</strong>: dynamic channel/power, load‑balancing, band‑steering (push dual‑band clients to 5/6 GHz).</p>
+<hr>
+<h1 id="7wifi-frame-categories">7  Wi‑Fi Frame Categories</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Examples</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Management</strong></td>
+          <td>Beacon, Probe, Auth, Assoc</td>
+          <td>Establish &amp; maintain connections</td>
+      </tr>
+      <tr>
+          <td><strong>Control</strong></td>
+          <td>ACK, RTS/CTS, BlockAck</td>
+          <td>Coordinate access to medium</td>
+      </tr>
+      <tr>
+          <td><strong>Data</strong></td>
+          <td>QoS Data, Null‑Data</td>
+          <td>Carry user payload</td>
+      </tr>
+  </tbody>
+</table>
+<p>Airtime fairness depends on MAC efficiency: fewer management frames, aggregate MSDUs (A‑MSDU) &amp; MPDUs (A‑MPDU) to amortise overhead.</p>
+<hr>
+<h1 id="8wlan-topologies">8  WLAN Topologies</h1>
+<h2 id="81adhoc-ibss">8.1  Ad‑Hoc (IBSS)</h2>
+<p>Peer‑to‑peer without infrastructure; limited scale and no roaming.</p>
+<h2 id="82infrastructure-bssess">8.2  Infrastructure (BSS/ESS)</h2>
+<p>Clients associate to AP(s) forming Basic Service Sets; multiple BSS under one SSID constitute an <strong>ESS</strong> enabling roaming.</p>
+<h2 id="83mesh-80211s--proprietary">8.3  Mesh (802.11s / Proprietary)</h2>
+<p>APs create wireless backhaul links; self‑healing; adds latency vs wired uplink.</p>
+<hr>
+<h1 id="9identifiers--service-sets">9  Identifiers &amp; Service Sets</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Term</th>
+          <th>Definition</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>SSID</strong></td>
+          <td>Network name broadcast in Beacon; unicode up to 32 chars</td>
+      </tr>
+      <tr>
+          <td><strong>BSSID</strong></td>
+          <td>Radio MAC (one per AP radio per WLAN)</td>
+      </tr>
+      <tr>
+          <td><strong>ESSID</strong></td>
+          <td>Group of APs sharing SSID across an ESS</td>
+      </tr>
+      <tr>
+          <td><strong>RSSI / SNR</strong></td>
+          <td>Signal strength / quality; target ‑65 dBm, &gt; 25 dB SNR</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p>Monitor <strong>channel utilisation</strong> (&lt; 50 %) and <strong>airtime</strong> (client airtime fairness) using WLC or <code>iw</code>/<code>airodump‑ng</code> during surveys.</p></blockquote>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="http://localhost:1313/grayape/tags/computer-networks/">Computer Networks</a></span>
+        
+    </p>
+
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/grayape/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>

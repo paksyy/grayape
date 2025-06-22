@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/grayape/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=grayape/livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Ports, protocols, and application services coordinate the conversations that ride upon the network’s physical and virtual highways.
+1 Addressing &amp; Name Services 1.1 DHCP – Dynamic Host Configuration Protocol Dynamic Host Configuration Protocol (DHCP) automatically assigns IP addressing details (subnet mask, default‑gateway, DNS, NTP, option‑43 for VoIP, etc.) to hosts, simplifying moves/adds/changes.
+1.1.1 Lease Process (DORA &#43; Timers) Stage Broadcast? Description Discover Yes Client (0.0.0.0 → 255.255.255.255) announces it needs config. Offer Yes Server advertises free lease (includes yiaddr, lease‑time). Request Yes Client formally requests a specific offer / renews existing lease. Ack Yes Server finalises; client configures interface and sends gratuitous ARP. Lease renewal T1 = 50 % lease‑time – unicast REQUEST to original server. T2 = 87.5 % – broadcast REQUEST if original server timed‑out. After expiry, client returns to INIT state.
+" />
+<meta name="keywords" content=", Computer Networks" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/grayape/learningpath/1.2_network_services__protocols.net/" />
+
+
+    <title>
+        
+            1.2_network_services_&amp;_protocols.net :: grayape 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/grayape/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="css/custom.css">
+    
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/grayape/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/grayape/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/grayape/favicon-16x16.png">
+    <link rel="manifest" href="/grayape/site.webmanifest">
+    <link rel="mask-icon" href="/grayape/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/grayape/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="1.2_network_services_&_protocols.net">
+  <meta itemprop="description" content="Ports, protocols, and application services coordinate the conversations that ride upon the network’s physical and virtual highways.
+1 Addressing &amp; Name Services 1.1 DHCP – Dynamic Host Configuration Protocol Dynamic Host Configuration Protocol (DHCP) automatically assigns IP addressing details (subnet mask, default‑gateway, DNS, NTP, option‑43 for VoIP, etc.) to hosts, simplifying moves/adds/changes.
+1.1.1 Lease Process (DORA &#43; Timers) Stage Broadcast? Description Discover Yes Client (0.0.0.0 → 255.255.255.255) announces it needs config. Offer Yes Server advertises free lease (includes yiaddr, lease‑time). Request Yes Client formally requests a specific offer / renews existing lease. Ack Yes Server finalises; client configures interface and sends gratuitous ARP. Lease renewal T1 = 50 % lease‑time – unicast REQUEST to original server. T2 = 87.5 % – broadcast REQUEST if original server timed‑out. After expiry, client returns to INIT state.">
+  <meta itemprop="datePublished" content="2025-06-21T09:21:10-07:00">
+  <meta itemprop="dateModified" content="2025-06-21T09:21:10-07:00">
+  <meta itemprop="wordCount" content="1264">
+  <meta itemprop="keywords" content="Computer Networks">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="1.2_network_services_&_protocols.net">
+  <meta name="twitter:description" content="Ports, protocols, and application services coordinate the conversations that ride upon the network’s physical and virtual highways.
+1 Addressing &amp; Name Services 1.1 DHCP – Dynamic Host Configuration Protocol Dynamic Host Configuration Protocol (DHCP) automatically assigns IP addressing details (subnet mask, default‑gateway, DNS, NTP, option‑43 for VoIP, etc.) to hosts, simplifying moves/adds/changes.
+1.1.1 Lease Process (DORA &#43; Timers) Stage Broadcast? Description Discover Yes Client (0.0.0.0 → 255.255.255.255) announces it needs config. Offer Yes Server advertises free lease (includes yiaddr, lease‑time). Request Yes Client formally requests a specific offer / renews existing lease. Ack Yes Server finalises; client configures interface and sends gratuitous ARP. Lease renewal T1 = 50 % lease‑time – unicast REQUEST to original server. T2 = 87.5 % – broadcast REQUEST if original server timed‑out. After expiry, client returns to INIT state.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2025-06-21 09:21:10 -0700 PDT" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/grayape" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                grayape@monkeybrain:~$</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/grayape/projects/">projects</a></li><li><a href="/grayape/learningpath/">learningPath</a></li><li><a href="/grayape/hacklog/">hacklog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="http://localhost:1313/grayape/learningpath/1.2_network_services__protocols.net/">1.2_network_services_&amp;_protocols.net</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p><em>Ports, protocols, and application services coordinate the conversations that ride upon the network’s physical and virtual highways.</em></p>
+<hr>
+<h1 id="1--addressing--name-services">1  Addressing &amp; Name Services</h1>
+<h2 id="11--dhcp--dynamic-host-configuration-protocol">1.1  DHCP – Dynamic Host Configuration Protocol</h2>
+<p>Dynamic Host Configuration Protocol (DHCP) automatically assigns IP addressing details (subnet mask, default‑gateway, DNS, NTP, option‑43 for VoIP, etc.) to hosts, simplifying moves/adds/changes.</p>
+<h3 id="111--lease-process-dora--timers">1.1.1  Lease Process (DORA + Timers)</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Stage</th>
+          <th>Broadcast?</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Discover</strong></td>
+          <td>Yes</td>
+          <td>Client (<code>0.0.0.0</code> → <code>255.255.255.255</code>) announces it needs config.</td>
+      </tr>
+      <tr>
+          <td><strong>Offer</strong></td>
+          <td>Yes</td>
+          <td>Server advertises free lease (includes <code>yiaddr</code>, lease‑time).</td>
+      </tr>
+      <tr>
+          <td><strong>Request</strong></td>
+          <td>Yes</td>
+          <td>Client formally requests a specific offer / renews existing lease.</td>
+      </tr>
+      <tr>
+          <td><strong>Ack</strong></td>
+          <td>Yes</td>
+          <td>Server finalises; client configures interface and sends <strong>gratuitous ARP</strong>.</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>Lease renewal</em>
+<code>T1</code> = 50 % lease‑time – unicast REQUEST to original server.
+<code>T2</code> = 87.5 % – broadcast REQUEST if original server timed‑out.
+After expiry, client returns to INIT state.</p>
+<h3 id="112--dhcpv6-highlights">1.1.2  DHCPv6 Highlights</h3>
+<ul>
+<li>Uses <strong>Solicit‑Advertise‑Request‑Reply</strong> (SARR) with multicast <code>ff02::1:2</code>.</li>
+<li>Prefix delegation, rapid‑commit, and stateless address autoconfiguration (<strong>SLAAC</strong> + <strong>RDNSS option 25</strong>).</li>
+</ul>
+<h3 id="113--high-availability">1.1.3  High Availability</h3>
+<ul>
+<li><strong>Hot‑Standby</strong> – One active, one backup; VRRP on server VIP.</li>
+<li><strong>Load‑Balance</strong> – Even/odd hash of client MACs; each peer owns half‑scope.</li>
+</ul>
+<h3 id="114--security-concerns">1.1.4  Security Concerns</h3>
+<ul>
+<li>Rogue server → Mitigate with <strong>DHCP Snooping</strong> (switch feature).</li>
+<li>Exhaustion attack → Reduce lease‑time, implement rate‑limit.</li>
+</ul>
+<hr>
+<h2 id="12--dns--domain-name-system">1.2  DNS – Domain Name System</h2>
+<p>DNS converts memorable names to IPs and underpins load‑balancing (round‑robin), geo‑location (EDNS‑client‑subnet) and service discovery (SRV records).</p>
+<h3 id="121--query-types--flow">1.2.1  Query Types &amp; Flow</h3>
+<ul>
+<li><strong>Recursive</strong> – Resolver does all work and returns final answer to stub resolver.</li>
+<li><strong>Iterative</strong> – Each referral returned to the client until authoritative answer reached.</li>
+</ul>
+<h3 id="122--record-cheatsheet">1.2.2  Record Cheat‑Sheet</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Record</th>
+          <th>Purpose</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>A / AAAA</strong></td>
+          <td>IPv4 / IPv6 mapping</td>
+          <td><code>chat.openai.com → 104.18.12.123</code></td>
+      </tr>
+      <tr>
+          <td><strong>CNAME</strong></td>
+          <td>Alias to another FQDN</td>
+          <td><code>www → @</code></td>
+      </tr>
+      <tr>
+          <td><strong>MX</strong></td>
+          <td>Mail server preference</td>
+          <td><code>10 mail1.example.net</code></td>
+      </tr>
+      <tr>
+          <td><strong>NS</strong></td>
+          <td>Delegates zone authority</td>
+          <td><code>ns1/ns2</code></td>
+      </tr>
+      <tr>
+          <td><strong>TXT</strong></td>
+          <td>Arbitrary text – SPF/DMARC</td>
+          <td><code>v=spf1 include:_spf.google.com -all</code></td>
+      </tr>
+      <tr>
+          <td><strong>SRV</strong></td>
+          <td>Service + port discovery</td>
+          <td><code>_sip._tcp.example.com 0 5060 sip.example.com</code></td>
+      </tr>
+      <tr>
+          <td><strong>CAA</strong></td>
+          <td>Permitted certificate issuers</td>
+          <td><code>0 issue &quot;letsencrypt.org&quot;</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="123--dnssec-in-60seconds">1.2.3  DNSSEC in 60 Seconds</h3>
+<p>Adds authenticity &amp; integrity via <strong>RRSIG</strong> signatures and a chain of trust (root → TLD → zone). Validating resolvers drop spoofed/poisoned answers.</p>
+<h3 id="124--ttl--caching">1.2.4  TTL &amp; Caching</h3>
+<p>Negative TTL (NXDOMAIN) • Flap‑protection via low TTL during migrations (300 s) • <code>dig +trace</code> to troubleshoot authoritative path.</p>
+<hr>
+<h2 id="13--nat--network-address-translation">1.3  NAT – Network Address Translation</h2>
+<p>Network Address Translation masks internal RFC‑1918 addresses behind public IPs.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Mode</th>
+          <th>Mapping</th>
+          <th>Typical Use</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Static</strong></td>
+          <td>1 private ↔ 1 public</td>
+          <td>DMZ servers requiring fixed IP</td>
+      </tr>
+      <tr>
+          <td><strong>Dynamic</strong></td>
+          <td>Many private ↔ many public (pool)</td>
+          <td>Enterprise outbound bursts</td>
+      </tr>
+      <tr>
+          <td><strong>PAT (Overload)</strong></td>
+          <td>Many private ↔ 1 public : <strong>port‑mux</strong></td>
+          <td>Home routers</td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="131--natvariants--behaviours">1.3.1  NAT Variants &amp; Behaviours</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Behaviour</th>
+          <th>Outbound Port Allocation</th>
+          <th>Inbound Acceptance</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Full‑cone</strong></td>
+          <td>Fixed port</td>
+          <td>Any external host ↔ that port</td>
+      </tr>
+      <tr>
+          <td><strong>Restricted‑cone</strong></td>
+          <td>Dynamic</td>
+          <td>Reply only to destination IP</td>
+      </tr>
+      <tr>
+          <td><strong>Port‑restricted</strong></td>
+          <td>Dynamic</td>
+          <td>Reply only to dest IP+port</td>
+      </tr>
+      <tr>
+          <td><strong>Symmetric</strong></td>
+          <td>Dynamic per flow</td>
+          <td>Only matching IP+port can return</td>
+      </tr>
+  </tbody>
+</table>
+<p><em>NAT traversal</em> uses <strong>STUN</strong>, <strong>TURN</strong>, <strong>ICE</strong> (VoIP/WebRTC). <strong>Hairpin NAT</strong> enables internal hosts to reach a service on the router’s public IP.</p>
+<hr>
+<h1 id="2--practical-service-enumeration">2  Practical Service Enumeration</h1>
+<p><em>These CLI utilities help discover and interrogate live services. Image thumbnails remain so you can bundle screenshots or icons locally.</em></p>
+<table>
+  <thead>
+      <tr>
+          <th>Tool</th>
+          <th>Typical Use</th>
+          <th>One‑Liner Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>dig</strong> <img src="dig.png" alt="dig"></td>
+          <td>Inspect DNS records, query ANY/TXT, measure TTL</td>
+          <td><code>dig +nocmd example.com any +multiline</code></td>
+      </tr>
+      <tr>
+          <td><strong>dnsrecon</strong> <img src="dnsrecon.png" alt="dnsrecon"></td>
+          <td>Automate zone transfers, brute‑force sub‑domains</td>
+          <td><code>dnsrecon -d example.com -t axfr</code></td>
+      </tr>
+      <tr>
+          <td><strong>curl</strong> <img src="curl.png" alt="curl"></td>
+          <td>Fetch HTTP headers, test REST endpoints and status codes</td>
+          <td><code>curl -I https://api.example.com/v1/health</code></td>
+      </tr>
+      <tr>
+          <td><strong>wget</strong> <img src="wget.png" alt="wget"></td>
+          <td>Mirror sites recursively for offline audit; pull large files</td>
+          <td><code>wget -r --no-parent http://legacyhost/</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="3--network-access--remote-services--network-access--remote-services">3  Network Access &amp; Remote Services  Network Access &amp; Remote Services</h1>
+<h2 id="31--vpn-protocols--remote-access">3.1  VPN Protocols &amp; Remote Access</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Protocol</th>
+          <th>OSI Lvl</th>
+          <th>Encryption</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>IPsec (IKEv2)</strong></td>
+          <td>3</td>
+          <td>AES/GCM</td>
+          <td>Site‑to‑site &amp; remote access; NAT‑T UDP 4500</td>
+      </tr>
+      <tr>
+          <td><strong>L2TP + IPsec</strong></td>
+          <td>2</td>
+          <td>AES</td>
+          <td>Uses PPP inside UDP 1701; no data integrity sans IPsec</td>
+      </tr>
+      <tr>
+          <td><strong>SSL/TLS VPN</strong></td>
+          <td>7</td>
+          <td>AES/ChaCha</td>
+          <td>Runs over TCP 443; firewall‑friendly</td>
+      </tr>
+      <tr>
+          <td><strong>WireGuard</strong></td>
+          <td>3</td>
+          <td>ChaCha20‑Poly1305</td>
+          <td>Minimal code, fast handshakes (UDP‑only)</td>
+      </tr>
+      <tr>
+          <td><strong>GRE</strong></td>
+          <td>3</td>
+          <td>None</td>
+          <td>Encapsulates any L3 protocol; add IPsec for security</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="32--authentication-authorisation-accounting">3.2  Authentication, Authorisation, Accounting</h2>
+<ul>
+<li><strong>RADIUS</strong> – UDP 1812/1813; combines AAA; password obfuscated with shared secret.</li>
+<li><strong>TACACS+</strong> – TCP 49; separates AAA; encrypts full payload; command‑level authorisation (network devices).</li>
+</ul>
+<blockquote>
+<p>For Wi‑Fi Enterprise, 802.1X EAP‑TLS rides on RADIUS for credentials.</p></blockquote>
+<hr>
+<h1 id="4--routing-fundamentals">4  Routing Fundamentals</h1>
+<h2 id="41--key-routing-concepts">4.1  Key Routing Concepts</h2>
+<ul>
+<li><strong>Administrative Distance (AD)</strong> – Trust ranking of sources (Connected 0, Static 1, EIGRP 90, OSPF 110, RIP 120).</li>
+<li><strong>Route Redistribution</strong> – Injecting routes between protocols; beware loops, set seed metrics.</li>
+<li><strong>Summarisation / Aggregation</strong> – Reduces table size; OSPF manual on ABR, BGP automatic if exact prefix aggregate exists.</li>
+<li><strong>Split‑Horizon</strong> &amp; <strong>Route Poisoning</strong> – Prevent counting‑to‑infinity in distance‑vector protocols.</li>
+<li><strong>First Hop Redundancy</strong> – VRRP/HSRP/GLBP provide virtual default‑gateway IP; fail‑over sub‑second.</li>
+</ul>
+<h2 id="42--dynamic-protocol-capsules">4.2  Dynamic Protocol Capsules</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Protocol</th>
+          <th>Metric</th>
+          <th>Convergence</th>
+          <th>Scale</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>RIP v2</strong></td>
+          <td>Hop count (≤ 15)</td>
+          <td>Slow</td>
+          <td>Small</td>
+          <td>Simple; supports CIDR &amp; MD5 auth</td>
+      </tr>
+      <tr>
+          <td><strong>OSPF v2/v3</strong></td>
+          <td>Cost (BW)</td>
+          <td>Fast</td>
+          <td>Large</td>
+          <td>SPF algorithm; areas (0 = backbone)</td>
+      </tr>
+      <tr>
+          <td><strong>EIGRP</strong></td>
+          <td>Composite (BW, delay)</td>
+          <td>Very fast</td>
+          <td>Med</td>
+          <td>Cisco proprietary (now IETF draft)</td>
+      </tr>
+      <tr>
+          <td><strong>BGP‑4</strong></td>
+          <td>Policy/path (AS‑PATH, MED, LP)</td>
+          <td>Incremental</td>
+          <td>Internet‑scale</td>
+          <td>eBGP/iBGP, communities, route‑reflectors</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="5--unified-communication">5  Unified Communication</h1>
+<h2 id="51--voip-signalling-vs-media">5.1  VoIP Signalling vs Media</h2>
+<ul>
+<li><strong>SIP</strong> (TCP/UDP 5060, TLS 5061) sets up calls, negotiates codecs via <strong>SDP</strong>.</li>
+<li><strong>RTP/RTCP</strong> (UDP dynamic ports) carry voice/video streams; packet‑loss concealed with jitter buffers.</li>
+</ul>
+<h3 id="511--qos-for-uc">5.1.1  QoS for UC</h3>
+<ul>
+<li>Classify <strong>SIP control</strong> DSCP 24 (CS3) and <strong>RTP media</strong> DSCP 46 (EF); police &lt; 150 ms one‑way delay, &lt; 30 ms jitter, &lt; 1 % loss.</li>
+</ul>
+<h2 id="52--uc-edge-elements">5.2  UC Edge Elements</h2>
+<ul>
+<li><strong>Session Border Controller (SBC)</strong> – NAT‑traversal, topology‑hiding, DoS rate‑limit.</li>
+<li><strong>VoIP Gateway</strong> – Transcodes TDM ↔ SIP; converts G.711 ↔ G.729/OPUS.</li>
+</ul>
+<hr>
+<h1 id="6--tls--pki-basics">6  TLS &amp; PKI Basics</h1>
+<p>Transport Layer Security (TLS) secures Layer‑7 protocols such as HTTPS, SMTPS, and FTPS by providing <strong>encryption, integrity, and authentication</strong>. Public‑Key Infrastructure (PKI) binds identities to keys via X.509 certificates.</p>
+<h2 id="61--tls-handshake-tls13">6.1  TLS Handshake (TLS 1.3)</h2>
+<pre tabindex="0"><code>ClientHello →  ServerHello
+                ↓
+        [Encrypted Handshake]
+Client Finished ↔ Server Finished
+</code></pre><ol>
+<li><strong>ClientHello</strong> – Lists cipher‑suites, TLS version, <strong>SNI</strong> (Server Name Indication), <strong>ALPN</strong> (Application‑Layer Protocol Negotiation).</li>
+<li><strong>ServerHello</strong> – Chooses cipher, sends certificate + key‑share.</li>
+<li>Encrypted handshake messages exchange session secrets using (EC)DHE.</li>
+<li>Both sides send <strong>Finished</strong> MAC; application data now flows with <strong>AEAD</strong> (AES‑GCM/ChaCha20‑Poly1305).</li>
+</ol>
+<p><em>TLS 1.3 removed RSA key exchange &amp; static DH, reducing handshake RTT from two to one.</em></p>
+<h2 id="62--version-timeline">6.2  Version Timeline</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Era</th>
+          <th>Protocol</th>
+          <th>Key Points</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>1995</td>
+          <td><strong>SSL v2</strong></td>
+          <td>Weak, deprecated</td>
+      </tr>
+      <tr>
+          <td>1996</td>
+          <td><strong>SSL v3</strong></td>
+          <td>Pre‑TLS; CBC, MAC‑then‑Encrypt</td>
+      </tr>
+      <tr>
+          <td>1999</td>
+          <td><strong>TLS 1.0</strong></td>
+          <td>RFC 2246; RC4/CBC suites</td>
+      </tr>
+      <tr>
+          <td>2006</td>
+          <td><strong>TLS 1.1</strong></td>
+          <td>Adds explicit IV to CBC</td>
+      </tr>
+      <tr>
+          <td>2008</td>
+          <td><strong>TLS 1.2</strong></td>
+          <td>SHA‑256 PRF, AEAD (GCM)</td>
+      </tr>
+      <tr>
+          <td>2018</td>
+          <td><strong>TLS 1.3</strong></td>
+          <td>0‑RTT, forward secrecy mandatory</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="63--certificate-anatomy">6.3  Certificate Anatomy</h2>
+<ul>
+<li><strong>Subject</strong> CN/SAN – FQDN(s) covered.</li>
+<li><strong>Issuer</strong> – CA that signed the cert.</li>
+<li><strong>Validity</strong> – <code>Not Before / Not After</code>; expired certs trigger warnings.</li>
+<li><strong>Public Key</strong> – RSA/ECDSA.</li>
+<li><strong>Extensions</strong> – Key Usage, Extended Key Usage, OCSP Must‑Staple.</li>
+</ul>
+<h3 id="inspecting-certificates">Inspecting Certificates</h3>
+<p><code>openssl s_client -connect site:443 -servername site -alpn h2</code>
+<code>openssl x509 -noout -text -in cert.pem</code></p>
+<h2 id="64--common-misconfigurations--attacks">6.4  Common Misconfigurations &amp; Attacks</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Issue</th>
+          <th>Impact</th>
+          <th>Mitigation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Expired certificate</td>
+          <td>Breaks HTTPS; MITM possible if user ignores warning</td>
+          <td>Automated renewals (ACME/Let’s Encrypt)</td>
+      </tr>
+      <tr>
+          <td>Weak ciphers (3DES, RC4)</td>
+          <td>Vulnerable to SWEET32/RC4 biases</td>
+          <td>Disable legacy suites</td>
+      </tr>
+      <tr>
+          <td>Self‑signed in prod</td>
+          <td>Users can’t validate</td>
+          <td>Use public CA or corporate root pushed via GPO/MDM</td>
+      </tr>
+      <tr>
+          <td>Incorrect SNI</td>
+          <td>Certificate mismatch</td>
+          <td>Ensure reverse‑proxy passes <code>Host</code> header ↔ SNI</td>
+      </tr>
+      <tr>
+          <td>SSLStrip / Downgrade</td>
+          <td>Forces HTTP or TLS 1.0</td>
+          <td><strong>HSTS</strong>, <code>X‑Frame‑Options</code>, disable TLS &lt; 1.2</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+<p><strong>Tip:</strong> Qualys SSL Labs provides an instant grade of any public HTTPS service.</p></blockquote>
+<hr>
+<h1 id="7--protocol-landscape-cheatsheet">7  Protocol Landscape Cheat‑Sheet</h1>
+<table>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Protocols</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Routing (IGP/EGP)</strong></td>
+          <td>RIP • OSPF • EIGRP • IS‑IS • BGP</td>
+      </tr>
+      <tr>
+          <td><strong>Secure Remote</strong></td>
+          <td>SSH • TLS • IPsec • WireGuard</td>
+      </tr>
+      <tr>
+          <td><strong>Mgmt/Telemetry</strong></td>
+          <td>SNMPv3 • NetFlow/IPFIX • Syslog • gRPC‑GNMI</td>
+      </tr>
+      <tr>
+          <td><strong>Name/Addressing</strong></td>
+          <td>DNS • mDNS • DHCP • SLAAC</td>
+      </tr>
+      <tr>
+          <td><strong>Email</strong></td>
+          <td>SMTP • IMAP • POP3 • DMARC/SPF/DKIM</td>
+      </tr>
+      <tr>
+          <td><strong>File Transfer</strong></td>
+          <td>FTP • FTPS • SFTP • SCP • SMB • NFS</td>
+      </tr>
+      <tr>
+          <td><strong>Web</strong></td>
+          <td>HTTP/2 • HTTPS • QUIC/HTTP‑3</td>
+      </tr>
+      <tr>
+          <td><strong>IoT &amp; Messaging</strong></td>
+          <td>MQTT • AMQP • CoAP • WebSocket</td>
+      </tr>
+  </tbody>
+</table>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="http://localhost:1313/grayape/tags/computer-networks/">Computer Networks</a></span>
+        
+    </p>
+
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/grayape/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>
