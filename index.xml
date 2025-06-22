@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>grayape</title><link>http://paksyy.github.io/grayape/</link><description>Recent content on grayape</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 22 Jun 2025 09:22:00 +0000</lastBuildDate><atom:link href="http://paksyy.github.io/grayape/index.xml" rel="self" type="application/rss+xml"/><item><title>2.0_linux_&amp;_ba$h_scripting.sh</title><link>http://paksyy.github.io/grayape/learningpath/2.0_linux__bah_scripting.sh/</link><pubDate>Sun, 22 Jun 2025 09:22:00 +0000</pubDate><guid>http://paksyy.github.io/grayape/learningpath/2.0_linux__bah_scripting.sh/</guid><description/></item><item><title>1.7_politics_&amp;_compliances.net</title><link>http://paksyy.github.io/grayape/learningpath/1.7_politics__compliances.net/</link><pubDate>Sat, 21 Jun 2025 09:23:30 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.7_politics__compliances.net/</guid><description>&lt;p>&lt;em>Policies, audits, and standards translate technical safeguards into enterprise-wide accountability.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1--corporate-policy-framework">1 Corporate Policy Framework&lt;/h1>
+&lt;h2 id="11--bringyourowndevice-byod-policy">1.1 Bring‑Your‑Own‑Device (BYOD) Policy&lt;/h2>
+&lt;p>A BYOD policy governs how employees can use personal devices (phones, laptops, tablets) to access corporate networks and data.&lt;/p>
+&lt;h3 id="security-considerations">Security Considerations&lt;/h3>
+&lt;ul>
+&lt;li>Enforce strong authentication (e.g., MFA)&lt;/li>
+&lt;li>Require full‑disk and mobile storage encryption&lt;/li>
+&lt;li>Use mobile‑device management (&lt;strong>MDM&lt;/strong>)&lt;/li>
+&lt;li>Restrict access based on role, network zone, or geolocation&lt;/li>
+&lt;li>Monitor for malicious or non‑compliant behaviour&lt;/li>
+&lt;/ul>
+&lt;h3 id="benefits">Benefits&lt;/h3>
+&lt;ul>
+&lt;li>Increased flexibility and user satisfaction&lt;/li>
+&lt;li>Reduced hardware costs&lt;/li>
+&lt;/ul>
+&lt;h3 id="risks">Risks&lt;/h3>
+&lt;ul>
+&lt;li>Data leakage&lt;/li>
+&lt;li>Malware introduction&lt;/li>
+&lt;li>Non‑compliant endpoints&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="12--acceptableuse--remotework-policies">1.2 Acceptable‑Use &amp;amp; Remote‑Work Policies&lt;/h2>
+&lt;p>Supplemental to BYOD, these policies define approved software, prohibited activities (pirated media, offensive content, personal cloud drives), and minimum workstation hardening (screen‑lock ≤ 10 min, corporate VPN, OS auto‑patch) for employees connecting from home or shared spaces.&lt;/p></description></item><item><title>1.6_cloud_&amp;_virtualization.net</title><link>http://paksyy.github.io/grayape/learningpath/1.6_cloud__virtualization/</link><pubDate>Sat, 21 Jun 2025 09:22:30 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.6_cloud__virtualization/</guid><description>&lt;p>&lt;em>Abstracted compute, programmable fabric, and container agility let workloads float free of hardware confines.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1virtualization-fundamentals">1  Virtualization Fundamentals&lt;/h1>
+&lt;p>Virtualization abstracts hardware so that multiple isolated systems share one physical server—boosting utilization, elasticity, and disaster‑recovery options.&lt;/p>
+&lt;h2 id="11hypervisors">1.1  Hypervisors&lt;/h2>
+&lt;p>Software that provisions and runs VMs by intercepting privileged CPU instructions and brokering access to memory, I/O and firmware.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Type&lt;/th>
+ &lt;th>Runs On&lt;/th>
+ &lt;th>Typical Platforms&lt;/th>
+ &lt;th>Notes&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Type 1 (bare‑metal)&lt;/strong>&lt;/td>
+ &lt;td>Direct on hardware&lt;/td>
+ &lt;td>VMware ESXi, Microsoft Hyper‑V, KVM, Xen&lt;/td>
+ &lt;td>Lowest latency; hardware passthrough (SR‑IOV, VT‑d).&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Type 2 (hosted)&lt;/strong>&lt;/td>
+ &lt;td>Inside a desktop OS&lt;/td>
+ &lt;td>VMware Workstation, Oracle VirtualBox, Parallels&lt;/td>
+ &lt;td>Great for labs; relies on host OS drivers.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="hardware-assist--isolation">Hardware Assist &amp;amp; Isolation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Intel VT‑x / AMD‑V&lt;/strong> – Trap‑and‑emulate at ring ‑1.&lt;/li>
+&lt;li>&lt;strong>Nested virtualization&lt;/strong> – Run a hypervisor within a VM (useful for CI).&lt;/li>
+&lt;li>&lt;strong>Paravirtual drivers (virtio)&lt;/strong> – Bypass emulation overhead for NIC/disk.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Security pitfall:&lt;/strong> Keep tools/guest‑additions patched—old drivers allow VM‑escape.&lt;/p></description></item><item><title>1.5_network_operations.net</title><link>http://paksyy.github.io/grayape/learningpath/1.5_network_operations.net/</link><pubDate>Sat, 21 Jun 2025 09:22:20 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.5_network_operations.net/</guid><description>&lt;p>&lt;em>Instrumentation, automation, and disciplined response keep every packet moving and every incident short-lived.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1--monitoring--visibility">1 Monitoring &amp;amp; Visibility&lt;/h1>
+&lt;h2 id="11--lightweight-realtime-monitors">1.1 Lightweight Real‑Time Monitors&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>iftop&lt;/strong> &lt;img src="iftop.png" alt="iftop"> — Interface‑level bandwidth by host pair in near real time.&lt;/li>
+&lt;li>&lt;strong>nethogs&lt;/strong> &lt;img src="nethog.png" alt="nethog"> — Per‑process network usage; great on jump‑boxes.&lt;/li>
+&lt;li>&lt;strong>iptraf‑ng&lt;/strong> &lt;img src="iptraf-ng.png" alt="iptraf-ng"> — L7‑agnostic traffic stats, TCP flag counters, VLAN tags.&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Field trick:&lt;/strong> Pipe &lt;code>iftop -n -F 0.0.0.0/0&lt;/code> through &lt;code>tee&lt;/code> to log peak flows during an incident.&lt;/p>&lt;/blockquote>
+&lt;h2 id="12--connectivity--path-analysis">1.2 Connectivity &amp;amp; Path Analysis&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Tool&lt;/th>
+ &lt;th>Image&lt;/th>
+ &lt;th>Core Use&lt;/th>
+ &lt;th>Hidden Super‑Power&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>ping&lt;/strong>&lt;/td>
+ &lt;td>&lt;img src="ping.png" alt="ping">&lt;/td>
+ &lt;td>Reachability &amp;amp; RTT&lt;/td>
+ &lt;td>&lt;code>-A&lt;/code> adaptive mode plots jitter like a poor‑man’s smokeping.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>traceroute&lt;/strong>&lt;/td>
+ &lt;td>&lt;img src="traceroute.png" alt="traceroute">&lt;/td>
+ &lt;td>Hop‑by‑hop path, per‑hop latency&lt;/td>
+ &lt;td>UDP vs. ICMP vs. TCP mode exposes asymmetric routing.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>ip&lt;/strong>&lt;/td>
+ &lt;td>&lt;img src="ip.png" alt="ip">&lt;/td>
+ &lt;td>Interfaces, routes, ARP&lt;/td>
+ &lt;td>&lt;code>ip monitor&lt;/code> streams route/addr changes for drift detection.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>netcat (nc)&lt;/strong>&lt;/td>
+ &lt;td>&lt;img src="netcat.png" alt="netcat">&lt;/td>
+ &lt;td>TCP/UDP swiss‑army knife&lt;/td>
+ &lt;td>&lt;code>-u -l -p 53&lt;/code> spins a quick DNS sink‑hole.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="13--enterprisescale-monitoring--enterprisescale-monitoring">1.3 Enterprise‑Scale Monitoring Enterprise‑Scale Monitoring&lt;/h2>
+&lt;h3 id="131--tool-arsenal">1.3.1 Tool Arsenal&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Nagios / Zabbix&lt;/strong> — Polling &amp;amp; trap‑based availability; SLA dashboards.&lt;/li>
+&lt;li>&lt;strong>nmap&lt;/strong> &lt;img src="nmap.png" alt="nmap"> — Discovery and compliance (&lt;code>--script vuln&lt;/code>).&lt;/li>
+&lt;li>&lt;strong>tcpdump&lt;/strong> &lt;img src="tcpdump.png" alt="tcpdump"> — CLI packet capture; use with &lt;code>‑G&lt;/code> &amp;amp; &lt;code>‑W&lt;/code> for ring buffers.&lt;/li>
+&lt;li>&lt;strong>Wireshark&lt;/strong> &lt;img src="wireshark.png" alt="wireshark"> — Deep decode; Follow‑Stream reassembles C2 channels.&lt;/li>
+&lt;/ul>
+&lt;h3 id="132--log-sources--enrichment">1.3.2 Log Sources &amp;amp; Enrichment&lt;/h3>
+&lt;p>Firewall • DHCP • DNS • Router/Switch • Authentication • EDR
+&lt;em>Correlate to expose lateral movement, misconfiguration, bottlenecks, hardware failures.&lt;/em>&lt;/p></description></item><item><title>1.4_network_security.net</title><link>http://paksyy.github.io/grayape/learningpath/1.4_network_security.net/</link><pubDate>Sat, 21 Jun 2025 09:22:10 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.4_network_security.net/</guid><description>&lt;p>&lt;em>Cryptographic walls, layered defenses, and relentless monitoring transform fragile links into fortress-grade networks.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1defensive-infrastructure">1  Defensive Infrastructure&lt;/h1>
+&lt;h2 id="11security-devices">1.1  Security Devices&lt;/h2>
+&lt;h3 id="firewall">Firewall&lt;/h3>
+&lt;p>Operates at Layers 2–4 and (in next‑gen models) Layer 7. It enforces policy at the edge or host level.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Mode&lt;/th>
+ &lt;th>How it works&lt;/th>
+ &lt;th>Typical use cases&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Stateless filtering&lt;/strong>&lt;/td>
+ &lt;td>Simple ACL checks on source/destination IP, port, and protocol.&lt;/td>
+ &lt;td>High‑speed backbone filtering, low‑resource IoT gateways.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Stateful inspection&lt;/strong>&lt;/td>
+ &lt;td>Maintains a connection table (five‑tuple) and allows only packets that match an established session.&lt;/td>
+ &lt;td>Enterprise perimeter firewalls, data‑center cores.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>Tip:&lt;/strong> Combine stateless “trash filters” (bogons, multicast, Martians) with stateful rules for legitimate flows.&lt;/p></description></item><item><title>1.3_wireless_networks.net</title><link>http://paksyy.github.io/grayape/learningpath/1.3_wireless_networks.net/</link><pubDate>Sat, 21 Jun 2025 09:22:00 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.3_wireless_networks.net/</guid><description>&lt;p>&lt;em>Wireless signals extend the network’s reach, transforming radio waves into seamless connectivity across offices, campuses, and cities.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1wlan-infrastructure-overview">1  WLAN Infrastructure Overview&lt;/h1>
+&lt;p>Wireless LANs replace the copper last‑drop with radio, yet still rely on familiar Ethernet switching and IP routing behind the access layer.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Component&lt;/th>
+ &lt;th>Role&lt;/th>
+ &lt;th>Notes&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Access Point (AP)&lt;/strong>&lt;/td>
+ &lt;td>802.11 transceiver bridging RF ↔ wired LAN&lt;/td>
+ &lt;td>Split‑MAC (CAPWAP) or autonomous (local MAC)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Wireless LAN Controller (WLC)&lt;/strong>&lt;/td>
+ &lt;td>Centralised policy, RF management, seamless roaming&lt;/td>
+ &lt;td>CAPWAP tunnels, dynamic channel/power (RRM)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Cloud‑Managed Platform&lt;/strong>&lt;/td>
+ &lt;td>SaaS orchestration, zero‑touch provisioning&lt;/td>
+ &lt;td>Telemetry, AI‑driven RF optimisation&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>PoE Switch&lt;/strong>&lt;/td>
+ &lt;td>Powers APs (802.3at/bt)&lt;/td>
+ &lt;td>Budget 30 W per Wi‑Fi 6 AP, 60 W for tri‑radio 6E&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>RADIUS / LDAP&lt;/strong>&lt;/td>
+ &lt;td>802.1X authentication backend&lt;/td>
+ &lt;td>WPA2‑/WPA3‑Enterprise&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;blockquote>
+&lt;p>&lt;strong>CAPWAP&lt;/strong> (Control And Provisioning of Wireless Access Points) tunnels control messages over UDP 5246 and optionally data over UDP 5247.&lt;/p></description></item><item><title>1.2_network_services_&amp;_protocols.net</title><link>http://paksyy.github.io/grayape/learningpath/1.2_network_services__protocols.net/</link><pubDate>Sat, 21 Jun 2025 09:21:10 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.2_network_services__protocols.net/</guid><description>&lt;p>&lt;em>Ports, protocols, and application services coordinate the conversations that ride upon the network’s physical and virtual highways.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1--addressing--name-services">1 Addressing &amp;amp; Name Services&lt;/h1>
+&lt;h2 id="11--dhcp--dynamic-host-configuration-protocol">1.1 DHCP – Dynamic Host Configuration Protocol&lt;/h2>
+&lt;p>Dynamic Host Configuration Protocol (DHCP) automatically assigns IP addressing details (subnet mask, default‑gateway, DNS, NTP, option‑43 for VoIP, etc.) to hosts, simplifying moves/adds/changes.&lt;/p>
+&lt;h3 id="111--lease-process-dora--timers">1.1.1 Lease Process (DORA + Timers)&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Stage&lt;/th>
+ &lt;th>Broadcast?&lt;/th>
+ &lt;th>Description&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>Discover&lt;/strong>&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Client (&lt;code>0.0.0.0&lt;/code> → &lt;code>255.255.255.255&lt;/code>) announces it needs config.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Offer&lt;/strong>&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Server advertises free lease (includes &lt;code>yiaddr&lt;/code>, lease‑time).&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Request&lt;/strong>&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Client formally requests a specific offer / renews existing lease.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>Ack&lt;/strong>&lt;/td>
+ &lt;td>Yes&lt;/td>
+ &lt;td>Server finalises; client configures interface and sends &lt;strong>gratuitous ARP&lt;/strong>.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>Lease renewal&lt;/em>
+&lt;code>T1&lt;/code> = 50 % lease‑time – unicast REQUEST to original server.
+&lt;code>T2&lt;/code> = 87.5 % – broadcast REQUEST if original server timed‑out.
+After expiry, client returns to INIT state.&lt;/p></description></item><item><title>1.1_network_infrastructure.net</title><link>http://paksyy.github.io/grayape/learningpath/1.1_network_infrastructure.net/</link><pubDate>Sat, 21 Jun 2025 09:21:00 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.1_network_infrastructure.net/</guid><description>&lt;p>&lt;em>Routers, switches, cables, and power systems form the physical highway that moves every bit from point A to point B—laying the foundation for all higher-layer services.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1--network-devices">1 Network Devices&lt;/h1>
+&lt;h2 id="11--layer1-devices">1.1 Layer 1 Devices&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Analog modem&lt;/strong>: Developed to create connections between network segments via PSTN using POTS. Provides single connection (56 Kbps max).&lt;/li>
+&lt;li>&lt;strong>Repeater / Regenerator&lt;/strong>: Regenerates and reshapes a weakened signal to extend copper or fiber runs.&lt;/li>
+&lt;li>&lt;strong>Transceiver&lt;/strong> (&lt;em>media‑dependent adapter&lt;/em>): Converts a NIC’s signaling to the medium in use (e.g., 10BASE‑T MAU, 1000BASE‑SX optical module).&lt;/li>
+&lt;li>&lt;strong>Hub&lt;/strong>: Multi‑port repeater that operates half‑duplex and forms a single collision domain. Largely obsolete.&lt;/li>
+&lt;/ul>
+&lt;h2 id="12--layer2-devices">1.2 Layer 2 Devices&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Bridge&lt;/strong>: Early two‑port switch that forwards frames based on a MAC address table.&lt;/li>
+&lt;li>&lt;strong>Switch&lt;/strong>: Uses ASICs to learn MAC addresses and forward frames intelligently; creates a separate collision domain per port.&lt;/li>
+&lt;li>&lt;strong>Wireless Access Point (WAP)&lt;/strong>: Bridges wireless and wired networks; implements 802.11 standards (Wi‑Fi 6/6E).&lt;/li>
+&lt;/ul>
+&lt;h2 id="13--layer3-devices">1.3 Layer 3 Devices&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Router&lt;/strong>: Connects dissimilar networks using logical addressing; maintains routing tables (static/dynamic).&lt;/li>
+&lt;li>&lt;strong>Multilayer Switch (MLS)&lt;/strong>: Combines Layer 2 switching with wire‑speed Layer 3 routing features; common in campus cores.&lt;/li>
+&lt;/ul>
+&lt;h2 id="14--optimisation-specialty-devices">1.4 Optimisation / Specialty Devices&lt;/h2>
+&lt;ul>
+&lt;li>&lt;strong>Load Balancer&lt;/strong>: Distributes traffic among servers (Round‑Robin, Least‑Connections, etc.).&lt;/li>
+&lt;li>&lt;strong>Proxy Server&lt;/strong>: Intermediary that makes requests on behalf of clients (forward/reverse, caching, content filtering).&lt;/li>
+&lt;li>&lt;strong>Network TAP&lt;/strong>: Passive inline device that copies traffic for monitoring/IDS without introducing latency.&lt;/li>
+&lt;/ul>
+&lt;h2 id="15--modular-interfaces--transceiver-formfactors">1.5 Modular Interfaces &amp;amp; Transceiver Form‑Factors&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Form‑Factor&lt;/th>
+ &lt;th>Typical Speed&lt;/th>
+ &lt;th>Medium&lt;/th>
+ &lt;th>Notes&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>GBIC&lt;/strong>&lt;/td>
+ &lt;td>1 Gb/s&lt;/td>
+ &lt;td>SX, LX, copper&lt;/td>
+ &lt;td>Legacy, large footprint&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>SFP&lt;/strong>&lt;/td>
+ &lt;td>1 Gb/s&lt;/td>
+ &lt;td>SX, LX, copper&lt;/td>
+ &lt;td>“Mini‑GBIC”, hot‑swappable&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>SFP+&lt;/strong>&lt;/td>
+ &lt;td>10 Gb/s&lt;/td>
+ &lt;td>SR, LR, DAC&lt;/td>
+ &lt;td>Backwards‑compatible with SFP slots in some switches&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>QSFP+ / QSFP28&lt;/strong>&lt;/td>
+ &lt;td>40 Gb/s / 100 Gb/s&lt;/td>
+ &lt;td>SR4, LR4, DAC&lt;/td>
+ &lt;td>Four‑lane transceivers; break‑out to 4× SFP+&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>OSFP / QSFP‑DD&lt;/strong>&lt;/td>
+ &lt;td>400 Gb/s&lt;/td>
+ &lt;td>SR8, DR4, FR4&lt;/td>
+ &lt;td>Next‑gen DC fabrics&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>DAC / AOC&lt;/strong>&lt;/td>
+ &lt;td>10–400 Gb/s&lt;/td>
+ &lt;td>Twin‑ax / Fiber&lt;/td>
+ &lt;td>Low‑cost short‑reach links (≤ 7 m)&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>Tip ▸ Many ToR switches accept both SFP+/SFP28 and QSFP+/QSFP28, enabling flexible up‑/down‑links without forklift upgrades.&lt;/em>&lt;/p></description></item><item><title>1.0_computer_networks.net</title><link>http://paksyy.github.io/grayape/learningpath/1.0_computer_networks.net/</link><pubDate>Tue, 10 Jun 2025 09:23:40 -0700</pubDate><guid>http://paksyy.github.io/grayape/learningpath/1.0_computer_networks.net/</guid><description>&lt;p>&lt;em>Computer networks rely on many devices, protocols, services, and standards that enable us to communicate with one another.&lt;/em>&lt;/p>
+&lt;hr>
+&lt;h1 id="1-reference-models--architecture">1. Reference Models &amp;amp; Architecture&lt;/h1>
+&lt;h2 id="11-osi-model">1.1 OSI Model&lt;/h2>
+&lt;p>The Open Systems Interconnection (OSI) Model was created to standardize and streamline communication between networked devices.&lt;/p>
+&lt;h3 id="osi-reference-model">OSI Reference Model&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>Layer 7 – Application&lt;/strong>: Provides network services directly to user applications (HTTP, FTP, SMTP)&lt;/li>
+&lt;li>&lt;strong>Layer 6 – Presentation&lt;/strong>: Handles data formatting, encryption/decryption (SSL, JPEG)&lt;/li>
+&lt;li>&lt;strong>Layer 5 – Session&lt;/strong>: Manages communication sessions between devices (RPC, NetBIOS)&lt;/li>
+&lt;li>&lt;strong>Layer 4 – Transport&lt;/strong>: Ensures reliable data transfer (TCP, UDP)&lt;/li>
+&lt;li>&lt;strong>Layer 3 – Network&lt;/strong>: Handles logical addressing and routing (IP, ICMP)&lt;/li>
+&lt;li>&lt;strong>Layer 2 – Data Link&lt;/strong>: Physical addressing and error detection (Ethernet, MAC)&lt;/li>
+&lt;li>&lt;strong>Layer 1 – Physical&lt;/strong>: Transmits raw bit streams over physical media (Copper, Fiber)&lt;/li>
+&lt;/ul>
+&lt;p>Most devices operate on more than one layer, but to determine which layer a device is operating on, you must first identify the highest layer at which it functions.&lt;/p></description></item></channel></rss>
