@@ -1,6 +1,6 @@
 ---
 title: "1.2_network_services_&_protocols.net"
-date: 2025-06-21T09:22:23-00:00
+date: 2025-06-21T09:22:23Z
 draft: false
 toc: false
 images:
@@ -8,172 +8,158 @@ tags:
   - Computer Networks
 ---
 
-## DHCP
+# 1  Addressing & Name Services
+
+## 1.1  DHCP – Dynamic Host Configuration Protocol
 Dynamic Host Configuration Protocol (DHCP) is a network management protocol used to automatically assign IP addresses and other network configuration parameters to client devices. It simplifies network management by reducing the need for manual IP configuration.
 
-- **Static IP**: Manually configured IP address that does not change over time. Useful for servers, printers, and other critical devices.
-- **Dynamic IP**: Automatically assigned by the DHCP server from a predefined pool. The address may change when the lease expires or the device reconnects.
-- **DHCP Process (DORA)**:
-  - **Discover**: Client sends broadcast request to locate a DHCP server.
-  - **Offer**: Server responds with an available IP address and configuration options.
-  - **Request**: Client requests the offered IP from one of the servers.
-  - **Acknowledgment**: Server confirms the lease and completes the configuration.
-- **Ports**: DHCP communication uses **UDP port 67** (server) and **UDP port 68** (client).
-- **Leases**: IP addresses are assigned for a limited period (lease time). Clients must renew leases before expiration to keep their IPs.
-- **Options**: Additional parameters provided by the DHCP server, such as default gateway, DNS servers, domain name, NTP servers, and more.
-- **Preferred IP configuration**: Clients can request a specific IP address, and the server may honor the request if available.
-- **DHCP Relay (IP Helper)**: Allows DHCP requests to be forwarded across subnets to a central DHCP server. Common in large networks to avoid deploying a DHCP server per subnet.
-
-## DNS
-The Domain Name System (DNS) translates domain names into IP addresses. It is a critical component of network communication and internet functionality.
-
-- **Servers**: Include root, TLD, authoritative, and caching resolvers. Resolve queries from users to locate websites or services.
-- **Records**:
-  - **A/AAAA**: IPv4/IPv6 address records.
-  - **CNAME**: Alias for another domain.
-  - **MX**: Mail exchange server.
-  - **NS**: Delegates a subdomain to a DNS server.
-  - **PTR**: Reverse DNS mapping.
-  - **TXT**: Text records (e.g., SPF, DKIM).
-- **Dynamic DNS**: Automatically updates DNS records in real-time when devices join or leave the network, useful in environments with frequently changing IPs.
-
-## NAT (Network Address Translation)
-- **Static NAT**: 1:1 mapping (public:private)
-- **Dynamic NAT**: Pool of public addresses
-- **PAT (Port NAT)**: Many private to single public
-- **Address Types**: Public/Private, RFC 1918
+- **Static IP**: Manually configured IP address that does not change over time. Useful for servers, printers, and other critical devices.  
+- **Dynamic IP**: Automatically assigned by the DHCP server from a predefined pool. The address may change when the lease expires or the device reconnects.  
+- **DHCP Process (DORA)**:  
+  - **Discover** – Client broadcasts to locate a DHCP server  
+  - **Offer** – Server responds with an available IP and options  
+  - **Request** – Client requests the offered IP  
+  - **Acknowledgment** – Server confirms the lease  
+- **Ports** – UDP 67 (server) / UDP 68 (client)  
+- **Leases** – IPs are time-limited; clients renew before expiration.  
+- **Options** – Extra parameters (gateway, DNS, domain, NTP, etc.).  
+- **Preferred IP configuration** – Client can request a specific IP.  
+- **DHCP Relay (IP Helper)** – Forwards DHCP across subnets to a central server.
 
 ---
 
-## (PRACTICAL) Service Enumeration
-Tools used for querying, discovering, and enumerating information about services, particularly DNS and web services:
+## 1.2  DNS – Domain Name System
+The Domain Name System (DNS) translates domain names into IP addresses. It is critical to network communication and Internet functionality.
 
-- **dig**: A powerful DNS lookup tool for querying specific DNS records and analyzing DNS responses.
-
-  ![dig](dig.png)
-
-- **dnsrecon**: Python-based tool for performing DNS enumeration, including brute force, zone transfers, and record collection.
-
-  ![dnsrecon](dnsrecon.png)
-
-- **curl**: Transfers data from or to a server using supported protocols (HTTP, FTP, etc.), ideal for testing endpoints.
-
-  ![curl](curl.png)
-  
-- **wget**: Retrieves content from web servers, often used for downloading files or mirroring websites.
-
-  ![wget](wget.png)
+- **Servers**: Root, TLD, authoritative, caching resolvers.  
+- **Records**:  
+  - **A / AAAA** – IPv4 / IPv6 address  
+  - **CNAME** – Canonical name (alias)  
+  - **MX** – Mail-exchange host  
+  - **NS** – Delegates zone to another DNS server  
+  - **PTR** – Reverse DNS  
+  - **TXT** – Arbitrary text (SPF, DKIM, etc.)  
+- **Dynamic DNS** – Real-time record updates for changing hosts.
 
 ---
 
-## Network Access Applications
-- **VPN**: Secure remote access (IPsec, SSL)
-- **Remote Access**: RDP, SSH, Telnet
-- **Web Services**: HTTP/HTTPS, REST APIs
-- **Unified Voice**: VoIP, SIP trunking
-
-## VPN Protocols
-- **IPsec**: Secure encrypted tunnels (IKE, ESP)
-- **GRE**: Generic Routing Encapsulation (no encryption)
-- **PPTP**: Obsolete (MS-CHAP vulnerabilities)
-- **TLS/SSL**: Common in web-based VPNs
-
-## Network Access Services
-- **NIC**: Network Interface Card (Physical/MAC address)
-- **RADIUS**: Centralized authentication (UDP 1812)
-- **TACACS+**: Cisco alternative (TCP 49, more secure)
+## 1.3  NAT – Network Address Translation
+- **Static NAT** – 1:1 public ↔ private mapping  
+- **Dynamic NAT** – Uses a pool of public IPs  
+- **PAT (Port Address Translation)** – Many private hosts share one public IP  
+- **Address Types** – Public / Private (RFC 1918)
 
 ---
 
-## Routing
+# 2  Practical Service Enumeration
 
+Tools for discovering or interrogating network services (especially DNS/Web):
+
+| Tool | Purpose |
+|------|---------|
+| **dig** | Query specific DNS records, analyze responses ![dig](dig.png) |
+| **dnsrecon** | Enumerate DNS (brute force, zone XFR) ![dnsrecon](dnsrecon.png) |
+| **curl** | Transfer data via HTTP, FTP, etc. ![curl](curl.png) |
+| **wget** | Download / mirror web content ![wget](wget.png) |
+
+---
+
+# 3  Network Access & Remote Services
+
+## 3.1  Access Applications
+- **VPN** – Secure remote access (IPsec, SSL)  
+- **Remote Access** – RDP, SSH, Telnet  
+- **Web Services** – HTTP/HTTPS, REST APIs  
+- **Unified Voice** – VoIP, SIP trunking
+
+## 3.2  VPN Protocols
+- **IPsec** – Encrypted tunnels (IKE, ESP)  
+- **GRE** – Generic Routing Encapsulation (no encryption)  
+- **PPTP** – Obsolete (MS-CHAP vulnerabilities)  
+- **TLS/SSL** – Common in browser-based VPNs
+
+## 3.3  Network Access Services
+- **NIC** – Network Interface Card (MAC address)  
+- **RADIUS** – Centralized authentication (UDP 1812)  
+- **TACACS+** – Cisco alternative (TCP 49, encrypted)
+
+---
+
+# 4  Routing Fundamentals
+
+## 4.1  Routing Concepts
 ### Static Routing
-- Routes are manually configured by an admin.
-- Simple but not scalable; no automatic path updates.
+- Admin-configured; simple, not scalable.
 
 ### Dynamic Routing
-- Routers learn routes from each other automatically.
-- Uses protocols like OSPF, EIGRP, RIP, and BGP.
+- Routers share routes automatically (OSPF, EIGRP, RIP, BGP).
 
 ### Default Route
-- A catch-all route when no specific match is found.
-- Usually points to the internet gateway.
-- Represented as `0.0.0.0/0` or `::/0`.
+- Catch-all `0.0.0.0/0` or `::/0` pointing to the Internet gateway.
 
 ### Routing Table
-- Stores all known routes to destination networks.
-- Includes static, dynamic, and default routes.
+- Contains static, dynamic, and default routes.
 
 ### Loopback Interface
-- A virtual interface used for diagnostics and stability.
-- IPv4: 127.0.0.1, IPv6: ::1
+- Virtual interface for diagnostics (IPv4 127.0.0.1 / IPv6 ::1).
 
 ### Routing Loop
-- A situation where packets endlessly circulate due to misconfiguration.
-- Prevented using TTL, split horizon, or route poisoning.
+- Packets circulate endlessly; mitigated by TTL, split-horizon, poisoning.
 
 ### Routing Metrics
-- Values used to determine the best route.
-- Includes hop count, bandwidth, delay, reliability, and cost.
+- Hop count, bandwidth, delay, reliability, cost.
 
 ### Routing Aggregation
-- Combines multiple routes into one summary route.
-- Reduces routing table size and simplifies configuration.
+- Summarizes multiple routes to reduce table size.
 
 ### High Availability
-- Ensures continuous network operation through redundancy.
-- Technologies: VRRP, HSRP, GLBP, failover routing, load balancing.
-
-## Routing Protocols
-
-### IGP (Interior Gateway Protocol)
-- IGPs are used for routing **within a single autonomous system (AS)**.
-- Designed for internal network communication and fast convergence.
-- Common IGPs:
-  - **RIP (Routing Information Protocol)** – Distance-vector, simple but limited.
-  - **OSPF (Open Shortest Path First)** – Link-state, scalable, widely used.
-  - **EIGRP (Enhanced Interior Gateway Routing Protocol)** – Cisco proprietary, advanced distance-vector.
-
-### EGP (Exterior Gateway Protocol)
-- EGPs are used for routing **between autonomous systems**, usually across the internet.
-- The primary EGP is:
-  - **BGP (Border Gateway Protocol)** – Path-vector protocol used by ISPs and enterprises to exchange routing information on the internet.
-- EGPs focus on **policy-based routing** and scalability, rather than speed of convergence.
+- VRRP, HSRP, GLBP, failover routing, load balancing.
 
 ---
 
-## Unified communication
+## 4.2  Routing Protocol Families
 
-### Unified communication devices
-Unified communication devices include hardware that enables integrated communications, such as IP phones, video conferencing systems, headsets, speakerphones, and collaboration hubs. These devices are optimized for services like VoIP, video calls, screen sharing, and real-time messaging.
+### Interior Gateway Protocols (IGP)
+- **RIP** – Distance-vector  
+- **OSPF** – Link-state  
+- **EIGRP** – Advanced distance-vector (Cisco)
 
-Examples:
-- IP desk phones with video support
-- USB headsets with noise cancellation
-- Smart conferencing cameras with tracking
+### Exterior Gateway Protocols (EGP)
+- **BGP** – Path-vector for inter-AS routing; policy-driven, highly scalable.
+
+---
+
+# 5  Unified Communication
+
+## 5.1  UC Devices
+Hardware enabling integrated comms (voice, video, chat):
+
+- IP desk phones with video  
+- USB noise-canceling headsets  
+- Smart conferencing cameras  
 - Interactive whiteboards
 
-### Voice over IP
-Voice over IP (VoIP) allows voice communication over the internet rather than traditional phone lines. It converts voice into digital packets and sends them over IP networks. VoIP reduces communication costs and enables integration with other services like video and chat.
+## 5.2  Voice over IP (VoIP)
+Voice travels as IP packets; integrates with other UC services.
 
-Advantages:
-- Lower cost than PSTN
-- Integration with UC platforms
-- Scalability and portability
-- Advanced call features (voicemail-to-email, call routing, etc.)
+**Advantages**: lower cost, scalable, portable, rich features (voicemail-to-email, call routing).
 
-Common VoIP Protocols:
-- SIP (Session Initiation Protocol)
-- RTP (Real-time Transport Protocol)
-- H.323
+**Common Protocols**:  
+- **SIP** – Session initiation  
+- **RTP** – Real-time media transport  
+- **H.323** – Legacy signaling
 
-## Networking protocols
-* **Routing:** RIP, OSPF, EIGRP, BGP  
-* **Secure remote access:** SSH, TLS, IPsec  
-* **Management & monitoring:** SNMP, NetFlow, Syslog, NTP  
-* **Name resolution:** DNS, mDNS  
-* **Addressing/assignment:** DHCP, SLAAC  
-* **Email:** SMTP, IMAP, POP3  
-* **File transfer & sharing:** FTP, SFTP, SMB, NFS  
-* **Web:** HTTP/HTTPS, QUIC  
-* **Messaging:** MQTT, AMQP  
+---
+
+# 6  Protocol Landscape Cheat-Sheet
+*Quick reference to where the above protocols live or what they solve.*
+
+- **Routing** – RIP, OSPF, EIGRP, BGP  
+- **Secure remote access** – SSH, TLS, IPsec  
+- **Management & monitoring** – SNMP, NetFlow, Syslog, NTP  
+- **Name resolution** – DNS, mDNS  
+- **Addressing / assignment** – DHCP, SLAAC  
+- **Email** – SMTP, IMAP, POP3  
+- **File transfer & sharing** – FTP, SFTP, SMB, NFS  
+- **Web** – HTTP/HTTPS, QUIC  
+- **Messaging / IoT** – MQTT, AMQP

@@ -1,6 +1,6 @@
 ---
 title: "1.3_wireless_networks.net"
-date: 2025-06-21T09:22:24-00:00
+date: 2025-06-21T09:22:24Z
 draft: false
 toc: false
 images:
@@ -8,60 +8,61 @@ tags:
   - Computer Networks
 ---
 
-## WLAN infrastructure
+# 1  WLAN Infrastructure Overview
+Wireless LANs provide network access via radio waves rather than copper or fiber cabling. A typical infrastructure includes:
 
-Wireless LAN infrastructure enables network access using radio waves instead of physical cabling. It includes access points, wireless controllers, and antennas to provide reliable wireless coverage and performance.
-
-### Wireless Access Standards
-
-Wi-Fi standards define capabilities like frequency, speed, and channel width:
-- 802.11a: 5 GHz, up to 54 Mbps
-- 802.11b/g: 2.4 GHz, up to 11/54 Mbps
-- 802.11n: 2.4/5 GHz, up to 600 Mbps with MIMO
-- 802.11ac: 5 GHz, up to 1 Gbps with MU-MIMO
-- 802.11ax (Wi-Fi 6): High efficiency, works on both 2.4 and 5 GHz
-
-### Antenna technology
-
-Antenna types influence coverage and direction:
-- Omnidirectional antennas radiate in all directions, ideal for general coverage.
-- Directional antennas focus the signal in a specific direction, useful for point-to-point links.
-- MIMO (Multiple Input, Multiple Output) improves speed and reliability using multiple antennas.
-
-### Wireless Access Points
-
-Access points (APs) bridge wireless clients to the wired LAN. They support multiple SSIDs, VLAN tagging, and security features like WPA3. Enterprise APs can be managed individually or via a central controller or cloud platform.
+- **Access points (APs)**  
+- **Wireless controllers / cloud management**  
+- **Antennas** for coverage and performance
 
 ---
 
-## WLAN topologies
+# 2  Wi-Fi (802.11) Standards
 
-### Ad hoc topology
-
-In an ad hoc topology, devices communicate directly with one another without an access point. This setup is temporary and lacks central control or scalability.
-
-### Infrastructure topology
-
-The most common WLAN topology. Devices connect to the network through a central access point, which manages traffic and connects to the wired LAN.
-
-### Mesh topology
-
-In mesh networks, multiple APs connect to each other wirelessly, forming a resilient and self-healing network. If one node fails, traffic reroutes through others. Common in large areas or outdoor deployments.
-
-### SSID
-
-The Service Set Identifier (SSID) is the name of the wireless network broadcasted by an access point. Clients use the SSID to identify and join the correct network. A single AP can broadcast multiple SSIDs, each mapped to a different VLAN or policy group.
-
-### BSSID
-
-The Basic Service Set Identifier (BSSID) is the MAC address of the radio interface on the access point. While the SSID is the network name seen by users, the BSSID uniquely identifies each AP or radio. This helps differentiate between access points broadcasting the same SSID.
-
-## Wireless network standards
 | Standard | Band(s) | Max Data Rate | Notes |
 |----------|---------|--------------|-------|
 | **802.11a** | 5 GHz | 54 Mb/s | OFDM |
 | **802.11b** | 2.4 GHz | 11 Mb/s | DSSS |
-| **802.11g** | 2.4 GHz | 54 Mb/s | Backward-compatible with b |
-| **802.11n** | 2.4/5 GHz | 600 Mb/s | MIMO, HT |
+| **802.11g** | 2.4 GHz | 54 Mb/s | Backward-compatible with **b** |
+| **802.11n** | 2.4/5 GHz | 600 Mb/s | MIMO, HT channels |
 | **802.11ac** | 5 GHz | 6.9 Gb/s | Wider channels, MU-MIMO |
-| **802.11ax (Wi-Fi 6)** | 2.4/5/6 GHz | 9.6 Gb/s | OFDMA, TWT, BSS coloring |
+| **802.11ax (Wi-Fi 6)** | 2.4/5/6 GHz | 9.6 Gb/s | OFDMA, TWT, BSS-coloring |
+
+---
+
+# 3  Antenna Technology
+
+- **Omnidirectional** – radiates 360°, ideal for general coverage  
+- **Directional** – focuses energy toward a target, good for point-to-point links  
+- **MIMO (Multiple Input, Multiple Output)** – uses multiple antennas for higher throughput and reliability
+
+---
+
+# 4  Wireless Access Points
+
+- Bridge wireless clients to the wired LAN  
+- Support multiple **SSIDs**, VLAN tagging, WPA3 security  
+- Enterprise APs can be standalone, controller-based, or cloud-managed
+
+---
+
+# 5  WLAN Topologies
+
+## 5.1  Ad-Hoc
+Devices communicate directly without an AP—temporary, no central control.
+
+## 5.2  Infrastructure
+Most common: clients connect through a central AP that forwards traffic to the wired LAN.
+
+## 5.3  Mesh
+Multiple APs interconnect wirelessly, forming a self-healing fabric; ideal for large areas and outdoor deployments.
+
+---
+
+# 6  Identifiers & Service Sets
+
+| Term | Purpose |
+|------|---------|
+| **SSID** (Service Set Identifier) | Human-readable network name. One AP can broadcast multiple SSIDs mapped to different VLANs or policies. |
+| **BSSID** (Basic Service Set Identifier) | MAC address of the AP’s radio interface; uniquely identifies each AP, even if SSID is shared. |
+
