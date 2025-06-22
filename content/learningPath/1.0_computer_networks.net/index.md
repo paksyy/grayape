@@ -147,3 +147,28 @@ Most devices operate on more than one layer, but to determine which layer a devi
 - **Broadcast**: one sender to all devices (IPv4 only).
 - **Multicast**: one sender to specific group.
 - **Anycast**: one sender to the closest receiver (IPv6).
+
+
+## Modulation
+* Converts digital data to analog signals for transmission.  
+* Common types: **ASK** (Amplitude Shift Keying), **FSK** (Frequency), **PSK** (Phase), **QAM** (Quadrature Amplitude).
+
+---
+
+## Network transmission concepts
+* **Bandwidth** vs. **Throughput** vs. **Goodput**  
+* **Latency** (propagation, processing, queuing)  
+* **Jitter** (variance in delay)  
+* **MTU** and fragmentation  
+* **Unicast, Broadcast, Multicast, Anycast**
+
+---
+
+## CSMA/CD vs. CSMA/CA
+| Feature | CSMA/CD | CSMA/CA |
+|---------|---------|---------|
+| Medium | Wired Ethernet (legacy half-duplex) | Wireless LAN (Wi-Fi) |
+| Method | Detects collisions, then back-offs | Avoids collisions via RTS/CTS & NAV timers |
+| Status | Obsolete on full-duplex links | Still essential for 802.11 |
+
+---
